@@ -27,6 +27,27 @@
         }
     }
 
+  &--right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    input {
+      position: absolute;
+    }
+
+    span {
+      width: 20px;
+      height: 20px;
+      padding-left: 0;
+    }
+
+    input:checked + span:after {
+      border: 1px solid #333333;
+    }
+  }
+
     &:hover {
         input:not(:disabled):not(:checked) + span {
             &:after {

@@ -25,6 +25,8 @@
 @import "bem/label.scss";
 @import "bem/input-file.scss";
 @import "bem/add-img.scss";
+@import "bem/identifier.scss";
+@import "bem/semicircle.scss";
 
 
 @import "bem/important.scss";
@@ -71,6 +73,10 @@
 @import "blocks/privacy.scss";
 @import "blocks/instruction.scss";
 @import "blocks/stage.scss";
+@import "blocks/calculation.scss";
+@import "blocks/shipping-content.scss";
+@import "blocks/insurance.scss";
+@import "blocks/count-list.scss";
 
 /*Помощники*/
 @import "libs/helpers.scss";

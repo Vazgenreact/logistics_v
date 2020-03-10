@@ -1,0 +1,21 @@
+.semicircle {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-left-color: #fff !important;
+  border-bottom-color: #fff !important;
+  z-index: 3;
+
+  &--left {
+    left: -20px;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &--right {
+    right: -20px;
+    transform: translate(50%, -50%) rotate(-135deg);
+  }
+}

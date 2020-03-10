@@ -1,0 +1,253 @@
+.shipping-top {
+  background-color: $u-white;
+  padding: 30px 30px 90px;
+  margin-bottom: 11px;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .text {
+    line-height: 1.35;
+  }
+}
+.delivery-img {
+  width: 48px;
+  height: 53px;
+  margin-right: 14px;
+}
+
+.shipping-nav {
+  position: relative;
+  margin: -64px 0 0;
+  padding: 0 30px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+
+  &__item {
+    flex-basis: 31%;
+  }
+  &__link {
+    display: block;
+    padding: 15px 10px 9px;
+    background-color: $silver-normal;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: $silver-big;
+    border: 1px solid $silver-big;
+    line-height: 1.1;
+
+    &:hover {
+      color: inherit;
+      background-color: $u-white;
+    }
+    &.active {
+      color: inherit;
+      background-color: $u-white;
+      border-bottom-color: $u-white;
+    }
+  }
+}
+
+.shipping-content {
+  background-color: $u-white;
+  padding: 22px 30px;
+  border: 1px solid $silver-big;
+  margin-top: -1px;
+
+  .insurance {
+    margin-bottom: 40px;
+  }
+}
+
+.orders-slider {
+  position: relative;
+  padding: 0 30px;
+  margin: 25px 0;
+  display: flex;
+  overflow: auto;
+
+  ///* width */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  ///* Track */
+  &::-webkit-scrollbar-track {
+
+  }
+  ///* Handle */
+  &::-webkit-scrollbar-thumb {
+
+  }
+  ///* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+
+  }
+
+  .checkbox {
+    margin-bottom: 5px;
+  }
+
+  .identifier {
+    margin-bottom: 25px;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 5;
+    border: 0;
+    background-color: rgba(255,255,255,.8);
+    outline: none;
+    padding: 0;
+    width: 30px;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: default;
+      background-color: rgba(255,255,255,.4);
+      svg {
+        fill: $font-color-silver;
+      }
+    }
+    &:not(:disabled):hover {
+      background-color: rgba(255,255,255,1);
+    }
+
+    &--left {
+      left: 0;
+      transform: rotate(180deg);
+      text-align: left;
+    }
+    &--right {
+      right: 0;
+      text-align: right;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 295px;
+    padding: 25px 20px;
+    margin: 0 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    &:not(.checked) {
+      color: $font-color-silver;
+      border-color: $font-color-silver;
+
+      .semicircle {
+        border-color: $font-color-silver;
+      }
+    }
+  }
+}
+
+.orders-details {
+  font-size: 14px;
+  border-top: 1px solid $silver-big;
+
+  &__title {
+    text-align: center;
+    color: $font-color-silver;
+  }
+}
+
+.details-list {
+  padding-bottom: 20px;
+
+  &__item {
+    padding: 5px;
+
+    &:nth-child(even) {
+      background-color: $silver-normal;
+    }
+  }
+}
+
+.stock-images {
+  position: relative;
+  padding-top: 25px;
+  border-top: 1px solid $silver-big;
+
+  &__list {
+    position: relative;
+    display: flex;
+  }
+
+  &__btn {
+    position: absolute;
+    border: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    background-color: rgba(255,255,255,.9);
+    z-index: 3;
+    outline: none;
+    
+    &:not(:disabled):hover {
+      background-color: #fff;
+    }
+
+    &:disabled {
+      background-color: rgba(255,255,255,.5);
+
+      svg {
+        fill: $font-color-silver;
+      }
+    }
+
+    &--right {
+      right: 0;
+    }
+    &--left {
+      left: 0;
+      transform: rotate(180deg);
+    }
+  }
+  &__item {
+    position: relative;
+    width: 47px;
+    height:47px;
+    margin: 0 3px;
+    border: 1px solid transparent;
+
+    &:hover {
+      border-color: $font-color-main;
+
+      .stock-images__zoom {
+        background-color: rgba(255,255,255,.5);
+        opacity: 1;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+  &__zoom {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: 0;
+    opacity: 0;
+    cursor: zoom-in;
+  }
+}
+
+.info-icon {
+  width: 12px;
+  height: 14px;
+  margin-left: 7px;
+}

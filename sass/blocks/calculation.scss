@@ -1,0 +1,51 @@
+.calculation {
+  background-color: $u-white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.22);
+
+  &__top {
+    display: flex;
+    align-items: center;
+    padding: 22px 30px;
+    border-bottom: 1px solid $silver-big;
+  }
+  &__img {
+    width: 42px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  &__total {
+    padding: 10px 30px 20px;
+    font-size: 20px;
+    background-color: $silver-normal;
+    border-bottom: 1px solid $silver-big;
+
+    .text {
+      font-size: 12px;
+      line-height: 1.15;
+      color: $font-color-silver;
+      padding-top: 8px;
+    }
+
+    .total-top {
+      @include flex;
+    }
+  }
+  .list-item {
+    @include flex;
+  }
+  &__bottom {
+    padding: 25px 30px;
+  }
+  &__list {
+    padding: 25px 0;
+    border-bottom: 1px solid $silver-big;
+
+    & > * {
+      padding: 2px 30px;
+    }
+    .list-item.checked {
+      background-color: $u-yellow;
+      font-weight: 700;
+    }
+  }
+}
