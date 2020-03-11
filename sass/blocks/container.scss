@@ -1,6 +1,5 @@
 .container {
-    padding-bottom: 40px;
-    margin-top: 33px;
+    padding: 33px 15px 40px;
     @include flex;
     align-items: flex-start;
 
@@ -143,8 +142,6 @@
 /*Планшет*/
 @media (max-width: $desctop-width - 1) {
     .container {
-        display: block;
-
         &:after {
             content: '';
             clear: both;
@@ -157,7 +154,6 @@
 
         &__additionally {
             float: left;
-            margin-top: 10px;
         }
 
         &__center {

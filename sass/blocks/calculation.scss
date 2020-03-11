@@ -1,6 +1,15 @@
 .calculation {
+  position: fixed;
+  width: 278px;
+  top: 207px;
+  right: calc((100% - 1200px)/2);
   background-color: $u-white;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.22);
+
+  @media screen and (max-width: 1230px) {
+    top: 200px;
+    right: 15px;
+  }
 
   &__top {
     display: flex;
@@ -43,7 +52,7 @@
     & > * {
       padding: 2px 30px;
     }
-    .list-item.checked {
+    .list-item.update {
       background-color: $u-yellow;
       font-weight: 700;
     }

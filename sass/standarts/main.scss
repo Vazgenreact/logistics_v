@@ -27,6 +27,20 @@ select {
 }
 
 .main {
-    width: $desctop-width;
+    width: 100%;
+    max-width: $desctop-width;
     margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.relative {
+  position: relative;
+}
+
+.pt-25 {
+  padding-top: 25px;
+}
+.pl-30 {
+  padding-left: 30px;
 }

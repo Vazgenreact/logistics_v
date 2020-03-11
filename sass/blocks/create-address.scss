@@ -1,0 +1,12 @@
+.create-address {
+  padding: 15px 20px;
+  background-color: $u-yellow;
+
+  &__text {
+    padding: 0 15px;
+    flex-grow: 1;
+  }
+  .btn {
+    background-color: transparent;
+  }
+}

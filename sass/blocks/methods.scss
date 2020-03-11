@@ -1,0 +1,70 @@
+.methods {
+  padding: 20px 0;
+  border-bottom: 1px solid $silver-big;
+
+  &__item {
+    padding: 5px 20px 5px 13px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    min-height: 52px;
+    box-sizing: border-box;
+    font-weight: 700;
+
+    &:not(.checked):not(.disabled) {
+      color: $font-color-silver;
+      border-color: $font-color-silver;
+      user-select: none;
+      font-weight: 300;
+
+      path {
+        fill: $font-color-silver;
+      }
+      .helper:hover:after {
+        display: none;
+      }
+    }
+
+    &.disabled {
+      color: $silver-big;
+      border-color: $silver-big;
+      user-select: none;
+      font-weight: 300;
+
+      path {
+        fill: $silver-big;
+      }
+      .helper:hover:after {
+        display: none;
+      }
+    }
+    .icon {
+      width: 70px;
+      text-align: center;
+      margin-left: -13px;
+    }
+  }
+  &__icon {
+    margin-right: 15px;
+  }
+  &__title {
+    flex-grow: 1;
+    line-height: 1;
+    padding-right: 20px;
+  }
+  &__price {
+    margin-right: 40px;
+  }
+  &__comment {
+    .input {
+      width: 100%;
+      height: 52px;
+    }
+    .text {
+      color: $font-color-silver;
+      font-size: 16px;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+  }
+}

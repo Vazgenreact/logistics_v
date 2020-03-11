@@ -46,6 +46,7 @@
 @import "bem/pay-card.scss";
 @import "bem/mini-cart.scss";
 @import "bem/redemption-order.scss";
+@import "bem/tooltip-block.scss";
 
 /*Блоки в сайте*/
 @import "blocks/wrap-form.scss";
@@ -77,6 +78,8 @@
 @import "blocks/shipping-content.scss";
 @import "blocks/insurance.scss";
 @import "blocks/count-list.scss";
+@import "blocks/methods.scss";
+@import "blocks/create-address.scss";
 
 /*Помощники*/
 @import "libs/helpers.scss";

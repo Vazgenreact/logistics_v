@@ -7,4 +7,14 @@
   border-radius: 3px;
   background-color: $silver-normal;
   margin-right: 20px;
+  font-size: 20px;
+
+  &--small {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 700;
+  }
 }

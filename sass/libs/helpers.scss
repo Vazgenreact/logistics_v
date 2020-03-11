@@ -104,10 +104,6 @@
 
 /*Планшет*/
 @media (max-width: $desctop-width - 1) {
-    .main {
-        max-width: $tablet-width;
-    }
-
     .l-hidden_tablet {
         display: none;
     }
@@ -115,10 +111,6 @@
 
 /*Мобильные*/
 @media (max-width: $tablet-width - 2) {
-    .main {
-        max-width: $mobile-width;
-    }
-
     .l-hidden_mobile {
         display: none !important;
     }

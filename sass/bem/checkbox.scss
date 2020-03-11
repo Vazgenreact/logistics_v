@@ -37,10 +37,12 @@
       position: absolute;
     }
 
-    span {
-      width: 20px;
-      height: 20px;
-      padding-left: 0;
+    .checkbox {
+      span {
+        width: 20px;
+        height: 20px;
+        padding-left: 0;
+      }
     }
 
     input:checked + span:after {
