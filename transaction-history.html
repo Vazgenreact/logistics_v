@@ -105,14 +105,19 @@
             <div class="transaction-history  container__transaction-history">
                 <div class="transaction-history__filter">
                     <span class="text">История</span>
-                    <div class="select  select--small  select--inline  transaction-history__select">
-                        <div class="select__param">Все операции</div>
-                        <div class="select__list">
-                            <div class="select__item" data-value="Все операции"><b>Все операции</b></div>
-                            <div class="select__item" data-value="Пополнения">Пополнения</div>
-                            <div class="select__item" data-value="Вывод">Вывод</div>
-                            <div class="select__item" data-value="Платежи">Платежи</div>
-                            <div class="select__item" data-value="Реферальный бонус">Реферальный бонус</div>
+                    <div class="transaction-history__select">
+                        <div class="custom-select">
+                            <div class="input custom-select__input" id="story_select" onclick="onToggleSelect(this)">
+                                <input class="input-hide" name="story_select" value="Все операции">
+                                <span class="text">Все операции</span>
+                            </div>
+                            <ul class="custom-select__list">
+                                <li class="custom-select__item" onclick="onChangeSelect('story_select', 'Все операции', this)">Все операции</li>
+                                <li class="custom-select__item" onclick="onChangeSelect('story_select', 'Пополнения', this)">Пополнения</li>
+                                <li class="custom-select__item" onclick="onChangeSelect('story_select', 'Вывод', this)">Вывод</li>
+                                <li class="custom-select__item" onclick="onChangeSelect('story_select', 'Платежи', this)">Платежи</li>
+                                <li class="custom-select__item" onclick="onChangeSelect('story_select', 'Реферальный бонус', this)">Реферальный бонус</li>
+                            </ul>
                         </div>
                     </div>
                     <form action="#" method="post" class="search  transaction-history__search">
@@ -122,12 +127,17 @@
                             <svg><use xlink:href="#search-icon"></use></svg>
                         </button>
                     </form>
-                    <div class="select  select--small  select--inline  transaction-history__currency">
-                        <div class="select__param">$<b class="l-hidden_mobile">, доллары</b></div>
-                        <div class="select__list">
-                            <div class="select__item" data-value="доллары">$<b class="l-hidden_mobile">, доллары</b></div>
-                            <div class="select__item" data-value="юани">¥<b class="l-hidden_mobile">, юани</b></div>
-                            <div class="select__item" data-value="рубли">₽<b class="l-hidden_mobile">, рубли</b></div>
+                    <div class="transaction-history__currency">
+                        <div class="custom-select">
+                            <div class="input custom-select__input" id="money_select" onclick="onToggleSelect(this)">
+                                <input class="input-hide" name="money_select" value="доллары">
+                                <span class="text">$, доллары</span>
+                            </div>
+                            <ul class="custom-select__list">
+                                <li class="custom-select__item" onclick="onChangeSelect('money_select', 'доллары', this)">$, доллары</li>
+                                <li class="custom-select__item" onclick="onChangeSelect('money_select', 'юани', this)">¥, юани</li>
+                                <li class="custom-select__item" onclick="onChangeSelect('money_select', 'рубли', this)">₽, рубли</li>
+                            </ul>
                         </div>
                     </div>
                 </div>

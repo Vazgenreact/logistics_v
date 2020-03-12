@@ -117,55 +117,44 @@
 
                 <div class="label  my-information__label  my-information__label--select">
                     <span class="text  l-max_width">Дата рождения</span>
-
-                    <div class="select  select--inline  select--small">
-                        <div class="select__param">
-                            13
+                    <div class="custom-select">
+                        <div class="input custom-select__input" id="select_date_day" onclick="onToggleSelect(this)">
+                            <input class="input-hide" name="select_date_day" value="1">
+                            <span class="text">1</span>
                         </div>
-                        <!-- Если нужно показать селект - показываем select__list display: block; ну или как-то чтоб поменять это свойство-->
-                        <div class="select__list">
-                            <div class="select__item" data-value="14">
-                                14
-                            </div>
-                            <div class="select__item" data-value="15">
-                                15
-                            </div>
-                            <div class="select__item" data-value="16">
-                                16
-                            </div>
-                        </div>
+                        <ul class="custom-select__list">
+                            <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '1', this)">1</li>
+                            <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '2', this)">2</li>
+                            <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '3', this)">3</li>
+                            <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '4', this)">4</li>
+                            <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '5', this)">5</li>
+                            <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '6', this)">6</li>
+                            <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '7', this)">7</li>
+                        </ul>
                     </div>
-                    <div class="select  select--inline  select--small">
-                        <div class="select__param">
-                            сентября
+                    <div class="custom-select month">
+                        <div class="input custom-select__input" id="select_date_month" onclick="onToggleSelect(this)">
+                            <input class="input-hide" name="select_date_month" value="9">
+                            <span class="text">сентября</span>
                         </div>
-                        <div class="select__list">
-                            <div class="select__item" data-value="октября">
-                                октября
-                            </div>
-                            <div class="select__item" data-value="ноября">
-                                ноября
-                            </div>
-                            <div class="select__item" data-value="декабря">
-                                декабря
-                            </div>
-                        </div>
+                        <ul class="custom-select__list">
+                            <li class="custom-select__item" onclick="onChangeSelect('select_date_month', '9', this)">сентября</li>
+                            <li class="custom-select__item" onclick="onChangeSelect('select_date_month', '10', this)">октября</li>
+                            <li class="custom-select__item" onclick="onChangeSelect('select_date_month', '11', this)">ноября</li>
+                            <li class="custom-select__item" onclick="onChangeSelect('select_date_month', '12', this)">декабря</li>
+                        </ul>
                     </div>
-                    <div class="select  select--inline  select--small">
-                        <div class="select__param">
-                            1991
+                    <div class="custom-select">
+                        <div class="input custom-select__input" id="select_date_year" onclick="onToggleSelect(this)">
+                            <input class="input-hide" name="select_date_year" value="1991">
+                            <span class="text">1991</span>
                         </div>
-                        <div class="select__list">
-                            <div class="select__item" data-value="1992">
-                                1992
-                            </div>
-                            <div class="select__item" data-value="1993">
-                                1993
-                            </div>
-                            <div class="select__item" data-value="1994">
-                                1994
-                            </div>
-                        </div>
+                        <ul class="custom-select__list">
+                            <li class="custom-select__item" onclick="onChangeSelect('select_date_year', '1991', this)">1991</li>
+                            <li class="custom-select__item" onclick="onChangeSelect('select_date_year', '1992', this)">1992</li>
+                            <li class="custom-select__item" onclick="onChangeSelect('select_date_year', '1993', this)">1993</li>
+                            <li class="custom-select__item" onclick="onChangeSelect('select_date_year', '1994', this)">1994</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -198,7 +187,6 @@
         <img src="img/wechatpayalexey.png">
     </div>
 
-    <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

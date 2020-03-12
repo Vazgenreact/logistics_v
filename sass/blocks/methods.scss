@@ -11,14 +11,14 @@
     box-sizing: border-box;
     font-weight: 700;
 
-    &:not(.checked):not(.disabled) {
+    &.unchecked {
       color: $font-color-silver;
       border-color: $font-color-silver;
       user-select: none;
       font-weight: 300;
 
-      path {
-        fill: $font-color-silver;
+      svg {
+        opacity: .3;
       }
       .helper:hover:after {
         display: none;
@@ -31,8 +31,8 @@
       user-select: none;
       font-weight: 300;
 
-      path {
-        fill: $silver-big;
+      svg {
+        opacity: .1;
       }
       .helper:hover:after {
         display: none;
@@ -43,6 +43,23 @@
       text-align: center;
       margin-left: -13px;
     }
+    .image {
+      width: 55px;
+      text-align: center;
+      margin-left: -3px;
+      margin-right: 10px;
+
+      img {
+        max-width: 100%;
+        vertical-align: middle;
+      }
+    }
+
+    &:hover {
+      .checkbox input:not(:disabled):not(:checked) + span:after {
+        opacity: .3;
+      }
+    }
   }
   &__icon {
     margin-right: 15px;
@@ -50,10 +67,16 @@
   &__title {
     flex-grow: 1;
     line-height: 1;
-    padding-right: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    padding-right: 5px;
+  }
+  .checked &__title {
+    font-weight: 700;
   }
   &__price {
-    margin-right: 40px;
+    width: 15%;
+    flex-shrink: 0;
   }
   &__comment {
     .input {
@@ -65,6 +88,19 @@
       font-size: 16px;
       line-height: 1;
       margin-bottom: 5px;
+    }
+    .info-text {
+      opacity: .3;
+    }
+  }
+  &__days {
+    width: 30%;
+    font-weight: 300;
+    flex-shrink: 0;
+
+    svg {
+      margin-right: 5px;
+      vertical-align: top;
     }
   }
 }
