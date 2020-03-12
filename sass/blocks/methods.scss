@@ -3,6 +3,7 @@
   border-bottom: 1px solid $silver-big;
 
   &__item {
+    position: relative;
     padding: 5px 20px 5px 13px;
     border: 1px solid #333;
     border-radius: 5px;
@@ -59,24 +60,55 @@
       .checkbox input:not(:disabled):not(:checked) + span:after {
         opacity: .3;
       }
+      .methods__disabled-msg {
+        opacity: 1;
+        z-index: 9;
+        transition: .2s;
+      }
     }
   }
   &__icon {
     margin-right: 15px;
   }
   &__title {
+    position: relative;
     flex-grow: 1;
     line-height: 1;
     font-size: 18px;
     font-weight: 400;
     padding-right: 5px;
+
+    .tooltip-content {
+      left: 50px;
+      top: 100%;
+      width: 100%;
+      max-width: 150px;
+      text-transform: capitalize;
+    }
+
+    svg:hover + .tooltip-content {
+      opacity: 1;
+      z-index: 99;
+    }
   }
   .checked &__title {
     font-weight: 700;
   }
   &__price {
-    width: 15%;
+    position: relative;
+    width: 30px;
+    margin-right: 8%;
     flex-shrink: 0;
+
+    .tooltip-content {
+      left: 25px;
+      top: 95%;
+    }
+
+    &:hover .tooltip-content {
+      opacity: 1;
+      z-index: 99;
+    }
   }
   &__comment {
     .input {
@@ -101,6 +133,32 @@
     svg {
       margin-right: 5px;
       vertical-align: top;
+    }
+  }
+  &__disabled-msg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px solid rgba($font-color-silver, .5);
+    padding: 5px 15px;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    z-index: -9;
+    opacity: 0;
+  }
+
+  @media screen and (max-width: 991px) {
+    &__price {
+      .tooltip-content {
+        left: auto;
+        right: -10px;
+        top: 100%;
+      }
+    }
+    &__title {
+      font-size: 14px;
     }
   }
 }

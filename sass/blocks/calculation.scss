@@ -6,11 +6,6 @@
   background-color: $u-white;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.22);
 
-  @media screen and (max-width: 1230px) {
-    top: 200px;
-    right: 15px;
-  }
-
   &__top {
     display: flex;
     align-items: center;
@@ -56,5 +51,24 @@
       background-color: $u-yellow;
       font-weight: 700;
     }
+  }
+
+  @media screen and (max-width: 1229px) {
+    width: 250px;
+    top: 200px;
+    right: 15px;
+
+    &__list > *,
+    &__total,
+    &__top {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    position: static;
+  }
+  @media screen and (max-width: $tablet-width) {
+    width: 100%;
   }
 }

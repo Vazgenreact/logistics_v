@@ -2,11 +2,26 @@
   padding: 15px 20px;
   background-color: $u-yellow;
 
+  a {
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+  }
+
   &__text {
     padding: 0 15px;
     flex-grow: 1;
   }
   .btn {
     background-color: transparent;
+  }
+
+  @media screen and (max-width: 1229px) {
+    .btn {
+      padding: 10px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
   }
 }

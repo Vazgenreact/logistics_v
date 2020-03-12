@@ -150,6 +150,7 @@
 
         &__part {
             float: left;
+            max-width: 240px;
         }
 
         &__additionally {
@@ -158,7 +159,9 @@
 
         &__center {
             float: right;
-            max-width: 480px;
+            max-width: 450px;
+            padding: 0 10px;
+          box-sizing: border-box;
 
             &--max {
                 margin-left: 0;
@@ -173,11 +176,15 @@
     }
 }
 
+@media screen and (max-width: 991px){
+  .container {
+    flex-wrap: wrap;
+  }
+}
+
 /*Мобильные*/
 @media (max-width: $tablet-width - 2) {
     .container {
-        display: flex;
-        flex-wrap: wrap;
         &__part,
         &__additionally {
             max-width: 100%;

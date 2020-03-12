@@ -24,6 +24,8 @@
     .text {
       padding: 9px 15px;
       display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     &.active + .custom-select__list {

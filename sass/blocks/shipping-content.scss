@@ -53,6 +53,22 @@
       border-bottom-color: $u-white;
     }
   }
+
+  @media screen and (max-width: 1229px) {
+    padding: 0 10px;
+
+    &__link {
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    margin: -44px 0 0;
+
+    &__link {
+      font-size: 14px;
+      padding: 10px 5px;
+    }
+  }
 }
 
 .shipping-content {
@@ -60,6 +76,14 @@
   padding: 22px 30px;
   border: 1px solid $silver-big;
   margin-top: -1px;
+
+  @media screen and (max-width: 1229px) {
+    padding: 20px 15px;
+  }
+  .helper:after,
+  .helper:hover:after {
+    display: none;
+  }
 }
 
 .orders-slider {
@@ -143,6 +167,11 @@
       .semicircle {
         border-color: $font-color-silver;
       }
+    }
+
+    @media screen and (max-width: 576px) {
+      max-width: 250px;
+      min-width: 250px;
     }
   }
 }
@@ -308,6 +337,10 @@
     }
   }
 
+  .tooltip-content {
+    width: 240px;
+  }
+
   .checkbox {
     width: 48%;
 
@@ -318,6 +351,14 @@
   .delivery-methods {
     display: flex;
     justify-content: space-between;
+  }
+  @media (max-width: 576px) {
+    .delivery-methods {
+      flex-direction: column;
+    }
+    .checkbox {
+      width: 90%;
+    }
   }
 }
 
@@ -365,5 +406,25 @@
 
   .custom-select {
     max-width: 130px;
+  }
+  .tooltip-content {
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .delivery-formData {
+    .custom-select {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 10px;
+    }
+    .mobile-wrap {
+      .input {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+    }
   }
 }
