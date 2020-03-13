@@ -38,6 +38,18 @@
       .helper:hover:after {
         display: none;
       }
+      .tooltip-content {
+        left: auto;
+        top: 0;
+        right: 0;
+        color: $font-color-main;
+        width: 230px;
+      }
+      &:hover .tooltip-content {
+        opacity: 1;
+        z-index: 9;
+        transition: .2s;
+      }
     }
     .icon {
       width: 70px;
@@ -59,11 +71,6 @@
     &:hover {
       .checkbox input:not(:disabled):not(:checked) + span:after {
         opacity: .3;
-      }
-      .methods__disabled-msg {
-        opacity: 1;
-        z-index: 9;
-        transition: .2s;
       }
     }
   }

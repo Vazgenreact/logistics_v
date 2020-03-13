@@ -426,7 +426,8 @@
                         <span></span>
                     </span>
                 </label>
-                <label class="methods__item checkbox--right disabled" title="Недоступно для данной отправки груза">
+                <label class="methods__item checkbox--right disabled">
+                    <span class="tooltip-content">Недоступно для данной отправки груза</span>
                     <svg class="methods__icon" width="25" height="25">
                         <use href="#palet"></use>
                     </svg>
@@ -688,12 +689,15 @@
                         </div>
                     </div>
                     <!--        filter btn        -->
-                    <button class="filter-btn l-flex" type="button">
+                    <div class="l-flex mb-10">
                         <svg width="15" height="16">
                             <use href="#filter"></use>
                         </svg>
-                        <span>Сортировать по: <u>срокам</u> стоимости</span>
-                    </button>
+                        <span>Сортировать по:
+                            <button class="filter-btn active" type="button">срокам</button>
+                            <button class="filter-btn" type="button">стоимости</button>
+                        </span>
+                    </div>
                     <!--        Method list        -->
                     <!--        Изначально нет классов checked/unchecked, как только один выбрали должен быть так как сайчас        -->
                     <label class="methods__item checkbox--right checked">
@@ -717,7 +721,7 @@
                     </label>
                     <!--        Изначально дизаблед        -->
                     <label class="methods__item checkbox--right disabled">
-                        <span class="methods__disabled-msg">Недоступно для данной отправки груза</span>
+                        <span class="tooltip-content">Недоступно для данной отправки груза</span>
                         <span class="icon">
                             <svg width="70" height="31">
                                 <use href="#avia"></use>
@@ -841,14 +845,17 @@
                         отправить груз внутри страны ТК, которой нет в списке, выберите соответствующий пункт меню и
                         укажите название ТК в комментарии к заявке.</p>
                     <!--        filter btn        -->
-                    <button class="filter-btn l-flex" type="button">
+                    <div class="l-flex mb-10">
                         <svg width="15" height="16">
                             <use href="#filter"></use>
                         </svg>
-                        <span>Сортировать по: <u>срокам</u> стоимости</span>
-                    </button>
+                        <span>Сортировать по:
+                            <button class="filter-btn active" type="button">срокам</button>
+                            <button class="filter-btn" type="button">стоимости</button>
+                        </span>
+                    </div>
                     <!--        Method list        -->
-                    <!--        Изначально нет классов checked/unchecked, как только один выбрали должен быть так как сайчас        -->
+                    <!--        Изначально нет классов checked/unchecked, как только один выбрали должен быть один checked, остальные unchecked, а еще не забудь input поставить дизаблед и чекед         -->
                     <label class="methods__item checkbox--right">
                         <span class="image">
                             <img src="img/cdek.png" alt="">
@@ -1005,9 +1012,7 @@
                     </label>
                     <label class="methods__item checkbox--right">
                         <span class="image">
-                            <svg width="25" height="24">
-                                <use href="#samovizov"></use>
-                            </svg>
+                            <img src="img/samovizov.png" alt="">
                         </span>
                         <strong class="methods__title text--uppercase">Самовывоз<br> люблино</strong>
                         <span class="methods__days">
@@ -1024,9 +1029,7 @@
                     </label>
                     <label class="methods__item checkbox--right">
                         <span class="image">
-                            <svg width="25" height="24">
-                                <use href="#samovizov"></use>
-                            </svg>
+                            <img src="img/samovizov.png" alt="">
                         </span>
                         <strong class="methods__title text--uppercase">Самовывоз<br> южные ворота</strong>
                         <span class="methods__days">
@@ -1086,6 +1089,11 @@
                 <div class="list-item update">
                     <span>Страховой сбор</span>
                     <span>10$</span>
+                    <div class="tooltip-content">
+                        Весь груз отправляемый нашей транспортной компанией подлежит обязательному страхованию.<br><br>
+                        Для ознакомления с условиями страхования
+                        и тарифами перейдите в раздел "Часто задаваемые вопросы".
+                    </div>
                 </div>
                 <div class="list-item">
                     <span>Упаковка и погр.работы</span>
