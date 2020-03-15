@@ -1,0 +1,20 @@
+.loaded-images {
+  position: relative;
+  margin-bottom: 20px;
+
+  .stock-images__list {
+    display: flex;
+    overflow: hidden;
+    padding-left: 30px;
+  }
+  .stock-images__item {
+    border: 1px solid $silver-normal;
+
+    &.add-img {
+      border-color: $font-color-main;
+      cursor: pointer;
+      background-color: #fff;
+      flex-shrink: 0;
+    }
+  }
+}

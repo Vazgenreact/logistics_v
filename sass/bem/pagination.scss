@@ -3,6 +3,7 @@
     @include flex;
     justify-content: flex-start;
     align-items: stretch;
+    max-width: 100%;
 
     &__item {
         margin-right: 10px;
@@ -15,7 +16,7 @@
         background-color: $u-white;
         color: $font-color-main;
         border-radius: 3px;
-        border: 1px solid transparent;
+        border: 1px solid $silver-big;
         box-sizing: border-box;
         text-align: center;
         width: 30px;
@@ -26,16 +27,23 @@
 
         svg {
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: text-top;
         }
 
-        &:hover:not(&--active) {
+      .double-arrow {
+        vertical-align: initial;
+      }
+
+        &:not(.disabled):not(&--active):hover {
             border-color: $font-color-silver;
         }
 
         &--active {
             border-color: $font-color-main;
         }
+      &.disabled svg {
+        opacity: .3;
+      }
     }
 }
 

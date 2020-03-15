@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics Список заказов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<!-- Это спрайт c svg иконками -->
+<div class="none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<header class="main top">
+    <img src="img/logo.svg" alt="Topzakazz logistics logo" class="top__logo">
+    <a href="#" class="text  text--uppercase  text--regular  text--main  top__exit">Выход</a>
+</header>
+
+<section class="main">
+    <div class="user-box">
+        <p class="user-box__text">
+            <small class="text  text--little  text--regular">Здравствуйте,</small>
+            <span class="text  text--uppercase  text--bold  user-box__name">Алексей Хайрутдинов</span>
+        </p>
+        <div class="user-box__balance">
+            <a href="#" class="btn  btn--border  btn--arrow  user-box__btn  user-box__btn--left">
+                Пополнить
+                <svg class="arrow  arrow--right">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
+            <div class="select select-valuted user-box__select">
+                <div class="select__param">
+                    <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
+                </div>
+                <!-- Если нужно показать селект - показываем select__list display: block; ну или как-то чтоб поменять это свойство-->
+                <div class="select__list">
+                    <div class="select__item" data-value="4187.63 RUB">
+                        <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
+                    </div>
+                    <div class="select__item" data-value="418.7 CNY">
+                        <strong>418.7</strong><small>.63</small> <span class="helper" data-help="Юани">¥</span>
+                    </div>
+                    <div class="select__item" data-value="65 USD">
+                        <strong>65</strong><small>.63</small> <span class="helper" data-help="Доллары">$</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#"
+               class="btn  btn--border  btn--border_disabled  btn--arrow  user-box__btn  user-box__btn--right helper helper--payout"
+               data-help="В настоящий момент вывод средств производится в ручном режиме. Свяжитесь с тех. поддержкой через 'Мои сообщения'.">
+                Вывести
+                <svg class="arrow  arrow--right">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<main class="main container">
+    <div class="container__part">
+        <ul class="part">
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--active  text--bold">мои заказы на
+                    выкуп</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои отправки из китая</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои запросы на поиск</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">мои финансы</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои сообщения</a>
+            </li>
+        </ul>
+
+        <ul class="part  container__user-sidebar">
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">моя информация</a>
+            </li>
+            <li class="part__item">
+                <a href="change-password.html" class="text  text--uppercase  part__link">изменить пароль</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">мои адреса</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои социальные сети</a>
+            </li>
+            <li class="part__item  part__item--partner">
+                <a href="#" class="text  text--uppercase  part__link">моя реферальная программа</a>
+            </li>
+        </ul>
+
+        <img src="img/email-confirmation.jpg" class="container__confirmation">
+    </div>
+
+    <div class="grow-1 pl-lg-30">
+        <div class="shipping-history__top">
+            <div class="shipping-top">
+                <div class="shipping-top__title">
+                    <img class="delivery-img" src="img/delivery.svg" alt="">
+                    <h5 class="text text--big text--uppercase text--bold">отправки из китая</h5>
+                </div>
+                <p class="text">В этом разделе находится вся информация по Вашим отправкам из Китая. В зависимости от задач,
+                    подготовьте новый расчет на доставку, сформируйте заказы на отправку со склада или посмотрите данные по
+                    уже отправленному товару.</p>
+            </div>
+
+            <ul class="shipping-nav">
+                <li class="shipping-nav__item"><a class="shipping-nav__link" href="#">заказы на складе</a></li>
+                <li class="shipping-nav__item"><a class="shipping-nav__link active" href="#">история отправок</a></li>
+                <li class="shipping-nav__item"><a class="shipping-nav__link" href="#">Новый расчет <br> на отправку</a></li>
+            </ul>
+        </div>
+
+        <div class="shipping-content">
+            <div>
+                <p>В данном разделе хранится вся информация о Ваших заявках на отправку и фактическим отправлениям.
+                    Обратите внимание, что фактически отправленные грузы могут отличаться от первичной заяявки на перевозку в части веса,
+                    габаритов, плотности груза и другим показателям. Поэтому мы сохраняем всю историю заказа на перевозку,
+                    чтобы Вы всегда могли ознакомится с деталями.</p>
+            </div>
+
+            <div class="custom-select filter-history">
+                <div class="input custom-select__input" id="filter_history_select" onclick="onToggleSelect(this)">
+                    <input class="input-hide" name="filter_history" value="all">
+                    <span class="text">Все</span>
+                </div>
+                <ul class="custom-select__list">
+                    <li class="custom-select__item" onclick="onChangeSelect('filter_history_select', 'all', this)">Все</li>
+                    <li class="custom-select__item" onclick="onChangeSelect('filter_history_select', 'awaiting-receipt', this)">Ожидает поступления на склад</li>
+                    <li class="custom-select__item" onclick="onChangeSelect('filter_history_select', 'awaiting-shipment', this)">Ожидает отправки</li>
+                    <li class="custom-select__item" onclick="onChangeSelect('filter_history_select', 'sent', this)">Отправлен</li>
+                    <li class="custom-select__item" onclick="onChangeSelect('filter_history_select', 'getting', this)">Получен</li>
+                </ul>
+            </div>
+
+            <div class="history-container">
+                <div class="history">
+                <button class="history__titles history__titles--bottom active">Заявка на перевозку груза</button>
+                <button class="history__titles history__titles--top">Фактическая отправка груза</button>
+
+                <div class="history__container">
+                    <!--    полукруги на бордерах     -->
+                    <span class="semicircle semicircle__top semicircle__top--left"></span>
+                    <span class="semicircle semicircle__top semicircle__top--right"></span>
+                    <span class="semicircle semicircle__bottom semicircle__bottom--left"></span>
+                    <span class="semicircle semicircle__bottom semicircle__bottom--right"></span>
+                    <!--    загаловок, принт     -->
+                    <div class="history__header l-flex align-items-end">
+                        <div class="grow-1">
+                            <small class="identifier identifier--green">Статус: Готов к отправке</small>
+                            <div class="text--big text--bold">Заказ на консолидацию №1</div>
+                        </div>
+                        <div class="l-flex">
+                            <button class="history__topIcon">
+                                <svg width="15" height="15">
+                                    <use href="#address"></use>
+                                </svg>
+                            </button>
+                            <button class="history__topIcon">
+                                <svg width="15" height="15">
+                                    <use href="#print"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!--   Детали 3 болка   -->
+                    <div class="history__list">
+                        <div class="history__item">
+                            <div class="orders-details">
+                                <p class="place-slider-title">Детали заказа:</p>
+                                <!--    Переключаем класс active у блоков detail-slide при клике на detail-btn   -->
+                                <div class="l-flex justify-between">
+                                    <button class="detail-btn active"></button>
+                                    <button class="detail-btn"></button>
+                                </div>
+                                <!--    Детали заказа    -->
+                                <div class="detail-slide active">
+                                    <ul class="details-list part">
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>Дата:</span>
+                                            <span>14.02.2020</span>
+                                        </li>
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>№ заявки:</span>
+                                            <span>548763</span>
+                                        </li>
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>Кол-во мест:</span>
+                                            <span class="color-blue">2</span>
+                                        </li>
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>Общий вес:</span>
+                                            <span>210 кг</span>
+                                        </li>
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>Общий объем:</span>
+                                            <span>0.25 м3</span>
+                                        </li>
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>Характер груза:</span>
+                                            <span>Электроника</span>
+                                        </li>
+                                    </ul>
+                                    <div class="stock-images mt-auto">
+                                        <div class="stock-images__list">
+                                            <button class="stock-images__btn stock-images__btn--left" disabled="">
+                                                <svg width="25" height="30" viewBox="0 0 512 512">
+                                                    <path d="M160 128.4L192.3 96 352 256 192.3 416 160 383.6 287.3 256z"></path>
+                                                </svg>
+                                            </button>
+                                            <button class="stock-images__btn stock-images__btn--right">
+                                                <svg width="25" height="30" viewBox="0 0 512 512">
+                                                    <path d="M160 128.4L192.3 96 352 256 192.3 416 160 383.6 287.3 256z"></path>
+                                                </svg>
+                                            </button>
+
+                                            <div class="stock-images__item">
+                                                <img class="stock-images__img" src="img/Rectangle695.png" alt="">
+                                                <button class="stock-images__zoom">
+                                                    <svg height="20" viewBox="0 0 139 139" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M127.558 111.961L100.249 84.65a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="stock-images__item">
+                                                <img class="stock-images__img" src="img/Rectangle697.png" alt="">
+                                                <button class="stock-images__zoom">
+                                                    <svg height="20" viewBox="0 0 139 139" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M127.558 111.961L100.249 84.65a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="stock-images__item">
+                                                <img class="stock-images__img" src="img/Rectangle698.png" alt="">
+                                                <button class="stock-images__zoom">
+                                                    <svg height="20" viewBox="0 0 139 139" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M127.558 111.961L100.249 84.65a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="stock-images__item">
+                                                <img class="stock-images__img" src="img/Rectangle697.png" alt="">
+                                                <button class="stock-images__zoom">
+                                                    <svg height="20" viewBox="0 0 139 139" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M127.558 111.961L100.249 84.65a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="stock-images__item">
+                                                <img class="stock-images__img" src="img/Rectangle698.png" alt="">
+                                                <button class="stock-images__zoom">
+                                                    <svg height="20" viewBox="0 0 139 139" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M127.558 111.961L100.249 84.65a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--    Кол-во мест    -->
+                                <div class="detail-slide ">
+                                    <div class="place-slider">
+                                        <!--    Переключаем класс active у блоков place-slider__item при клике на place-slider__btn   -->
+                                        <div class="place-slider__arrows">
+                                            <button class="place-slider__btn" disabled>
+                                                <svg class="arrow  arrow--left">
+                                                    <use href="#arrow"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="place-slider__btn">
+                                                <svg class="arrow  arrow--right">
+                                                    <use href="#arrow"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+
+                                        <div class="place-slider__list">
+                                            <div class="place-slider__item active">
+                                                <span class="place-slider__title text--bold">Место 1</span>
+
+                                                <ul class="details-list part">
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Габариты:</span>
+                                                        <span>0.1*0.3*0.5</span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Объем:</span>
+                                                        <span>0.25 м<sup>3</sup></span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Вес:</span>
+                                                        <span>20кг</span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Плотность:</span>
+                                                        <span>210 кг</span>
+                                                    </li>
+                                                    <li class="list-text">
+                                                        <p class="text text--small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            Donec condimentum, lacus vitae commodo convallis, augue neque blandit mi, vel pulvinar mauris nulla vitae augue.
+                                                            Aenean sit amet est sed nibh elementum rhoncus.
+                                                            Curabitur turpis sapien, vestibulum id mattis sit amet, rutrum eu sem.</p>
+                                                        <div class="tooltip-content">
+                                                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Donec condimentum, lacus vitae commodo convallis, augue neque blandit mi, vel pulvinar mauris nulla vitae augue.
+                                                                Aenean sit amet est sed nibh elementum rhoncus.
+                                                                Curabitur turpis sapien, vestibulum id mattis sit amet, rutrum eu sem.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="place-slider__item ">
+                                                <span class="place-slider__title text--bold">Место 2</span>
+
+                                                <ul class="details-list part">
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Габариты:</span>
+                                                        <span>0.1*0.3*0.5</span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Объем:</span>
+                                                        <span>0.25 м<sup>3</sup></span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Вес:</span>
+                                                        <span>20кг</span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Плотность:</span>
+                                                        <span>210 кг</span>
+                                                    </li>
+                                                    <li class="list-text">
+                                                        <p class="text text--small">“Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            Donec condimentum, lacus vitae commodo convallis, augue neque blandit mi,
+                                                            vel pulvinar mauris nulla vitae augue.”</p>
+                                                        <div class="tooltip-content">
+                                                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Donec condimentum, lacus vitae commodo convallis, augue neque blandit mi, vel pulvinar mauris nulla vitae augue.
+                                                                Aenean sit amet est sed nibh elementum rhoncus.
+                                                                Curabitur turpis sapien, vestibulum id mattis sit amet, rutrum eu sem.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history__item">
+                            <div class="orders-details">
+                                <p class="orders-details__title">Детали доставки:</p>
+                                <!--    Детали заказа    -->
+                                <ul class="details-list part">
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Китай - Россия</span>
+                                        <span>ЖД 8-12 дней</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Ориентировочная<br> дата прибытия</span>
+                                        <span>25.02.2020</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Китай - Россия</span>
+                                        <span>Сдек, до двери</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Ориентировочная<br> дата прибытия</span>
+                                        <span>25.02.2020</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-auto">
+                                    <a href="#" class="btn btn--border l-flex justify-center disabled">
+                                        подтвердить получение
+                                        <svg class="arrow  arrow--right">
+                                            <use href="#arrow"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history__item">
+                            <div class="orders-details">
+                                <p class="orders-details__title">Детали оплаты:</p>
+                                <!--    Детали заказа    -->
+                                <ul class="details-list part">
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Стоимость отправки:</span>
+                                        <span>200$</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Тариф</span>
+                                        <span>120$</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Страховой сбор</span>
+                                        <span>10$</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Упаковка и погр.работы</span>
+                                        <span>10$</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Статус:</span>
+                                        <span class="color-red">не оплачено</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span class="text--bold">Крайняя дата оплаты:</span>
+                                        <span class="text--bold">18.02.2020</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <div class="text tooltip-block">
+                                            Компенсация:
+                                            <div class="helper label__help hide-mobile">
+                                                <svg width="12" height="14">
+                                                    <use href="#info"></use>
+                                                </svg>
+                                                <div class="tooltip-content">
+                                                    <p class="text">Стоимость упаковки рассчитывается автоматически, исходя из габаритов Вашего товара.</p>
+                                                    <strong>Обратите внимание,</strong> При выборе данного метода упаковки итоговый вес груза будет изменен. Мы проводим автоматический расчет из учета габаритов Вашего груза. Значения являются приблизительными и могут отличаться при фактической отправке.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span>0$</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-auto">
+                                    <a href="#" class="btn btn--arrow l-flex justify-center">
+                                        оплатить
+                                        <svg class="arrow  arrow--right">
+                                            <use href="#arrow"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="history">
+                <button class="history__titles history__titles--bottom ">Заявка на перевозку груза</button>
+                <button class="history__titles history__titles--top active">Фактическая отправка груза</button>
+
+                <div class="history__container">
+                    <!--    полукруги на бордерах     -->
+                    <span class="semicircle semicircle__top semicircle__top--left"></span>
+                    <span class="semicircle semicircle__top semicircle__top--right"></span>
+                    <span class="semicircle semicircle__bottom semicircle__bottom--left"></span>
+                    <span class="semicircle semicircle__bottom semicircle__bottom--right"></span>
+                    <!--    загаловок, принт     -->
+                    <div class="history__header l-flex align-items-end">
+                        <div class="grow-1">
+                            <small class="identifier identifier--green">Статус: Готов к отправке</small>
+                            <div class="text--big text--bold">Заказ на консолидацию №2</div>
+                        </div>
+                        <div class="l-flex">
+                            <button class="history__topIcon">
+                                <svg width="15" height="15">
+                                    <use href="#print"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!--   Детали 3 болка   -->
+                    <div class="history__list">
+                        <div class="history__item">
+                            <div class="orders-details">
+                                <p class="place-slider-title">Детали заказа:</p>
+                                <!--    Переключаем класс active у блоков detail-slide при клике на detail-btn   -->
+                                <div class="l-flex justify-between">
+                                    <button class="detail-btn "></button>
+                                    <button class="detail-btn active"></button>
+                                </div>
+                                <!--    Детали заказа    -->
+                                <div class="detail-slide ">
+                                    <ul class="details-list part">
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>Дата:</span>
+                                            <span>14.02.2020</span>
+                                        </li>
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>№ заявки:</span>
+                                            <span>548763</span>
+                                        </li>
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>Кол-во мест:</span>
+                                            <span class="color-blue">2</span>
+                                        </li>
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>Общий вес:</span>
+                                            <span>210 кг</span>
+                                        </li>
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>Общий объем:</span>
+                                            <span>0.25 м3</span>
+                                        </li>
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>Характер груза:</span>
+                                            <span>Электроника</span>
+                                        </li>
+                                    </ul>
+                                    <div class="stock-images mt-auto">
+                                        <div class="stock-images__list">
+                                            <button class="stock-images__btn stock-images__btn--left" disabled="">
+                                                <svg width="25" height="30" viewBox="0 0 512 512">
+                                                    <path d="M160 128.4L192.3 96 352 256 192.3 416 160 383.6 287.3 256z"></path>
+                                                </svg>
+                                            </button>
+                                            <button class="stock-images__btn stock-images__btn--right">
+                                                <svg width="25" height="30" viewBox="0 0 512 512">
+                                                    <path d="M160 128.4L192.3 96 352 256 192.3 416 160 383.6 287.3 256z"></path>
+                                                </svg>
+                                            </button>
+
+                                            <div class="stock-images__item">
+                                                <img class="stock-images__img" src="img/Rectangle695.png" alt="">
+                                                <button class="stock-images__zoom">
+                                                    <svg height="20" viewBox="0 0 139 139" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M127.558 111.961L100.249 84.65a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="stock-images__item">
+                                                <img class="stock-images__img" src="img/Rectangle697.png" alt="">
+                                                <button class="stock-images__zoom">
+                                                    <svg height="20" viewBox="0 0 139 139" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M127.558 111.961L100.249 84.65a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="stock-images__item">
+                                                <img class="stock-images__img" src="img/Rectangle698.png" alt="">
+                                                <button class="stock-images__zoom">
+                                                    <svg height="20" viewBox="0 0 139 139" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M127.558 111.961L100.249 84.65a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="stock-images__item">
+                                                <img class="stock-images__img" src="img/Rectangle697.png" alt="">
+                                                <button class="stock-images__zoom">
+                                                    <svg height="20" viewBox="0 0 139 139" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M127.558 111.961L100.249 84.65a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="stock-images__item">
+                                                <img class="stock-images__img" src="img/Rectangle698.png" alt="">
+                                                <button class="stock-images__zoom">
+                                                    <svg height="20" viewBox="0 0 139 139" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M127.558 111.961L100.249 84.65a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--    Кол-во мест    -->
+                                <div class="detail-slide active">
+                                    <div class="place-slider">
+                                        <!--    Переключаем класс active у блоков place-slider__item при клике на place-slider__btn   -->
+                                        <div class="place-slider__arrows">
+                                            <button class="place-slider__btn" disabled>
+                                                <svg class="arrow  arrow--left">
+                                                    <use href="#arrow"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="place-slider__btn">
+                                                <svg class="arrow  arrow--right">
+                                                    <use href="#arrow"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+
+                                        <div class="place-slider__list">
+                                            <div class="place-slider__item active">
+                                                <span class="place-slider__title text--bold">Место 1</span>
+
+                                                <ul class="details-list part">
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Габариты:</span>
+                                                        <span>0.1*0.3*0.5</span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Объем:</span>
+                                                        <span>0.25 м<sup>3</sup></span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Вес:</span>
+                                                        <span>20кг</span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Плотность:</span>
+                                                        <span>210 кг</span>
+                                                    </li>
+                                                    <li class="list-text">
+                                                        <p class="text text--small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            Donec condimentum, lacus vitae commodo convallis, augue neque blandit mi, vel pulvinar mauris nulla vitae augue.
+                                                            Aenean sit amet est sed nibh elementum rhoncus.
+                                                            Curabitur turpis sapien, vestibulum id mattis sit amet, rutrum eu sem.</p>
+                                                        <div class="tooltip-content">
+                                                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Donec condimentum, lacus vitae commodo convallis, augue neque blandit mi, vel pulvinar mauris nulla vitae augue.
+                                                                Aenean sit amet est sed nibh elementum rhoncus.
+                                                                Curabitur turpis sapien, vestibulum id mattis sit amet, rutrum eu sem.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="place-slider__item ">
+                                                <span class="place-slider__title text--bold">Место 2</span>
+
+                                                <ul class="details-list part">
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Габариты:</span>
+                                                        <span>0.1*0.3*0.5</span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Объем:</span>
+                                                        <span>0.25 м<sup>3</sup></span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Вес:</span>
+                                                        <span>20кг</span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Плотность:</span>
+                                                        <span>210 кг</span>
+                                                    </li>
+                                                    <li class="list-text">
+                                                        <p class="text text--small">“Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            Donec condimentum, lacus vitae commodo convallis, augue neque blandit mi,
+                                                            vel pulvinar mauris nulla vitae augue.”</p>
+                                                        <div class="tooltip-content">
+                                                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Donec condimentum, lacus vitae commodo convallis, augue neque blandit mi, vel pulvinar mauris nulla vitae augue.
+                                                                Aenean sit amet est sed nibh elementum rhoncus.
+                                                                Curabitur turpis sapien, vestibulum id mattis sit amet, rutrum eu sem.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history__item">
+                            <div class="orders-details">
+                                <p class="orders-details__title">Детали доставки:</p>
+                                <!--    Детали заказа    -->
+                                <ul class="details-list part">
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Китай - Россия</span>
+                                        <span>ЖД 8-12 дней</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Ориентировочная<br> дата прибытия</span>
+                                        <span>25.02.2020</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Китай - Россия</span>
+                                        <span>Сдек, до двери</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Ориентировочная<br> дата прибытия</span>
+                                        <span>25.02.2020</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-auto">
+                                    <a href="#" class="btn btn--border l-flex justify-center">
+                                        подтвердить получение
+                                        <svg class="arrow  arrow--right">
+                                            <use href="#arrow"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history__item">
+                            <div class="orders-details">
+                                <p class="orders-details__title">Детали оплаты:</p>
+                                <!--    Детали заказа    -->
+                                <ul class="details-list part">
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Стоимость отправки:</span>
+                                        <span>200$</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Тариф</span>
+                                        <span>120$</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Страховой сбор</span>
+                                        <span>10$</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Упаковка и погр.работы</span>
+                                        <span>10$</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Статус:</span>
+                                        <span class="text--bold">оплачено</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Крайняя дата оплаты:</span>
+                                        <span class="text--bold">-</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <div class="text tooltip-block">
+                                            Компенсация:
+                                            <div class="helper label__help hide-mobile">
+                                                <svg width="12" height="14">
+                                                    <use href="#info"></use>
+                                                </svg>
+                                                <div class="tooltip-content">
+                                                    <p class="text">Стоимость упаковки рассчитывается автоматически, исходя из габаритов Вашего товара.</p>
+                                                    <strong>Обратите внимание,</strong> При выборе данного метода упаковки итоговый вес груза будет изменен. Мы проводим автоматический расчет из учета габаритов Вашего груза. Значения являются приблизительными и могут отличаться при фактической отправке.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span>0$</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="history">
+                <button class="history__titles history__titles--bottom active">Заявка на перевозку груза</button>
+                <button class="history__titles history__titles--top">Фактическая отправка груза</button>
+
+                <div class="history__container">
+                    <!--    полукруги на бордерах     -->
+                    <span class="semicircle semicircle__top semicircle__top--left"></span>
+                    <span class="semicircle semicircle__top semicircle__top--right"></span>
+                    <span class="semicircle semicircle__bottom semicircle__bottom--left"></span>
+                    <span class="semicircle semicircle__bottom semicircle__bottom--right"></span>
+                    <!--    загаловок, принт     -->
+                    <div class="history__header l-flex align-items-end">
+                        <div class="grow-1">
+                            <small class="identifier identifier--green">Статус: Готов к отправке</small>
+                            <div class="text--big text--bold">Заказ на консолидацию №3</div>
+                        </div>
+                        <div class="l-flex">
+                            <button class="history__topIcon">
+                                <svg width="15" height="15">
+                                    <use href="#print"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!--   Детали 3 болка   -->
+                    <div class="history__list">
+                        <div class="history__item">
+                            <div class="orders-details">
+                                <p class="place-slider-title">Детали заказа:</p>
+                                <!--    Переключаем класс active у блоков detail-slide при клике на detail-btn   -->
+                                <div class="l-flex justify-between">
+                                    <button class="detail-btn active"></button>
+                                    <button class="detail-btn "></button>
+                                </div>
+                                <!--    Детали заказа    -->
+                                <div class="detail-slide active">
+                                    <ul class="details-list part">
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>Дата:</span>
+                                            <span>14.02.2020</span>
+                                        </li>
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>№ заявки:</span>
+                                            <span>548763</span>
+                                        </li>
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>Кол-во мест:</span>
+                                            <span class="color-blue">2</span>
+                                        </li>
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>Общий вес:</span>
+                                            <span>210 кг</span>
+                                        </li>
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>Общий объем:</span>
+                                            <span>0.25 м3</span>
+                                        </li>
+                                        <li class="details-list__item wrap-form__flex">
+                                            <span>Характер груза:</span>
+                                            <span>Электроника</span>
+                                        </li>
+                                    </ul>
+                                    <div class="stock-images mt-auto">
+                                        <div class="stock-images__list">
+                                            <button class="stock-images__btn stock-images__btn--left" disabled="">
+                                                <svg width="25" height="30" viewBox="0 0 512 512">
+                                                    <path d="M160 128.4L192.3 96 352 256 192.3 416 160 383.6 287.3 256z"></path>
+                                                </svg>
+                                            </button>
+                                            <button class="stock-images__btn stock-images__btn--right">
+                                                <svg width="25" height="30" viewBox="0 0 512 512">
+                                                    <path d="M160 128.4L192.3 96 352 256 192.3 416 160 383.6 287.3 256z"></path>
+                                                </svg>
+                                            </button>
+
+                                            <div class="stock-images__item">
+                                                <img class="stock-images__img" src="img/Rectangle695.png" alt="">
+                                                <button class="stock-images__zoom">
+                                                    <svg height="20" viewBox="0 0 139 139" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M127.558 111.961L100.249 84.65a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="stock-images__item">
+                                                <img class="stock-images__img" src="img/Rectangle697.png" alt="">
+                                                <button class="stock-images__zoom">
+                                                    <svg height="20" viewBox="0 0 139 139" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M127.558 111.961L100.249 84.65a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="stock-images__item">
+                                                <img class="stock-images__img" src="img/Rectangle698.png" alt="">
+                                                <button class="stock-images__zoom">
+                                                    <svg height="20" viewBox="0 0 139 139" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M127.558 111.961L100.249 84.65a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="stock-images__item">
+                                                <img class="stock-images__img" src="img/Rectangle697.png" alt="">
+                                                <button class="stock-images__zoom">
+                                                    <svg height="20" viewBox="0 0 139 139" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M127.558 111.961L100.249 84.65a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="stock-images__item">
+                                                <img class="stock-images__img" src="img/Rectangle698.png" alt="">
+                                                <button class="stock-images__zoom">
+                                                    <svg height="20" viewBox="0 0 139 139" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M127.558 111.961L100.249 84.65a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--    Кол-во мест    -->
+                                <div class="detail-slide ">
+                                    <div class="place-slider">
+                                        <!--    Переключаем класс active у блоков place-slider__item при клике на place-slider__btn   -->
+                                        <div class="place-slider__arrows">
+                                            <button class="place-slider__btn" disabled>
+                                                <svg class="arrow  arrow--left">
+                                                    <use href="#arrow"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="place-slider__btn">
+                                                <svg class="arrow  arrow--right">
+                                                    <use href="#arrow"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+
+                                        <div class="place-slider__list">
+                                            <div class="place-slider__item active">
+                                                <span class="place-slider__title text--bold">Место 1</span>
+
+                                                <ul class="details-list part">
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Габариты:</span>
+                                                        <span>0.1*0.3*0.5</span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Объем:</span>
+                                                        <span>0.25 м<sup>3</sup></span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Вес:</span>
+                                                        <span>20кг</span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Плотность:</span>
+                                                        <span>210 кг</span>
+                                                    </li>
+                                                    <li class="list-text">
+                                                        <p class="text text--small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            Donec condimentum, lacus vitae commodo convallis, augue neque blandit mi, vel pulvinar mauris nulla vitae augue.
+                                                            Aenean sit amet est sed nibh elementum rhoncus.
+                                                            Curabitur turpis sapien, vestibulum id mattis sit amet, rutrum eu sem.</p>
+                                                        <div class="tooltip-content">
+                                                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Donec condimentum, lacus vitae commodo convallis, augue neque blandit mi, vel pulvinar mauris nulla vitae augue.
+                                                                Aenean sit amet est sed nibh elementum rhoncus.
+                                                                Curabitur turpis sapien, vestibulum id mattis sit amet, rutrum eu sem.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="place-slider__item ">
+                                                <span class="place-slider__title text--bold">Место 2</span>
+
+                                                <ul class="details-list part">
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Габариты:</span>
+                                                        <span>0.1*0.3*0.5</span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Объем:</span>
+                                                        <span>0.25 м<sup>3</sup></span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Вес:</span>
+                                                        <span>20кг</span>
+                                                    </li>
+                                                    <li class="details-list__item wrap-form__flex">
+                                                        <span>Плотность:</span>
+                                                        <span>210 кг</span>
+                                                    </li>
+                                                    <li class="list-text">
+                                                        <p class="text text--small">“Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            Donec condimentum, lacus vitae commodo convallis, augue neque blandit mi,
+                                                            vel pulvinar mauris nulla vitae augue.”</p>
+                                                        <div class="tooltip-content">
+                                                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Donec condimentum, lacus vitae commodo convallis, augue neque blandit mi, vel pulvinar mauris nulla vitae augue.
+                                                                Aenean sit amet est sed nibh elementum rhoncus.
+                                                                Curabitur turpis sapien, vestibulum id mattis sit amet, rutrum eu sem.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history__item">
+                            <div class="orders-details">
+                                <p class="orders-details__title">Детали доставки:</p>
+                                <!--    Детали заказа    -->
+                                <ul class="details-list part">
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Китай - Россия</span>
+                                        <span>ЖД 8-12 дней</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Ориентировочная<br> дата прибытия</span>
+                                        <span>25.02.2020</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Китай - Россия</span>
+                                        <span>Сдек, до двери</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Ориентировочная<br> дата прибытия</span>
+                                        <span>25.02.2020</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-auto">
+                                    <a href="#" class="btn btn--border l-flex justify-center border--mutted">
+                                        <svg width="20" height="20" class="mr-10">
+                                            <use href="#check"></use>
+                                        </svg>
+                                        груз получен
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history__item">
+                            <div class="orders-details">
+                                <p class="orders-details__title">Детали оплаты:</p>
+                                <!--    Детали заказа    -->
+                                <ul class="details-list part">
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Стоимость отправки:</span>
+                                        <span>200$</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Тариф</span>
+                                        <span>120$</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Страховой сбор</span>
+                                        <span>10$</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Упаковка и погр.работы</span>
+                                        <span>10$</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Статус:</span>
+                                        <span class="text--bold">оплачено</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <span>Крайняя дата оплаты:</span>
+                                        <span class="text--bold">-</span>
+                                    </li>
+                                    <li class="details-list__item wrap-form__flex">
+                                        <div class="text tooltip-block">
+                                            Компенсация:
+                                            <div class="helper label__help hide-mobile">
+                                                <svg width="12" height="14">
+                                                    <use href="#info"></use>
+                                                </svg>
+                                                <div class="tooltip-content">
+                                                    <p class="text">Стоимость упаковки рассчитывается автоматически, исходя из габаритов Вашего товара.</p>
+                                                    <strong>Обратите внимание,</strong> При выборе данного метода упаковки итоговый вес груза будет изменен. Мы проводим автоматический расчет из учета габаритов Вашего груза. Значения являются приблизительными и могут отличаться при фактической отправке.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span>0$</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <ul class="pagination justify-center">
+                <li class="pagination__item hide-mobile">
+                    <a href="#" class="pagination__link disabled">
+                        <svg class="double-arrow arrow--left" aria-label="На предыдущую страницу">
+                            <use href="#double-arrow"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link disabled">
+                        <svg class="arrow arrow--left" aria-label="На предыдущую страницу">
+                            <use href="#arrow"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">1</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link  pagination__link--active">2</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">3</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">…</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">14</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">
+                        <svg class="arrow  arrow--right" aria-label="На следующую страницу">
+                            <use href="#arrow"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="pagination__item hide-mobile">
+                    <a href="#" class="pagination__link">
+                        <svg class="double-arrow arrow--right" aria-label="На следующую страницу">
+                            <use href="#double-arrow"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

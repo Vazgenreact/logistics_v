@@ -47,6 +47,7 @@
 @import "bem/mini-cart.scss";
 @import "bem/redemption-order.scss";
 @import "bem/tooltip-block.scss";
+@import "bem/checkbox-icon.scss";
 
 /*Блоки в сайте*/
 @import "blocks/wrap-form.scss";
@@ -81,6 +82,12 @@
 @import "blocks/methods.scss";
 @import "blocks/create-address.scss";
 @import "blocks/custom-select.scss";
+@import "blocks/additional-info.scss";
+@import "blocks/loaded-images.scss";
+@import "blocks/screenshots.scss";
+@import "blocks/cargo-data.scss";
+@import "blocks/shipping-history.scss";
+@import "blocks/history.scss";
 
 /*Помощники*/
 @import "libs/helpers.scss";

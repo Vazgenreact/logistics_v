@@ -33,38 +33,3 @@ select {
     padding: 0 15px;
     box-sizing: border-box;
 }
-
-.relative {
-  position: relative;
-}
-
-.pt-25 {
-  padding-top: 25px;
-}
-.pl-30 {
-  padding-left: 30px;
-}
-.mb-10 {
-  margin-bottom: 10px;
-}
-.ml-5 {
-  margin-left: 5px;
-}
-.mr-10 {
-  margin-right: 10px !important;
-}
-.grow-1 {
-  flex-grow: 1;
-}
-.shrink-0 {
-  flex-shrink: 0;
-}
-
-@media screen and (max-width: 576px) {
-  .hide-mobile {
-    display: none;
-  }
-  .mobile-wrap {
-    flex-wrap: wrap !important;
-  }
-}

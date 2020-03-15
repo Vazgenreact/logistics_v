@@ -1,3 +1,15 @@
+.calculation-container {
+  width: 278px;
+  flex-shrink: 0;
+
+  @media screen and (max-width: 1229px) {
+    width: 250px;
+  }
+  @media screen and (max-width: 991px) {
+    width: 100%;
+  }
+}
+
 .calculation {
   position: fixed;
   width: 278px;
@@ -83,6 +95,8 @@
   }
   @media screen and (max-width: 991px) {
     position: static;
+    width: 100%;
+    max-width: 360px;
 
     .list-item {
       .tooltip-content {

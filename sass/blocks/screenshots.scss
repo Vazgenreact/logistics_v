@@ -1,0 +1,23 @@
+.screenshots {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__title {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .input {
+    flex-grow: 1;
+  }
+  .add-img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    flex-shrink: 0;
+    .cross {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

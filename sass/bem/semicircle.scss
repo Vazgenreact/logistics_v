@@ -18,4 +18,34 @@
     right: -20px;
     transform: translate(50%, -50%) rotate(-135deg);
   }
+
+  &__top {
+    top: -10px;
+    transform: rotate(135deg);
+
+    &--left {
+      left: calc(33.33% - 9px);
+    }
+    &--right {
+      left: calc(66.67% - 9px);
+    }
+  }
+  &__bottom {
+    top: auto;
+    bottom: -10px;
+    transform: rotate(-45deg);
+
+    &--left {
+      left: calc(33.33% - 9px);
+    }
+    &--right {
+      left: calc(66.67% - 9px);
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &__top,
+    &__bottom {
+      display: none;
+    }
+  }
 }

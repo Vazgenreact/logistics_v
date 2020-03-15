@@ -1,0 +1,105 @@
+.cargo-data {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0 12px;
+
+  &__row {
+    width: 100%;
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    .checkbox {
+      margin-left: 15px;
+      margin-bottom: 10px;
+      color: $font-color-silver;
+    }
+  }
+  &__input {
+    width: 22%;
+
+    .text--small {
+      flex-wrap: wrap;
+      line-height: 19px;
+      padding-left: 8px;
+      margin-top: 3px;
+    }
+    .cross {
+      padding: 4px 7px 3px 3px;
+      width: 22px;
+      height: 19px;
+    }
+    .input-info {
+      position: absolute;
+      color: $font-color-silver;
+      right: 5px;
+      top: 10px;
+    }
+  }
+  .custom-select {
+    width: 100%;
+    padding-right: 0;
+
+    .label__help {
+      right: 10px;
+      top: 15px;
+    }
+    .text.l-flex {
+      padding: 8px 15px;
+    }
+    &__item {
+      padding: 0;
+    }
+  }
+  .tooltip-block {
+    padding-right: 0;
+    padding-left: 5px;
+    vertical-align: middle;
+
+    &:hover .tooltip-content {
+      visibility: visible;
+      opacity: 1;
+      z-index: 99;
+    }
+  }
+  .input {
+    width: 100%;
+    margin-top: 5px;
+    box-sizing: border-box;
+
+    &::-webkit-input-placeholder {
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+      opacity: 1;
+    }
+
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
+  &__symbol {
+    line-height: 42px;
+    width: 4%;
+    text-align: center;
+  }
+}
+
+.cargo-list {
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    cursor: pointer;
+
+    &:hover .checkbox-icon::after {
+      opacity: .4;
+      transition: .2s;
+    }
+  }
+}
