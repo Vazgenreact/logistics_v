@@ -15,9 +15,12 @@
     height: 40px;
     margin-left: 10px;
     flex-shrink: 0;
+    background-color: #fff;
+    border: 1px solid $silver-big;
+
     .cross {
-      width: 15px;
-      height: 15px;
+      width: 18px;
+      height: 18px;
     }
   }
 }

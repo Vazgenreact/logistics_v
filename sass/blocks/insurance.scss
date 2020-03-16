@@ -29,6 +29,9 @@
       }
     }
   }
+  .helper svg {
+    vertical-align: middle;
+  }
 
   @media (max-width: 576px) {
     flex-direction: column;
