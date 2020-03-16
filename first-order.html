@@ -25,7 +25,7 @@
             <a href="#" class="btn  btn--border  btn--arrow  user-box__btn  user-box__btn--left">
                 Пополнить
                 <svg class="arrow  arrow--right">
-                    <use xlink:href="#arrow"></use>
+                    <use  href="#arrow"></use>
                 </svg>
             </a>
             <div class="select select-valuted user-box__select">
@@ -48,7 +48,7 @@
             <a href="#" class="btn  btn--border  btn--border_silver  btn--arrow  user-box__btn  user-box__btn--right">
                 Вывести
                 <svg class="arrow  arrow--right">
-                    <use xlink:href="#arrow"></use>
+                    <use  href="#arrow"></use>
                 </svg>
             </a>
         </div>
@@ -97,9 +97,9 @@
 
         <div class="container__center">
             <div class="create-order  container__create">
-                <svg class="create-order__box"><use xlink:href="#open-box--order"></use></svg>
+                <svg class="create-order__box"><use  href="#open-box--order"></use></svg>
                 <h3 class="text  text--max  text--bold  text--uppercase">У вас еще нет заказов.<br>Создайте свой первый заказ</h3>
-                <svg class="create-order__arrow"><use xlink:href="#arrow-round-bottom"></use></svg>
+                <svg class="create-order__arrow"><use  href="#arrow-round-bottom"></use></svg>
             </div>
 
             <div class="redemption-order container__redemption">
@@ -110,10 +110,28 @@
 
                 <div class="redemption-order__product">
                     <div class="redemption-order__item">
-                        <svg class="redemption-order__icon-product"><use xlink:href="#product"></use></svg>
-                        <strong>Товар №1</strong>
-                        <button type="button" class="redemption-order__collapsed"><svg class="arrow  arrow--bottom_center"><use xlink:href="#arrow"></use></svg></button>
-                        <button type="button" data-help="Удалить товар" class="helper  helper--delit cross redemption-order__delit"><svg><use xlink:href="#cross"></use></svg></button>
+                        <button class="grow-1 l-flex redemption-order__toggle"
+                                onclick="this.parentNode.classList.toggle('active')">
+                            <svg class="redemption-order__icon-product">
+                                <use href="#product"></use>
+                            </svg>
+                            <strong>Товар №1</strong>
+                            <span class="redemption-order__collapsed">
+                                <svg class="arrow">
+                                    <use href="#arrow"></use>
+                                </svg>
+                            </span>
+                        </button>
+
+                        <button class="redemption-order__delit mr-10" type="button">
+                            <svg width="12" height="12"><use href="#marker"></use></svg>
+                        </button>
+                        <button type="button" data-help="Удалить товар"
+                                class="helper  helper--delit cross redemption-order__delit ">
+                            <svg>
+                                <use href="#cross"></use>
+                            </svg>
+                        </button>
                     </div>
 
                     <form class="redemption-order__info" method="post" action="">
@@ -128,7 +146,7 @@
                         <div class="l-flex">
                             <label class="add-img">
                                 <input type="file">
-                                <span class="cross cross--plus"  aria-label="Добавить изображение"><svg><use xlink:href="#cross"></use></svg></span>
+                                <span class="cross cross--plus"  aria-label="Добавить изображение"><svg><use  href="#cross"></use></svg></span>
                             </label>
                         </div>
 
@@ -183,30 +201,30 @@
                         <button class="btn btn--arrow  btn--right" type="submit">
                             Сохранить
                             <svg class="arrow  arrow--right">
-                                <use xlink:href="#arrow"></use>
+                                <use  href="#arrow"></use>
                             </svg>
                         </button>
                     </form>
                 </div>
 
-                <div class="redemption-order__more  l-flex">
+                <div class="redemption-order__more l-flex">
                     <span class="text  text--bold">Добавить ещё один товар к этому заказу</span>
                     <a href="#" class="btn  btn--arrow  btn--border  btn--border_silver">
                         добавить товар
                         <svg class="arrow  arrow--right">
-                            <use xlink:href="#arrow"></use>
+                            <use href="#arrow"></use>
                         </svg>
                     </a>
                 </div>
             </div>
 
             <div class="create-order">
-                <svg class="create-order__box"><use xlink:href="#open-box--order"></use></svg>
+                <svg class="create-order__box"><use  href="#open-box--order"></use></svg>
                 <h3 class="text  text--normal  text--bold  text--uppercase  create-order__text  create-order__text--left">Создать новый заказ на выкуп</h3>
                 <a href="#" class="btn  btn--arrow  btn--border  btn--transparent">
                     Создать
                     <svg class="arrow  arrow--right">
-                        <use xlink:href="#arrow"></use>
+                        <use  href="#arrow"></use>
                     </svg>
                 </a>
             </div>
@@ -214,12 +232,9 @@
 
         <div class="container__additionally">
 
-            <div class="video container__video">
-                <a href="#" class="cross  video__close" aria-label="Закрыть"><svg><use xlink:href="#cross"></use></svg></a>
-                <h5 class="text  text--uppercase  text--bold  text--big  video__title">посмотрите видео<br>как правильно оформить заказ</h5>
-                <div class="video__wrap">
-                    <img src="img/video__preview.png" class="video__preview">
-                </div>
+            <div class="banner" style="background-image: url(img/banner.png)">
+                <button class="cross banner__close" aria-label="Закрыть"><svg><use  href="#cross"></use></svg></button>
+                <h5 class="text  text--uppercase  text--bold  text--big  banner__title">Руководство<br> по оформлению<br> заказа</h5>
             </div>
 
             <div class="mini-cart  container__mini-cart">
@@ -251,7 +266,7 @@
                 <a href="#" class="btn btn--arrow">
                     Оформить заказ
                     <svg class="arrow  arrow--right">
-                        <use xlink:href="#arrow"></use>
+                        <use  href="#arrow"></use>
                     </svg>
                 </a>
             </div>

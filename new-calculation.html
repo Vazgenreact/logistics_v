@@ -299,8 +299,7 @@
             <!--     End Расчет страховой стоимости    -->
             <!--     Дополнительная информация    -->
             <div class="additional-info">
-                <!--     при клике добавляем active и к additional-info__top и additional-info__content   -->
-                <div class="additional-info__top active">
+                <div class="additional-info__top" onclick="this.classList.toggle('active')">
                     <div class="top-text">
                         <strong class="text--bold">Дополнительная информация</strong>
                         <p class="text">Добавьте информацию о своем грузе и мы выполним комплектацию и отправку
@@ -310,7 +309,7 @@
                         <use href="#arrow"></use>
                     </svg>
                 </div>
-                <div class="additional-info__content active">
+                <div class="additional-info__content">
                     <!--        Загрузите фотографии товара          -->
                     <p>Загрузите фотографии товара</p>
                     <div class="loaded-images">
@@ -367,12 +366,10 @@
                         </label>
                     </div>
                     <!--        Warning block            -->
-                    <div class="warning">
-                        <p class="text"><strong class="text--bold">Обратите внимание!</strong> Стоимость дополнительных
-                            услуг оплачивается отдельно за каждую
-                            единицу товара согласно следующим тарифам:</p>
-                        <table class="table">
-                            <tr>
+                    <div class="important  important--text  redemption-order__important">
+                        <p class="text  text--little"><b class="text__bold">Обратите внимание!</b> Стоимость дополнительных услуг оплачивается отдельно за каждую единицу товара согласно следующим тарифам:</p>
+                        <table class="important__table  text  text--little">
+                            <tbody><tr>
                                 <td>Визуальная проверка на брак:</td>
                                 <td>1 ¥/единица</td>
                             </tr>
@@ -380,7 +377,7 @@
                                 <td>Отдельное фото товара:</td>
                                 <td>1 ¥/единица</td>
                             </tr>
-                        </table>
+                            </tbody></table>
                     </div>
                     <!--        Комментарий        -->
                     <div class="methods__comment">

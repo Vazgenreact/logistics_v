@@ -35,6 +35,9 @@
         transition: .1s;
       }
     }
+    &.active + .additional-info__content {
+      display: block;
+    }
   }
   &__content {
     display: none;
@@ -58,21 +61,6 @@
       .text {
         color: #333;
       }
-    }
-  }
-}
-
-.warning {
-  background-color: $u-yellow;
-  padding: 10px 15px;
-  margin-bottom: 15px;
-  font-size: 12px;
-
-  .table {
-    margin-top: 5px;
-
-    td:first-child {
-      width: 40%;
     }
   }
 }
