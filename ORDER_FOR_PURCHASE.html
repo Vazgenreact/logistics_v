@@ -2,108 +2,166 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>ZZ-logistics Заказ продуктов</title>
+    <title>ZZ-logistics Заказ создан</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <!-- Это спрайт c svg иконками -->
-    <div class="none"><include src="build/img/sprite.svg"></include></div>
+<!-- Это спрайт c svg иконками -->
+<div class="none"><include src="build/img/sprite.svg"></include></div>
 
-    <header class="main  top">
-        <img src="img/logo.svg" alt="Topzakazz logistics logo" class="top__logo">
-        <a href="#" class="text  text--uppercase  text--regular  text--main  top__exit">Выход</a>
-    </header>
+<header class="main  top">
+    <img src="img/logo.svg" alt="Topzakazz logistics logo" class="top__logo">
+    <a href="#" class="text  text--uppercase  text--regular  text--main  top__exit">Выход</a>
+</header>
 
-    <section class="main">
-        <div class="user-box">
-            <p class="user-box__text">
-                <small class="text  text--little  text--regular">Здравствуйте,</small>
-                <span class="text  text--uppercase  text--bold  user-box__name">Алексей Хайрутдинов</span>
-            </p>
-            <div class="user-box__balance">
-                <a href="#" class="btn  btn--border  btn--arrow  user-box__btn  user-box__btn--left">
-                    Пополнить
-                    <svg class="arrow  arrow--right">
-                        <use xlink:href="#arrow"></use>
-                    </svg>
-                </a>
-                <div class="select select-valuted user-box__select">
-                    <div class="select__param">
+<section class="main">
+    <div class="user-box">
+        <p class="user-box__text">
+            <small class="text  text--little  text--regular">Здравствуйте,</small>
+            <span class="text  text--uppercase  text--bold  user-box__name">Алексей Хайрутдинов</span>
+        </p>
+        <div class="user-box__balance">
+            <a href="#" class="btn  btn--border  btn--arrow  user-box__btn  user-box__btn--left">
+                Пополнить
+                <svg class="arrow  arrow--right">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
+            <div class="select select-valuted user-box__select">
+                <div class="select__param">
+                    <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
+                </div>
+                <!-- Если нужно показать селект - показываем select__list display: block; ну или как-то чтоб поменять это свойство-->
+                <div class="select__list">
+                    <div class="select__item" data-value="4187.63 RUB">
                         <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
                     </div>
-                    <!-- Если нужно показать селект - показываем select__list display: block; ну или как-то чтоб поменять это свойство-->
-                    <div class="select__list">
-                        <div class="select__item" data-value="4187.63 RUB">
-                            <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
-                        </div>
-                        <div class="select__item" data-value="418.7 CNY">
-                            <strong>418.7</strong><small>.63</small> <span class="helper" data-help="Юани">¥</span>
-                        </div>
-                        <div class="select__item" data-value="65 USD">
-                            <strong>65</strong><small>.63</small> <span class="helper" data-help="Доллары">$</span>
-                        </div>
+                    <div class="select__item" data-value="418.7 CNY">
+                        <strong>418.7</strong><small>.63</small> <span class="helper" data-help="Юани">¥</span>
+                    </div>
+                    <div class="select__item" data-value="65 USD">
+                        <strong>65</strong><small>.63</small> <span class="helper" data-help="Доллары">$</span>
                     </div>
                 </div>
-                <a href="#" class="btn  btn--border  btn--border_silver  btn--arrow  user-box__btn  user-box__btn--right">
-                    Вывести
-                    <svg class="arrow  arrow--right">
-                        <use xlink:href="#arrow"></use>
-                    </svg>
-                </a>
             </div>
+            <a href="#" class="btn  btn--border  btn--border_silver  btn--arrow  user-box__btn  user-box__btn--right">
+                Вывести
+                <svg class="arrow  arrow--right">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <main class="main container">
-        <div class="container__part">
-            <ul class="part">
-                <li class="part__item">
-                    <a href="#" class="text  text--uppercase  part__link  part__link--active  text--bold">мои заказы на выкуп</a>
-                </li>
-                <li class="part__item">
-                    <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои отправки из китая</a>
-                </li>
-                <li class="part__item">
-                    <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои запросы на поиск</a>
-                </li>
-                <li class="part__item">
-                    <a href="#" class="text  text--uppercase  part__link">мои финансы</a>
-                </li>
-                <li class="part__item">
-                    <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои сообщения</a>
-                </li>
-            </ul>
+<main class="main container admin-page">
+    <div class="container__part">
+        <ul class="part">
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--active  text--bold">мои заказы на выкуп</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои отправки из китая</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои запросы на поиск</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">мои финансы</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои сообщения</a>
+            </li>
+        </ul>
 
-            <ul class="part  container__user-sidebar">
-                <li class="part__item">
-                    <a href="#" class="text  text--uppercase  part__link">моя информация</a>
-                </li>
-                <li class="part__item">
-                    <a href="change-password.html" class="text  text--uppercase  part__link">изменить пароль</a>
-                </li>
-                <li class="part__item">
-                    <a href="#" class="text  text--uppercase  part__link">мои адреса</a>
-                </li>
-                <li class="part__item">
-                    <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои социальные сети</a>
-                </li>
-                <li class="part__item  part__item--partner">
-                    <a href="#" class="text  text--uppercase  part__link">моя реферальная программа</a>
-                </li>
-            </ul>
+        <ul class="part  container__user-sidebar">
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">моя информация</a>
+            </li>
+            <li class="part__item">
+                <a href="change-password.html" class="text  text--uppercase  part__link">изменить пароль</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">мои адреса</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои социальные сети</a>
+            </li>
+            <li class="part__item  part__item--partner">
+                <a href="#" class="text  text--uppercase  part__link">моя реферальная программа</a>
+            </li>
+        </ul>
 
-            <img src="img/email-confirmation.jpg" class="container__confirmation">
-        </div>
+        <img src="img/email-confirmation.jpg" class="container__confirmation">
+    </div>
 
-        <div class="container__center">
-            <div class="redemption-order">
-                <div class="redemption-order__top">
-                    <h3 class="text  text--big  text--uppercase">заказ на выкуп №1</h3>
-                    <span class="text  text--big  text--silver">21.04.2019</span>
+    <div class="container__center--max100">
+        <div class="shipping-top">
+            <div class="cart-order container__order">
+                <div class="cart-order__wrap">
+                    <h5 class="text  text--big  text--bold  text--uppercase">Заказ на выкуп №1</h5>
+                    <span class="text  text--big  cart-order__date">21.04.2019</span>
                 </div>
 
+                <table class="table cart-order__table text  text--small_mobile">
+                    <tr class="table__row">
+                        <td class="text  text--bold  table__cell">Номер заказа:</td>
+                        <td class="table__cell">№1584558</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="text  text--bold  table__cell">Дата создания:</td>
+                        <td class="table__cell">21.04.2019</td>
+                    </tr>
+                    <tr class="table__row  table__row--yellow table__row--edit">
+                        <td class="text  text--bold  table__cell">Статус заказа:</td>
+                        <td class="table__cell">
+                            <div class="custom-select disabled">
+                                <div class="input custom-select__input" id="order_status"> <!-- onToggleSelect(this) -->
+                                    <input class="input-hide" name="order_status" value="Оплачен">
+                                    <span class="text">Оплачен</span>
+                                </div>
+                                <ul class="custom-select__list">
+                                    <li class="custom-select__item" onclick="onChangeSelect('order_status', 'Оплачен', this)">Оплачен
+                                    </li>
+                                    <li class="custom-select__item" onclick="onChangeSelect('order_status', 'Выкуплен', this)">Выкуплен
+                                    </li>
+                                    <li class="custom-select__item" onclick="onChangeSelect('order_status', 'Готов к отправке', this)">Готов к отправке
+                                    </li>
+                                    <li class="custom-select__item" onclick="onChangeSelect('order_status', 'Отправлен', this)">Отправлен
+                                    </li>
+                                    <li class="custom-select__item" onclick="onChangeSelect('order_status', 'Получен', this)">Получен
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="l-flex justify-center">
+                                <button class="marker  marker--box  mr-10" onclick=""><svg><use href="#marker"></use></svg></button>
+                                <button class="marker  marker--box  mr-10" disabled><svg><use href="#save"></use></svg></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="text  text--bold  table__cell">Сумма заказа:</td>
+                        <td class="table__cell">1 257 ¥, юаней</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <ul class="shipping-nav">
+            <li class="shipping-nav__item">
+                <button class="admin_tab shipping-nav__link "
+                   onclick="toggleTabs('redemption_of_goods', this)">выкуп товара</button></li>
+            <li class="shipping-nav__item">
+                <button class="admin_tab shipping-nav__link active"
+                   onclick="toggleTabs('additional_services', this)">дополнительные услуги</button></li>
+        </ul>
+
+        <div class="shipping-content mb-20">
+            <div class="admin_content" id="redemption_of_goods">
                 <div class="redemption-order container__redemption">
                     <div class="redemption-order__item">
                         <button class="grow-1 l-flex redemption-order__toggle"
@@ -119,9 +177,7 @@
                             </span>
                         </button>
 
-                        <button class="redemption-order__delit mr-10" type="button">
-                            <svg width="12" height="12"><use href="#marker"></use></svg>
-                        </button>
+                        <button class="marker  marker--box  mr-10"><svg><use href="#marker"></use></svg></button>
                         <button type="button" class="redemption-order__delit cross" title="Удалить товар"><svg><use href="#cross"></use></svg></button>
                         <!-- При клике возникает попап popup--delit -->
                     </div>
@@ -265,9 +321,7 @@
                             </span>
                         </button>
 
-                        <button class="redemption-order__delit mr-10" type="button">
-                            <svg width="12" height="12"><use href="#marker"></use></svg>
-                        </button>
+                        <button class="marker  marker--box  mr-10"><svg><use href="#marker"></use></svg></button>
                         <button type="button" class="redemption-order__delit cross"><svg><use xlink:href="#cross"></use></svg></button>
                     </div>
 
@@ -377,9 +431,7 @@
                             </span>
                         </button>
 
-                        <button class="redemption-order__delit mr-10" type="button">
-                            <svg width="12" height="12"><use href="#marker"></use></svg>
-                        </button>
+                        <button class="marker  marker--box  mr-10"><svg><use href="#marker"></use></svg></button>
                         <button type="button" class="redemption-order__delit cross"><svg><use xlink:href="#cross"></use></svg></button>
                     </div>
 
@@ -473,116 +525,198 @@
 
                     </form>
                 </div>
-
-                <div class="redemption-order__more  l-flex">
-                    <span class="text  text--bold">Добавить ещё один товар к этому заказу</span>
-                    <a href="#" class="btn  btn--arrow  btn--border  btn--border_silver">
-                        добавить товар
-                        <svg class="arrow  arrow--right">
+            </div>
+            <div class="admin_content active" id="additional_services">
+                <form class="mb-20" action="">
+                    <p class="text text--bold mb-25">Выставить дополнительный счет по данному заказу</p>
+                    <div class="custom-select l-max_width mb-20">
+                        <div class="input custom-select__input" id="selected_service" onclick="onToggleSelect(this)">
+                            <input class="input-hide" name="selected_service" value="">
+                            <span class="text">Выберите услугу</span>
+                        </div>
+                        <ul class="custom-select__list">
+                            <li class="custom-select__item" onclick="onChangeSelect('selected_service', '', this)">Выберите услугу
+                            </li>
+                            <li class="custom-select__item" onclick="onChangeSelect('selected_service', 'china', this)">Доставка по Китаю
+                            </li>
+                            <li class="custom-select__item" onclick="onChangeSelect('selected_service', 'marriage', this)">Проверка на брак
+                            </li>
+                            <li class="custom-select__item" onclick="onChangeSelect('selected_service', 'photo', this)">Фото товара
+                            </li>
+                            <li class="custom-select__item" onclick="onChangeSelect('selected_service', 'storage', this)">Хранение товара на складе
+                            </li>
+                            <li class="custom-select__item" onclick="onChangeSelect('selected_service', 'other', this)">Другое
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="l-flex price-block mb-10">
+                        <p class="text text--400">Укажите сумму</p>
+                        <input type="text" class="input price-input">
+                        <div class="custom-select">
+                            <div class="input custom-select__input" id="selected_service_rate" onclick="onToggleSelect(this)">
+                                <input class="input-hide" name="selected_service_rate" value="юани">
+                                <span class="text">¥, юани</span>
+                            </div>
+                            <ul class="custom-select__list">
+                                <li class="custom-select__item" onclick="onChangeSelect('selected_service_rate', 'юани', this)">¥, юани
+                                </li>
+                                <li class="custom-select__item" onclick="onChangeSelect('selected_service_rate', 'рубли', this)">₽, рубли
+                                </li>
+                                <li class="custom-select__item" onclick="onChangeSelect('selected_service_rate', 'доллары', this)">$, доллары
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text mb-10 text--400">Добавить комментарий:</p>
+                    <textarea name="" class="input l-max_width mb-25" placeholder="Текст комментария"></textarea>
+                    <div>
+                        <button class="btn btn--arrow">
+                            выставить счет
+                            <svg class="arrow  arrow--right">
+                                <use href="#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <div class="additional-info">
+                    <div class="additional-info__top" onclick="this.classList.toggle('active')">
+                        <div class="top-text">
+                            <strong class="text--bold">Оформить возврат средств</strong>
+                        </div>
+                        <svg class="arrow">
                             <use href="#arrow"></use>
                         </svg>
-                    </a>
+                    </div>
+                    <div class="additional-info__content">
+                        <form class="mb-20" action="">
+                            <p class="text text--bold mb-25">Выставить дополнительный счет по данному заказу</p>
+                            <div class="custom-select l-max_width mb-20">
+                                <div class="input custom-select__input" id="select_refund" onclick="onToggleSelect(this)">
+                                    <input class="input-hide" name="select_refund" value="">
+                                    <span class="text">Оформить возврат средств</span>
+                                </div>
+                                <ul class="custom-select__list">
+                                    <li class="custom-select__item" onclick="onChangeSelect('select_refund', '', this)">Оформить возврат средств
+                                    </li>
+                                    <li class="custom-select__item" onclick="onChangeSelect('select_refund', 'china', this)">Доставка по Китаю
+                                    </li>
+                                    <li class="custom-select__item" onclick="onChangeSelect('select_refund', 'marriage', this)">Проверка на брак
+                                    </li>
+                                    <li class="custom-select__item" onclick="onChangeSelect('select_refund', 'photo', this)">Фото товара
+                                    </li>
+                                    <li class="custom-select__item" onclick="onChangeSelect('select_refund', 'storage', this)">Хранение товара на складе
+                                    </li>
+                                    <li class="custom-select__item" onclick="onChangeSelect('select_refund', 'other', this)">Другое
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="l-flex price-block mb-10">
+                                <p class="text text--400">Укажите сумму <br>
+                                    к списанию</p>
+                                <input type="text" class="input price-input">
+                                <div class="custom-select">
+                                    <div class="input custom-select__input" id="select_refund_rate" onclick="onToggleSelect(this)">
+                                        <input class="input-hide" name="select_refund_rate" value="юани">
+                                        <span class="text">¥, юани</span>
+                                    </div>
+                                    <ul class="custom-select__list">
+                                        <li class="custom-select__item" onclick="onChangeSelect('select_refund_rate', 'юани', this)">¥, юани
+                                        </li>
+                                        <li class="custom-select__item" onclick="onChangeSelect('select_refund_rate', 'рубли', this)">₽, рубли
+                                        </li>
+                                        <li class="custom-select__item" onclick="onChangeSelect('select_refund_rate', 'доллары', this)">$, доллары
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="text mb-10 text--400">Добавить комментарий:</p>
+                            <textarea name="" class="input l-max_width mb-25" placeholder="Текст комментария"></textarea>
+                            <div>
+                                <button class="btn btn--arrow">
+                                    выставить счет
+                                    <svg class="arrow  arrow--right">
+                                        <use href="#arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="container__additionally">
+        <div class="shipping-content mb-20">
+            <p class="text mb-20">История выставленных счетов по заказу</p>
+            <ul class="transaction-history__list">
+                <li class="transaction-history__item  transaction-history__item--error">
+                    <div class="transaction-history__icon"><svg><use xlink:href="#icon-box"></use></svg></div>
+                    <div class="text  transaction-history__desc  text--small_mobile">
+                        Оплата, Заказ на выкуп №1
+                        <p class="text  text--little  text--silver">22.11.2018</p>
+                    </div>
+                    <span class="text  text--bold  text--big  transaction-history__sum  text--normal_mobile">- 1 020 ¥</span>
+                </li>
+                <li class="transaction-history__item">
+                    <div class="transaction-history__icon"><svg><use xlink:href="#icon-money"></use></svg></div>
+                    <div class="text  transaction-history__desc  text--small_mobile">
+                        Пополнение, Баланс личного кабинета
+                        <p class="text  text--little  text--silver">22.11.2018</p>
+                    </div>
+                    <span class="text  text--bold  text--big  text--green  transaction-history__sum  text--normal_mobile">+ 5 321 ¥</span>
+                </li>
+            </ul>
+        </div>
 
-            <div class="video container__video">
-                <a href="#" class="cross  video__close" aria-label="Закрыть"><svg><use xlink:href="#cross"></use></svg></a>
-                <!-- Открывает попап popup--video -->
-
-                <h5 class="text  text--uppercase  text--bold  text--big  video__title">посмотрите видео<br>как правильно оформить заказ</h5>
-                <div class="video__wrap">
-                    <img src="img/video__preview.png" class="video__preview">
-                </div>
-            </div>
-
-            <div class="mini-cart  container__mini-cart">
-                <h5 class="text  text--uppercase  text--bold  text--big  mini-cart__title">Корзина</h5>
-                <table class="mini-cart__params  text  text--regular">
-                    <tr>
-                        <td>Стоимость товара</td>
-                        <td>1250</td>
-                    </tr>
-                    <tr>
-                        <td>Комиссия платформы</td>
-                        <td>55</td>
-                    </tr>
-                    <tr>
-                        <td>Итоговая стоимость</td>
-                        <td>1755</td>
-                    </tr>
-                </table>
-                <table class="mini-cart__params mini-cart__params--silver  text  text--regular  text--blonde" title="Рассчитывается фактически после получения товара на склад. Оплата взымается вместе со стоимостью услуг по транспортировке товара из Китая">
-                    <tr>
-                        <td>Доставка товара по Китаю</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>Дополнительные услуги</td>
-                        <td>0</td>
-                    </tr>
-                </table>
-                <a href="#" class="btn btn--arrow">
-                    Оформить заказ
-                    <svg class="arrow  arrow--right">
-                        <use xlink:href="#arrow"></use>
+        <ul class="pagination">
+            <li class="pagination__item hide-mobile">
+                <a href="#" class="pagination__link disabled">
+                    <svg class="double-arrow arrow--left" aria-label="На предыдущую страницу">
+                        <use href="#double-arrow"></use>
                     </svg>
                 </a>
-            </div>
-
-            <div class="buyout">
-                <h5 class="text  text--uppercase  text--bold  text--big">Услуга “выкуп товара с&nbsp;китайских сайтов”</h5>
-
-                <ul class="text  text--regular  buyout__list">
-                    <li class="buyout__item">
-                        <span class="buyout__percent">7%</span>
-                        <p class="buyout__price  buyout__price--min">
-                            < 50 000 ₽
-                            <small class="text  text--little">минимум 1 000 ₽</small>
-                        </p>
-                    </li>
-                    <li class="buyout__item">
-                        <span class="buyout__percent">5%</span>
-                        <p class="buyout__price  buyout__price--normal">
-                            50 000 ₽ - 200 000 ₽
-                        </p>
-                    </li>
-                    <li class="buyout__item">
-                        <span class="buyout__percent">4%</span>
-                        <p class="buyout__price  buyout__price--large">
-                            200 000 ₽ - 500 000 ₽
-                        </p>
-                    </li>
-                    <li class="buyout__item">
-                        <span class="buyout__percent">3%</span>
-                        <p class="buyout__price  buyout__price--big">
-                            > 500 000 ₽
-                        </p>
-                    </li>
-                </ul>
-                <div class="important  buyout__important">
-                    <p class="text  text--little">Размер комиссии услуг зависит от&nbsp;суммы Вашего заказа. Чем больше сумма заказа, тем наша комиссия ниже</p>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <div class="popup  popup--delit">
-        <a class="cross  popup__close"><svg><use xlink:href="#cross"></use></svg></a>
-        <h3 class="text text--uppercase  popup__title">Вы уверенны, что хотите удалить данный товар?</h3>
-        <a href="#" class="btn btn--border  popup__btn">Удалить</a>
-        <a href="#" class="btn btn--border  popup__btn">Отмена</a>
+            </li>
+            <li class="pagination__item">
+                <a href="#" class="pagination__link disabled">
+                    <svg class="arrow arrow--left" aria-label="На предыдущую страницу">
+                        <use href="#arrow"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="pagination__item">
+                <a href="#" class="pagination__link">1</a>
+            </li>
+            <li class="pagination__item">
+                <a href="#" class="pagination__link  pagination__link--active">2</a>
+            </li>
+            <li class="pagination__item">
+                <a href="#" class="pagination__link">3</a>
+            </li>
+            <li class="pagination__item">
+                <a href="#" class="pagination__link">…</a>
+            </li>
+            <li class="pagination__item">
+                <a href="#" class="pagination__link">14</a>
+            </li>
+            <li class="pagination__item">
+                <a href="#" class="pagination__link">
+                    <svg class="arrow  arrow--right" aria-label="На следующую страницу">
+                        <use href="#arrow"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="pagination__item hide-mobile">
+                <a href="#" class="pagination__link">
+                    <svg class="double-arrow arrow--right" aria-label="На следующую страницу">
+                        <use href="#double-arrow"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
     </div>
 
-    <div class="popup  popup--video">
-        <a class="cross  popup__close"><svg><use xlink:href="#cross"></use></svg></a>
-        <h3 class="text text--uppercase  popup__title">Вы уверенны, что хотите скрыть обучающее видео?</h3>
-        <a href="#" class="btn btn--border  popup__btn">Скрыть</a>
-        <a href="#" class="btn btn--border  popup__btn">Отмена</a>
-    </div>
+    <div class="container__additionally"></div>
+</main>
 
-    <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

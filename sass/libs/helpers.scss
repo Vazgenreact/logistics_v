@@ -132,6 +132,12 @@
 .mb-10 {
   margin-bottom: 10px;
 }
+.mb-25 {
+  margin-bottom: 25px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
 .ml-5 {
   margin-left: 5px;
 }
@@ -155,6 +161,9 @@
 }
 .border--mutted {
   border-color: $silver-big;
+}
+.text--400 {
+  font-weight: 400;
 }
 @media screen and (min-width: 992px) {
   .pl-lg-30 {

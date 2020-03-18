@@ -27,11 +27,11 @@
       width: 100%;
       box-sizing: border-box;
     }
+  }
 
-    &.active + .custom-select__list {
-      transform: scaleY(1);
-      transition: .2s;
-    }
+  .active + .custom-select__list {
+    transform: scaleY(1);
+    transition: .2s;
   }
   &__list {
     transform-origin: top;
@@ -75,6 +75,19 @@
     &.selected,
     &:hover {
       background-color: $silver-normal;
+    }
+  }
+}
+
+.autocomplete-select {
+  position: relative;
+
+  .input {
+    width: 100% !important;
+
+    &.active + .custom-select__list {
+      transform: scaleY(1);
+      transition: .2s;
     }
   }
 }

@@ -1,0 +1,97 @@
+.admin-page {
+
+  .cart-order {
+    padding: 0;
+  }
+  .shipping-top {
+    padding: 30px 35px 40px;
+  }
+  .shipping-content {
+    padding-bottom: 20px;
+  }
+  .shipping-nav {
+    margin: -45px 0 0;
+
+    &__item {
+      flex-basis: 48%;
+    }
+    &__link {
+      padding-bottom: 10px;
+    }
+  }
+  .container__redemption {
+    margin-bottom: 10px;
+  }
+  .redemption-order__item {
+    padding: 0 20px;
+  }
+  .marker {
+    background: none;
+    border: 0;
+    &:disabled {
+      opacity: .4;
+      &:hover {
+        cursor: default;
+        svg {
+          fill: #333;
+        }
+      }
+    }
+  }
+  .admin_tab {
+    outline: none;
+    cursor: pointer;
+  }
+  .admin_content {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  textarea.input {
+    height: 90px;
+  }
+  .btn--arrow {
+    margin-left: auto;
+  }
+  .additional-info {
+    .input {
+      background-color: #fff;
+    }
+    &__top {
+      background-color: $silver-min;
+    }
+    &__content {
+      background-color: $silver-min;
+      padding: 20px;
+      margin-top: 10px;
+    }
+  }
+  .table {
+    .custom-select {
+      width: 160px;
+
+      &.disabled {
+        &::after {
+          display: none;
+        }
+        .input {
+          border: 0;
+        }
+        .text {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+.price-block {
+
+  .price-input {
+    width: 90px;
+    margin: 0 10px;
+  }
+  .custom-select {
+    width: 120px;
+  }
+}
