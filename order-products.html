@@ -127,10 +127,16 @@
                     </div>
 
                     <form class="redemption-order__info" method="post" action="">
-                        <label class="label  label--margin-bottom_small">
-                            <span class="text  text--regular">Ссылка на товар</span>
-                            <input type="text" name="link-product" class="input  input--max" placeholder="Введите ссылку на товар">
-                        </label>
+                        <div class="label  label--margin-top_small  label--margin-bottom_small  label--flex">
+                            <span class="text  text--regular l-max_width">Ссылка на товар</span>
+
+                            <input type="text" name="link-product" class="input  input--rubber" placeholder="Введите ссылку на товар">
+                            <a href="#" class="redemption-order__add-line" type="button">
+                                <span class="cross--plus_center cross--link">
+                                    <svg><use href="#share"></use></svg>
+                                </span>
+                            </a>
+                        </div>
 
                         <label class="label">
                             <span class="text  text--regular">Загрузите фотографию с модификациями товара</span>
@@ -179,7 +185,7 @@
                         </div>
 
                         <div class="label  label--margin-top_small  label--margin-bottom_small  label--flex">
-                            <span class="text  text--regular">Или добавьте скриншот с модификациями товара</span>
+                            <span class="text  text--regular  l-max_width">Или добавьте скриншот с модификациями товара</span>
 
                             <input type="text" name="link-product" class="input  input--rubber" placeholder="Введите ссылку на товар">
                             <button class="redemption-order__add-line" type="button">
@@ -272,10 +278,16 @@
                     </div>
 
                     <form class="redemption-order__info" method="post" action="">
-                        <label class="label  label--margin-bottom_small">
-                            <span class="text  text--regular">Ссылка на товар</span>
-                            <input type="text" name="link-product" class="input  input--max" placeholder="Введите ссылку на товар">
-                        </label>
+                        <div class="label  label--margin-top_small  label--margin-bottom_small  label--flex">
+                            <span class="text  text--regular l-max_width">Ссылка на товар</span>
+
+                            <input type="text" name="link-product" class="input  input--rubber" placeholder="Введите ссылку на товар">
+                            <a href="#" class="redemption-order__add-line" type="button">
+                                <span class="cross--plus_center cross--link">
+                                    <svg><use href="#share"></use></svg>
+                                </span>
+                            </a>
+                        </div>
 
                         <label class="label">
                             <span class="text  text--regular">Загрузите фотографию с модификациями товара</span>
@@ -384,10 +396,16 @@
                     </div>
 
                     <form class="redemption-order__info" method="post" action="">
-                        <label class="label  label--margin-bottom_small">
-                            <span class="text  text--regular">Ссылка на товар</span>
-                            <input type="text" name="link-product" class="input  input--max" placeholder="Введите ссылку на товар">
-                        </label>
+                        <div class="label  label--margin-top_small  label--margin-bottom_small  label--flex">
+                            <span class="text  text--regular l-max_width">Ссылка на товар</span>
+
+                            <input type="text" name="link-product" class="input  input--rubber" placeholder="Введите ссылку на товар">
+                            <a href="#" class="redemption-order__add-line" type="button">
+                                <span class="cross--plus_center cross--link">
+                                    <svg><use href="#share"></use></svg>
+                                </span>
+                            </a>
+                        </div>
 
                         <label class="label">
                             <span class="text  text--regular">Загрузите фотографию с модификациями товара</span>
@@ -484,6 +502,52 @@
                     </a>
                 </div>
             </div>
+            <br>
+            <ul class="pagination">
+                <li class="pagination__item hide-mobile">
+                    <a href="#" class="pagination__link disabled">
+                        <svg class="double-arrow arrow--left" aria-label="На предыдущую страницу">
+                            <use href="#double-arrow"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link disabled">
+                        <svg class="arrow arrow--left" aria-label="На предыдущую страницу">
+                            <use href="#arrow"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">1</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link  pagination__link--active">2</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">3</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">…</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">14</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">
+                        <svg class="arrow  arrow--right" aria-label="На следующую страницу">
+                            <use href="#arrow"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="pagination__item hide-mobile">
+                    <a href="#" class="pagination__link">
+                        <svg class="double-arrow arrow--right" aria-label="На следующую страницу">
+                            <use href="#double-arrow"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <div class="container__additionally">
@@ -499,7 +563,7 @@
             </div>
 
             <div class="mini-cart  container__mini-cart">
-                <h5 class="text  text--uppercase  text--bold  text--big  mini-cart__title">Корзина</h5>
+                <h5 class="text  text--uppercase  text--bold  text--big  mini-cart__title l-flex justify-between">Корзина <span>$</span></h5>
                 <table class="mini-cart__params  text  text--regular">
                     <tr>
                         <td>Стоимость товара</td>
@@ -570,18 +634,20 @@
     </main>
 
     <div class="popup  popup--delit">
-        <a class="cross  popup__close"><svg><use xlink:href="#cross"></use></svg></a>
+        <a class="cross  popup__close"><svg><use href="#cross"></use></svg></a>
         <h3 class="text text--uppercase  popup__title">Вы уверенны, что хотите удалить данный товар?</h3>
         <a href="#" class="btn btn--border  popup__btn">Удалить</a>
         <a href="#" class="btn btn--border  popup__btn">Отмена</a>
     </div>
 
     <div class="popup  popup--video">
-        <a class="cross  popup__close"><svg><use xlink:href="#cross"></use></svg></a>
+        <a class="cross  popup__close"><svg><use href="#cross"></use></svg></a>
         <h3 class="text text--uppercase  popup__title">Вы уверенны, что хотите скрыть обучающее видео?</h3>
         <a href="#" class="btn btn--border  popup__btn">Скрыть</a>
         <a href="#" class="btn btn--border  popup__btn">Отмена</a>
     </div>
+
+    <div class="popup__bg"></div>
 
     <script src="js/main.js"></script>
 </body>

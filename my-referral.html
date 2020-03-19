@@ -307,10 +307,17 @@
             </div>
 
             <ul class="pagination">
+                <li class="pagination__item hide-mobile">
+                    <a href="#" class="pagination__link disabled">
+                        <svg class="double-arrow arrow--left" aria-label="На предыдущую страницу">
+                            <use href="#double-arrow"></use>
+                        </svg>
+                    </a>
+                </li>
                 <li class="pagination__item">
-                    <a href="#" class="pagination__link">
-                        <svg class="arrow  arrow--left" aria-label="На предыдущую страницу">
-                            <use xlink:href="#arrow"></use>
+                    <a href="#" class="pagination__link disabled">
+                        <svg class="arrow arrow--left" aria-label="На предыдущую страницу">
+                            <use href="#arrow"></use>
                         </svg>
                     </a>
                 </li>
@@ -324,7 +331,7 @@
                     <a href="#" class="pagination__link">3</a>
                 </li>
                 <li class="pagination__item">
-                    <a href="#" class="pagination__link">&#133;</a>
+                    <a href="#" class="pagination__link">…</a>
                 </li>
                 <li class="pagination__item">
                     <a href="#" class="pagination__link">14</a>
@@ -332,7 +339,14 @@
                 <li class="pagination__item">
                     <a href="#" class="pagination__link">
                         <svg class="arrow  arrow--right" aria-label="На следующую страницу">
-                            <use xlink:href="#arrow"></use>
+                            <use href="#arrow"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="pagination__item hide-mobile">
+                    <a href="#" class="pagination__link">
+                        <svg class="double-arrow arrow--right" aria-label="На следующую страницу">
+                            <use href="#double-arrow"></use>
                         </svg>
                     </a>
                 </li>

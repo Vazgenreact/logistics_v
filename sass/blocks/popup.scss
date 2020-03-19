@@ -1,39 +1,50 @@
 .popup {
-    background-color: $u-white;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 320px;
-    padding: 40px 25px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 6px 0 $popup-shadow;
-    @include flex(wrap);
-    justify-content: space-around;
+  background-color: $u-white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  padding: 40px 25px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 20px -10px $popup-shadow;
+  @include flex(wrap);
+  justify-content: space-around;
+  display: none;
+  z-index: 99;
+
+  &__title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    width: 120px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+  }
+
+  &--wechatpay {
+    padding: 30px;
+    padding-bottom: 6px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+  &__bg {
     display: none;
-
-    &__title {
-        text-align: center;
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
-
-    &__btn {
-        width: 120px;
-    }
-
-    &__close {
-        position: absolute;
-        right: 8px;
-        top: 8px;
-    }
-
-    &--wechatpay {
-        padding: 30px;
-        padding-bottom: 6px;
-
-        img {
-            max-width: 100%;
-        }
-    }
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 98;
+    background-color: rgba(0,0,0,.5);
+  }
 }

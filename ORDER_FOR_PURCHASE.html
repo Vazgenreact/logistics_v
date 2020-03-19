@@ -98,6 +98,33 @@
     </div>
 
     <div class="container__center--max100">
+        <form class="filter" action="">
+            <div class="filter__status custom-select">
+                <div class="input custom-select__input" id="filter_status" onclick="onToggleSelect(this)">
+                    <input class="input-hide" name="filter_status" value="Статус заказа">
+                    <span class="text">Статус заказа</span>
+                </div>
+                <ul class="custom-select__list">
+                    <li class="custom-select__item" onclick="onChangeSelect('filter_status', 'Статус заказа', this)">Статус заказа
+                    </li>
+                    <li class="custom-select__item" onclick="onChangeSelect('filter_status', 'рубли', this)">Статус заказа 2
+                    </li>
+                    <li class="custom-select__item" onclick="onChangeSelect('filter_status', 'доллары', this)">Статус заказа 3
+                    </li>
+                </ul>
+            </div>
+            <div class="filter__date custom-select">
+                <div class="custom-select__input" id="filter_date">
+                    <input class="input" name="filter_date" placeholder="Дата создания заказа">
+                </div>
+            </div>
+            <div class="filter__search">
+                <input type="text" class="input" placeholder="Поиск по заказам">
+                <button class="icon-search">
+                    <svg width="16" height="16"><use href="#search"></use></svg>
+                </button>
+            </div>
+        </form>
         <div class="shipping-top">
             <div class="cart-order container__order">
                 <div class="cart-order__wrap">

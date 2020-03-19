@@ -1,0 +1,52 @@
+.filter {
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  margin-bottom: 10px;
+
+  &__status {
+    width: calc(30% - 10px);
+    margin-right: 10px;
+  }
+  &__date {
+    width: calc(40% - 10px);
+    margin-right: 10px;
+
+    .input {
+      padding: 9px 10px !important;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  &__search {
+    position: relative;
+    width: 50%;
+
+    .input {
+      width: 100%;
+    }
+    .icon-search {
+      position: absolute;
+      right: 5px;
+      top: 0;
+      opacity: .7;
+      background: none;
+      border: 0;
+      height: 100%;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+
+  @media screen and (max-width: 575px) {
+    flex-direction: column;
+    &__search,
+    &__date,
+    &__status {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+}

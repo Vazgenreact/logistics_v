@@ -135,10 +135,16 @@
                     </div>
 
                     <form class="redemption-order__info" method="post" action="">
-                        <label class="label  label--margin-bottom_small">
-                            <span class="text  text--regular">Ссылка на товар</span>
-                            <input type="text" name="link-product" class="input  input--max" placeholder="Введите ссылку на товар">
-                        </label>
+                        <div class="label  label--margin-top_small  label--margin-bottom_small  label--flex">
+                            <span class="text  text--regular l-max_width">Ссылка на товар</span>
+
+                            <input type="text" name="link-product" class="input  input--rubber" placeholder="Введите ссылку на товар">
+                            <a href="#" class="redemption-order__add-line" type="button">
+                                <span class="cross--plus_center cross--link">
+                                    <svg><use href="#share"></use></svg>
+                                </span>
+                            </a>
+                        </div>
 
                         <label class="label">
                             <span class="text  text--regular">Загрузите фотографию с модификациями товара</span>
@@ -231,14 +237,14 @@
         </div>
 
         <div class="container__additionally">
-
+<div class="scroll-block">
             <div class="banner" style="background-image: url(img/banner.png)">
                 <button class="cross banner__close" aria-label="Закрыть"><svg><use  href="#cross"></use></svg></button>
                 <h5 class="text  text--uppercase  text--bold  text--big  banner__title">Руководство<br> по оформлению<br> заказа</h5>
             </div>
 
             <div class="mini-cart  container__mini-cart">
-                <h5 class="text  text--uppercase  text--bold  text--big  mini-cart__title">Корзина</h5>
+                <h5 class="text  text--uppercase  text--bold  text--big  mini-cart__title l-flex justify-between">Корзина <span>$</span></h5>
                 <table class="mini-cart__params  text  text--regular">
                     <tr>
                         <td>Стоимость товара</td>
@@ -305,6 +311,7 @@
                     <p class="text  text--little">Размер комиссии услуг зависит от&nbsp;суммы Вашего заказа. Чем больше сумма заказа, тем наша комиссия ниже</p>
                 </div>
             </div>
+</div>
         </div>
     </main>
 

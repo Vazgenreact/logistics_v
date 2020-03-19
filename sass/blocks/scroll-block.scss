@@ -1,0 +1,21 @@
+.scroll-block {
+  position: fixed;
+  width: 278px;
+  top: 207px;
+  right: calc((100% - 1200px)/2);
+  z-index: 9;
+
+  @media screen and (max-width: 1229px) {
+    width: 250px;
+    top: 200px;
+    right: 15px;
+  }
+  @media screen and (max-width: 991px) {
+    width: 100%;
+    max-width: 360px;
+    position: static;
+  }
+  @media screen and (max-width: $tablet-width) {
+    width: 100%;
+  }
+}
