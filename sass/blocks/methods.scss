@@ -1,41 +1,70 @@
 .methods {
-  padding: 20px 0;
+  padding: 22px 0;
   border-bottom: 1px solid $silver-big;
+  margin-bottom: 28px;
 
   &__item {
     position: relative;
-    padding: 5px 20px 5px 13px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    min-height: 52px;
-    box-sizing: border-box;
-    font-weight: 700;
 
-    &.unchecked {
-      color: $font-color-silver;
-      border-color: $font-color-silver;
-      user-select: none;
-      font-weight: 300;
+    svg {
+      opacity: .4;
+    }
 
-      svg {
+    &:hover .checkbox span {
+      &::after {
         opacity: .3;
-      }
-      .helper:hover:after {
-        display: none;
       }
     }
 
-    &.disabled {
+    .input-hide:not(:disabled):checked + .methods__label {
+      .checkbox span {
+        &::before {
+          border-color: #333;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+
+      input::-webkit-input-placeholder {
+        opacity: 1;
+      }
+      input:-ms-input-placeholder {
+        opacity: 1;
+      }
+      input::placeholder {
+        opacity: 1;
+      }
+    }
+
+    &:hover .input-hide:not(:disabled) + .methods__label,
+    .input-hide:not(:disabled):checked + .methods__label {
+      border-color: #333;
+      color: #333;
+
+      .methods__days {
+        color: #333;
+      }
+      .icon,
+      svg {
+        opacity: 1;
+      }
+    }
+
+    .input-hide:disabled + .methods__label {
       color: $silver-big;
       border-color: $silver-big;
       user-select: none;
       font-weight: 300;
 
+      .checkbox span::after {
+        display: none;
+      }
+
       svg {
         opacity: .1;
       }
-      .helper:hover:after {
+      .helper .tooltip-content {
         display: none;
       }
       .tooltip-content {
@@ -51,11 +80,14 @@
         transition: .2s;
       }
     }
+
     .icon {
       width: 70px;
       text-align: center;
       margin-left: -13px;
+      opacity: .3;
     }
+
     .image {
       width: 55px;
       text-align: center;
@@ -67,12 +99,18 @@
         vertical-align: middle;
       }
     }
+  }
 
-    &:hover {
-      .checkbox input:not(:disabled):not(:checked) + span:after {
-        opacity: .3;
-      }
-    }
+  &__label {
+    padding: 5px 20px 5px 13px;
+    border: 1px solid $font-color-silver;
+    color: $font-color-silver;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    min-height: 52px;
+    box-sizing: border-box;
+    font-weight: 700;
+    cursor: pointer;
   }
   &__icon {
     margin-right: 15px;
@@ -86,10 +124,9 @@
     padding-right: 5px;
 
     .tooltip-content {
-      left: 50px;
-      top: 100%;
-      width: 100%;
-      max-width: 150px;
+      left: 100%;
+      top: -50px;
+      max-width: 180px;
       text-transform: capitalize;
     }
 
@@ -106,6 +143,10 @@
     width: 30px;
     margin-right: 8%;
     flex-shrink: 0;
+
+    svg {
+      opacity: .4;
+    }
 
     .tooltip-content {
       left: 25px;
@@ -128,6 +169,9 @@
       line-height: 1;
       margin-bottom: 5px;
     }
+    svg {
+      opacity: 1;
+    }
     .info-text {
       opacity: .3;
     }
@@ -136,10 +180,12 @@
     width: 30%;
     font-weight: 300;
     flex-shrink: 0;
+    color: $font-color-silver;
 
     svg {
       margin-right: 5px;
       vertical-align: top;
+      opacity: .3;
     }
   }
   &__disabled-msg {
@@ -168,4 +214,26 @@
       font-size: 14px;
     }
   }
+}
+
+
+
+.custom-transport {
+  display: flex;
+  flex-wrap: wrap;
+
+  .text--big {
+    font-weight: 400;
+    padding: 0 30px;
+  }
+
+  .methods__comment {
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .input {
+    margin-left: 0;
+  }
+
 }

@@ -124,12 +124,12 @@
             <!--      Slider      -->
             <div class="orders-slider">
                 <button class="orders-slider__btn orders-slider__btn--left" disabled>
-                    <svg width="25" height="30" viewBox="0 0 512 512">
+                    <svg width="30" height="30" viewBox="0 0 512 512">
                         <path d="M160 128.4L192.3 96 352 256 192.3 416 160 383.6 287.3 256z"></path>
                     </svg>
                 </button>
                 <button class="orders-slider__btn orders-slider__btn--right">
-                    <svg width="25" height="30" viewBox="0 0 512 512">
+                    <svg width="30" height="30" viewBox="0 0 512 512">
                         <path d="M160 128.4L192.3 96 352 256 192.3 416 160 383.6 287.3 256z"></path>
                     </svg>
                 </button>
@@ -178,12 +178,12 @@
 
                         <div class="stock-images__list">
                             <button class="stock-images__btn stock-images__btn--left" disabled>
-                                <svg width="25" height="30" viewBox="0 0 512 512">
+                                <svg width="30" height="30" viewBox="0 0 512 512">
                                     <path d="M160 128.4L192.3 96 352 256 192.3 416 160 383.6 287.3 256z"></path>
                                 </svg>
                             </button>
                             <button class="stock-images__btn stock-images__btn--right">
-                                <svg width="25" height="30" viewBox="0 0 512 512">
+                                <svg width="30" height="30" viewBox="0 0 512 512">
                                     <path d="M160 128.4L192.3 96 352 256 192.3 416 160 383.6 287.3 256z"></path>
                                 </svg>
                             </button>
@@ -364,7 +364,7 @@
             </div>
             <!--     End Расчет страховой стоимости    -->
             <!--     метод упаковки    -->
-            <div class="l-flex pt-25">
+            <div class="l-flex">
                 <span class="list-count">1</span>
                 <div class="text text--bold tooltip-block">
                     Выберите метод упаковки для данной отправки
@@ -383,71 +383,85 @@
                 </div>
             </div>
             <div class="methods">
-                <label class="methods__item checkbox--right checked">
-                    <svg class="methods__icon" width="25" height="17">
-                        <use href="#skotch"></use>
-                    </svg>
-                    <strong class="methods__title">Мешок + скотч</strong>
-                    <strong class="methods__price text--bold">2$</strong>
-                    <span class="checkbox">
-                        <input type="checkbox" name="checkbox" checked>
-                        <span></span>
-                    </span>
-                </label>
-                <label class="methods__item checkbox--right unchecked">
-                    <svg class="methods__icon" width="24" height="25">
-                        <use href="#korobka"></use>
-                    </svg>
-                    <strong class="methods__title">Коробка + мешок + скотч</strong>
-                    <strong class="methods__price text--bold">2$</strong>
-                    <span class="checkbox">
-                        <input type="checkbox" name="checkbox" disabled>
-                        <span></span>
-                    </span>
-                </label>
-                <label class="methods__item checkbox--right unchecked">
-                    <svg class="methods__icon" width="24" height="24">
-                        <use href="#obreshetka"></use>
-                    </svg>
-                    <strong class="methods__title">
-                        <div class="tooltip-block">
-                            Обрешетка + мешок + скотч
-                            <a data-help="Важная информация! Выбор обрешетки обязателен при отправке электроники и хрупкого груза. Если Вы отправляете груз, который может повредиться в процессе транспортировки, и НЕ выбираете данную упаковку"
-                               class="helper helper--big label__help">
-                                <svg width="12" height="14">
-                                    <use href="#info"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </strong>
-                    <strong class="methods__price text--bold">2$</strong>
-                    <span class="checkbox">
-                        <input type="checkbox" name="checkbox" disabled>
-                        <span></span>
-                    </span>
-                </label>
-                <label class="methods__item checkbox--right disabled">
-                    <span class="tooltip-content">Недоступно для данной отправки груза</span>
-                    <svg class="methods__icon" width="25" height="25">
-                        <use href="#palet"></use>
-                    </svg>
-                    <strong class="methods__title">
-                        <div class="tooltip-block">
-                            Палет + обрешетка + стрейч-пленка + скотч
-                            <a data-help="Важная информация! Выбор обрешетки обязателен при отправке электроники и хрупкого груза. Если Вы отправляете груз, который может повредиться в процессе транспортировки, и НЕ выбираете данную упаковку"
-                               class="helper helper--big label__help">
-                                <svg width="12" height="14">
-                                    <use href="#info"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </strong>
-                    <strong class="methods__price text--bold">2$</strong>
-                    <span class="checkbox">
-                        <input type="checkbox" name="checkbox" disabled>
-                        <span></span>
-                    </span>
-                </label>
+                <div class="methods__item">
+                    <input class="input-hide" type="radio" name="packing_method" id="packing_method1" checked>
+                    <label class="methods__label checkbox--right" for="packing_method1">
+                        <svg class="methods__icon" width="25" height="17">
+                            <use href="#skotch"></use>
+                        </svg>
+                        <strong class="methods__title">Мешок + скотч</strong>
+                        <strong class="methods__price text--bold">2$</strong>
+                        <span class="checkbox">
+                            <span></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="methods__item">
+                    <input class="input-hide" type="radio" name="packing_method" id="packing_method2">
+                    <label class="methods__label checkbox--right" for="packing_method2">
+                        <svg class="methods__icon" width="24" height="25">
+                            <use href="#korobka"></use>
+                        </svg>
+                        <strong class="methods__title">Коробка + мешок + скотч</strong>
+                        <strong class="methods__price text--bold">2$</strong>
+                        <span class="checkbox">
+                            <span></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="methods__item">
+                    <input class="input-hide" type="radio" name="packing_method" id="packing_method3">
+                    <label class="methods__label checkbox--right" for="packing_method3">
+                        <svg class="methods__icon" width="24" height="24">
+                            <use href="#obreshetka"></use>
+                        </svg>
+                        <strong class="methods__title">
+                            <div class="tooltip-block">
+                                Обрешетка + мешок + скотч
+                                <div class="helper helper--big label__help">
+                                    <svg width="12" height="14">
+                                        <use href="#info"></use>
+                                    </svg>
+                                    <div class="tooltip-content hide-mobile">
+                                        <strong>Важная информация!</strong>
+                                        <p class="text">Выбор обрешетки обязателен при отправке электроники и хрупкого груза. Если Вы отправляете груз, который может повредиться в процессе транспортировки, и НЕ выбираете данную упаковку</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </strong>
+                        <strong class="methods__price text--bold">2$</strong>
+                        <span class="checkbox">
+                            <span></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="methods__item">
+                    <input class="input-hide" type="radio" name="packing_method" id="packing_method4" disabled>
+                    <label class="methods__label checkbox--right disabled" for="packing_method4">
+                        <span class="tooltip-content">Недоступно для данной отправки груза</span>
+                        <svg class="methods__icon" width="25" height="25">
+                            <use href="#palet"></use>
+                        </svg>
+                        <strong class="methods__title">
+                            <div class="tooltip-block">
+                                Палет + обрешетка + стрейч-пленка + скотч
+                                <div class="helper helper--big label__help">
+                                    <svg width="12" height="14">
+                                        <use href="#info"></use>
+                                    </svg>
+                                    <div class="tooltip-content hide-mobile">
+                                        <strong>Важная информация!</strong>
+                                        <p class="text">Выбор обрешетки обязателен при отправке электроники и хрупкого груза. Если Вы отправляете груз, который может повредиться в процессе транспортировки, и НЕ выбираете данную упаковку</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </strong>
+                        <strong class="methods__price text--bold">2$</strong>
+                        <span class="checkbox">
+                            <span></span>
+                        </span>
+                    </label>
+                </div>
                 <div class="methods__comment">
                     <p class="text">Комментарий:</p>
                     <input class="input" type="text"
@@ -462,7 +476,7 @@
             </div>
             <!--     End метод упаковки    -->
             <!--     адреса Slider    -->
-            <div class="l-flex pt-25">
+            <div class="l-flex">
                 <span class="list-count">2</span>
                 <div class="text text--bold">
                     Укажите получателя и адрес для доставки груза
@@ -470,15 +484,15 @@
             </div>
             <!--      Когда есть адресса      -->
             <div class="my-addresses-container">
-                <p class="text--bold pl-30">Мои адреса:</p>
+                <p class="text text--bold pl-30">Мои адреса:</p>
                 <div class="orders-slider addresses-slider">
                     <button class="orders-slider__btn orders-slider__btn--left" disabled>
-                        <svg width="25" height="30" viewBox="0 0 512 512">
+                        <svg width="30" height="30" viewBox="0 0 512 512">
                             <path d="M160 128.4L192.3 96 352 256 192.3 416 160 383.6 287.3 256z"></path>
                         </svg>
                     </button>
                     <button class="orders-slider__btn orders-slider__btn--right">
-                        <svg width="25" height="30" viewBox="0 0 512 512">
+                        <svg width="30" height="30" viewBox="0 0 512 512">
                             <path d="M160 128.4L192.3 96 352 256 192.3 416 160 383.6 287.3 256z"></path>
                         </svg>
                     </button>
@@ -498,12 +512,12 @@
                         </label>
 
                         <div class="address">
-                            Карпенко Юлия Владимировна<br>
-                            Красная, 15/1, 88<br>
-                            Краснодарский край, Краснодар<br>
-                            350900<br>
-                            Россия<br>
-                            892821965453
+                            <p class="text">Карпенко Юлия Владимировна</p>
+                            <p class="text">Красная, 15/1, 88</p>
+                            <p class="text">Краснодарский край, Краснодар</p>
+                            <p class="text">350900</p>
+                            <p class="text">Россия</p>
+                            <p class="text">892821965453</p>
                         </div>
 
                         <div class="stock-images">
@@ -522,25 +536,19 @@
                     </div>
                     <div class="orders-slider__item">
                         <label class="checkbox--right">
-                            <div class="l-flex">
-                                <small class="identifier identifier--yellow">Адрес по умолчанию</small>
-                                <svg width="15" height="15">
-                                    <use href="#address"></use>
-                                </svg>
-                            </div>
-                            <span class="checkbox">
+                            <span class="checkbox l-margin-left_auto">
                                 <input type="checkbox" name="check" checked>
                                 <span></span>
                             </span>
                         </label>
 
                         <div class="address">
-                            Карпенко Юлия Владимировна<br>
-                            Красная, 15/1, 88<br>
-                            Краснодарский край, Краснодар<br>
-                            350900<br>
-                            Россия<br>
-                            892821965453
+                            <p class="text">Карпенко Юлия Владимировна</p>
+                            <p class="text">Красная, 15/1, 88</p>
+                            <p class="text">Краснодарский край, Краснодар</p>
+                            <p class="text">350900</p>
+                            <p class="text">Россия</p>
+                            <p class="text">892821965453</p>
                         </div>
 
                         <div class="stock-images">
@@ -613,7 +621,7 @@
                 <div class="l-flex">
                     <div class="autocomplete-select">
                         <input class="input" name="select_city" value="" id="select_city"
-                               onfocus="this.classList.add('active')">
+                               onfocus="this.classList.add('active')" placeholder="Город">
                         <ul class="custom-select__list">
                             <li class="custom-select__item" onclick="onAutocomplete('select_city', this)">Могоча, Россия</li>
                             <li class="custom-select__item" onclick="onAutocomplete('select_city', this)">Можайск, Россия</li>
@@ -658,14 +666,14 @@
                         Выберите метод доставки:
                     </div>
                 </div>
-                <p>В данном пункте Вы можете создать свой уникальный составной маршрут для отправки груза из Китая в
+                <p class="methods-delivery__text">В данном пункте Вы можете создать свой уникальный составной маршрут для отправки груза из Китая в
                     город назначения.
                     Не важно, оптовый это груз или розничный заказ. Стоимость заказа указана исходя из характеристик
                     Вашего груза.</p>
 
                 <!--     метод доставки Китай - Россия  -->
                 <form action="" class="delivery-formData">
-                    <div class="l-flex pt-25 mb-10 mobile-wrap">
+                    <div class="l-flex mobile-wrap">
                         <div class="text text--bold mr-10 l-flex">
                             <span class="list-count list-count--small">1</span>
                             Для доставки груза: Китай - Россия
@@ -696,124 +704,133 @@
                             <button class="filter-btn" type="button">стоимости</button>
                         </span>
                     </div>
-                    <!--        Method list        -->
-                    <!--        Изначально нет классов checked/unchecked, как только один выбрали должен быть так как сайчас        -->
-                    <label class="methods__item checkbox--right checked">
-                        <span class="icon">
-                            <svg width="21" height="30">
-                                <use href="#superexpres"></use>
-                            </svg>
-                        </span>
-                        <strong class="methods__title">Супер Экспрес</strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>3-4 дня</span>
-                        </span>
-                        <strong class="methods__price text--big">30$</strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox" checked>
-                            <span></span>
-                        </span>
-                    </label>
-                    <!--        Изначально дизаблед        -->
-                    <label class="methods__item checkbox--right disabled">
-                        <span class="tooltip-content">Недоступно для данной отправки груза</span>
-                        <span class="icon">
-                            <svg width="70" height="31">
-                                <use href="#avia"></use>
-                            </svg>
-                        </span>
-                        <strong class="methods__title">Авиа</strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>3-4 дня</span>
-                        </span>
-                        <strong class="methods__price text--big">20$</strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox" disabled>
-                            <span></span>
-                        </span>
-                    </label>
-                    <label class="methods__item checkbox--right unchecked">
-                        <span class="icon">
-                            <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <use href="#poezd"></use>
-                            </svg>
-                        </span>
-                        <strong class="methods__title">Ж/Д</strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>3-4 дня</span>
-                        </span>
-                        <strong class="methods__price text--big">30$</strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox" disabled>
-                            <span></span>
-                        </span>
-                    </label>
-                    <label class="methods__item checkbox--right unchecked">
-                        <span class="icon">
-                            <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <use href="#poezd"></use>
-                            </svg>
-                        </span>
-                        <strong class="methods__title">Ж/Д</strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>3-4 дня</span>
-                        </span>
-                        <strong class="methods__price text--big">20$</strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox" disabled>
-                            <span></span>
-                        </span>
-                    </label>
-                    <label class="methods__item checkbox--right unchecked">
-                        <span class="icon">
-                            <svg width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <use href="#avto"></use>
-                            </svg>
-                        </span>
-                        <strong class="methods__title">Авто</strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>3-4 дня</span>
-                        </span>
-                        <strong class="methods__price text--big">30$</strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox" disabled>
-                            <span></span>
-                        </span>
-                    </label>
-                    <label class="methods__item checkbox--right unchecked">
-                        <span class="icon">
-                            <svg width="24" height="28">
-                                <use href="#ship"></use>
-                            </svg>
-                        </span>
-                        <strong class="methods__title">Море</strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>3-4 дня</span>
-                        </span>
-                        <strong class="methods__price text--big">3$</strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox" disabled>
-                            <span></span>
-                        </span>
-                    </label>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_china_russia" id="delivery_china_russia1" checked>
+                        <label class="methods__label checkbox--right" for="delivery_china_russia1">
+                            <span class="icon">
+                                <svg width="21" height="30">
+                                    <use href="#superexpres"></use>
+                                </svg>
+                            </span>
+                            <strong class="methods__title">Супер Экспрес</strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
+                                </svg>
+                                <span>3-4 дня</span>
+                            </span>
+                            <strong class="methods__price text--big">30$</strong>
+                            <span class="checkbox">
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_china_russia" id="delivery_china_russia2" disabled>
+                        <label class="methods__label checkbox--right" for="delivery_china_russia2">
+                            <span class="tooltip-content">Недоступно для данной отправки груза</span>
+                                <span class="icon">
+                                <svg width="70" height="31">
+                                    <use href="#avia"></use>
+                                </svg>
+                            </span>
+                            <strong class="methods__title">Авиа</strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
+                                </svg>
+                                <span>3-4 дня</span>
+                            </span>
+                            <strong class="methods__price text--big">20$</strong>
+                            <span class="checkbox">
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_china_russia" id="delivery_china_russia3">
+                        <label class="methods__label checkbox--right" for="delivery_china_russia3">
+                            <span class="icon">
+                                <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="#poezd"></use>
+                                </svg>
+                            </span>
+                            <strong class="methods__title">Ж/Д</strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
+                                </svg>
+                                <span>3-4 дня</span>
+                            </span>
+                            <strong class="methods__price text--big">30$</strong>
+                            <span class="checkbox">
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_china_russia" id="delivery_china_russia4">
+                        <label class="methods__label checkbox--right" for="delivery_china_russia4">
+                            <span class="icon">
+                                <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="#poezd"></use>
+                                </svg>
+                            </span>
+                            <strong class="methods__title">Ж/Д</strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
+                                </svg>
+                                <span>3-4 дня</span>
+                            </span>
+                            <strong class="methods__price text--big">20$</strong>
+                            <span class="checkbox">
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_china_russia" id="delivery_china_russia5">
+                        <label class="methods__label checkbox--right" for="delivery_china_russia5">
+                            <span class="icon">
+                                <svg width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="#avto"></use>
+                                </svg>
+                            </span>
+                            <strong class="methods__title">Авто</strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
+                                </svg>
+                                <span>3-4 дня</span>
+                            </span>
+                            <strong class="methods__price text--big">30$</strong>
+                            <span class="checkbox">
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_china_russia" id="delivery_china_russia6">
+                        <label class="methods__label checkbox--right" for="delivery_china_russia6">
+                            <span class="icon">
+                                <svg width="24" height="28">
+                                    <use href="#ship"></use>
+                                </svg>
+                            </span>
+                            <strong class="methods__title">Море</strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
+                                </svg>
+                                <span>3-4 дня</span>
+                            </span>
+                            <strong class="methods__price text--big">3$</strong>
+                            <span class="checkbox">
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
                 </form>
                 <form action="" class="delivery-formData">
                     <div class="l-flex pt-25 mb-10 mobile-wrap">
@@ -853,216 +870,238 @@
                         </span>
                     </div>
                     <!--        Method list        -->
-                    <!--        Изначально нет классов checked/unchecked, как только один выбрали должен быть один checked, остальные unchecked, а еще не забудь input поставить дизаблед и чекед         -->
-                    <label class="methods__item checkbox--right">
-                        <span class="image">
-                            <img src="img/cdek.png" alt="">
-                        </span>
-                        <strong class="methods__title text--uppercase">
-                            СДэК
-                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.9608 5.75336C14.862 5.44963 14.5926 5.23459 14.2751 5.20587L9.94509 4.81276L8.23383 0.806344C8.10748 0.511997 7.82 0.322021 7.50002 0.322021C7.18004 0.322021 6.89244 0.511997 6.7669 0.806344L5.05563 4.81276L0.72489 5.20587C0.407425 5.23517 0.138599 5.4502 0.039263 5.75336C-0.0595012 6.0571 0.0317097 6.39024 0.271811 6.60081L3.54499 9.47092L2.57989 13.7216C2.50928 14.0341 2.63059 14.3573 2.88992 14.5447C3.02931 14.646 3.19308 14.6966 3.35742 14.6966C3.49864 14.6966 3.63998 14.6591 3.76621 14.5835L7.50002 12.351L11.2331 14.5835C11.507 14.7472 11.8514 14.7322 12.1101 14.5447C12.3694 14.3573 12.4908 14.0341 12.4201 13.7216L11.455 9.47092L14.7282 6.60081C14.9682 6.39024 15.0595 6.05778 14.9608 5.75336Z"
-                                      fill="#F9C800"/>
-                            </svg>
-                            <div class="tooltip-content">Выбор пользователей</div>
-                        </strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>3-4 дня</span>
-                        </span>
-                        <strong class="methods__price text--big">30$</strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox">
-                            <span></span>
-                        </span>
-                    </label>
-                    <label class="methods__item checkbox--right">
-                        <span class="image">
-                            <img src="img/Russian_Post.png" alt="">
-                        </span>
-                        <strong class="methods__title text--uppercase">Почта России</strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>3-4 дня</span>
-                        </span>
-                        <strong class="methods__price text--big">30$</strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox">
-                            <span></span>
-                        </span>
-                    </label>
-                    <label class="methods__item checkbox--right">
-                        <span class="image">
-                            <img src="img/Delovye-lini.png" alt="">
-                        </span>
-                        <strong class="methods__title text--uppercase">Деловые<br> линии</strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>10-12 дней</span>
-                        </span>
-                        <strong class="methods__price text--big">
-                            <svg width="25" height="25">
-                                <use href="#loading"></use>
-                            </svg>
-                            <div class="tooltip-content">Ожидаем информацию</div>
-                        </strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox">
-                            <span></span>
-                        </span>
-                    </label>
-                    <label class="methods__item checkbox--right">
-                        <span class="image">
-                            <img src="img/geldor.png" alt="">
-                        </span>
-                        <strong class="methods__title text--uppercase">ЖелДор<br> Экспедиция</strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>18-25 дней</span>
-                        </span>
-                        <strong class="methods__price text--big">45$</strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox">
-                            <span></span>
-                        </span>
-                    </label>
-                    <label class="methods__item checkbox--right">
-                        <span class="image">
-                            <img src="img/baikal.png" alt="">
-                        </span>
-                        <strong class="methods__title text--uppercase">Байкал сервис</strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>18-25 дней</span>
-                        </span>
-                        <strong class="methods__price text--big">45$</strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox">
-                            <span></span>
-                        </span>
-                    </label>
-                    <label class="methods__item checkbox--right">
-                        <span class="image">
-                            <img src="img/gto.png" alt="">
-                        </span>
-                        <strong class="methods__title text--uppercase">GTD</strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>18-25 дней</span>
-                        </span>
-                        <strong class="methods__price text--big">
-                            <svg width="25" height="25">
-                                <use href="#loading"></use>
-                            </svg>
-                            <div class="tooltip-content">Ожидаем информацию</div>
-                        </strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox">
-                            <span></span>
-                        </span>
-                    </label>
-                    <label class="methods__item checkbox--right">
-                        <span class="image">
-                            <img src="img/viktoria.png" alt="">
-                        </span>
-                        <strong class="methods__title text--uppercase">Виктория</strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>18-25 дней</span>
-                        </span>
-                        <strong class="methods__price text--big">45$</strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox">
-                            <span></span>
-                        </span>
-                    </label>
-                    <label class="methods__item checkbox--right">
-                        <span class="image">
-                            <img src="img/glavdostavka.png" alt="">
-                        </span>
-                        <strong class="methods__title text--uppercase">Главдоставка</strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>18-25 дней</span>
-                        </span>
-                        <strong class="methods__price text--big">45$</strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox">
-                            <span></span>
-                        </span>
-                    </label>
-                    <label class="methods__item checkbox--right">
-                        <span class="image">
-                            <img src="img/samovizov.png" alt="">
-                        </span>
-                        <strong class="methods__title text--uppercase">Самовывоз<br> люблино</strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>0 дней</span>
-                        </span>
-                        <strong class="methods__price text--big">45$</strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox">
-                            <span></span>
-                        </span>
-                    </label>
-                    <label class="methods__item checkbox--right">
-                        <span class="image">
-                            <img src="img/samovizov.png" alt="">
-                        </span>
-                        <strong class="methods__title text--uppercase">Самовывоз<br> южные ворота</strong>
-                        <span class="methods__days">
-                            <svg width="15" height="16">
-                                <use href="#calendar"></use>
-                            </svg>
-                            <span>0 дней</span>
-                        </span>
-                        <strong class="methods__price text--big">45$</strong>
-                        <span class="checkbox">
-                            <input type="checkbox" name="checkbox">
-                            <span></span>
-                        </span>
-                    </label>
-                    <div class="custom-transport">
-                        <label class="checkbox--right">
-                            <svg width="25" height="29" class="shrink-0">
-                                <use href="#question"></use>
-                            </svg>
-                            <span class="text--big">Желаемой транспортной компании нет в списке. Я укажу название в комментарии к заказу</span>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_in_russia" id="delivery_in_russia1" checked>
+                        <label class="methods__label checkbox--right" for="delivery_in_russia1">
+                            <span class="image">
+                                <img src="img/cdek.png" alt="">
+                            </span>
+                            <strong class="methods__title">
+                                СДЭК
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.9608 5.75336C14.862 5.44963 14.5926 5.23459 14.2751 5.20587L9.94509 4.81276L8.23383 0.806344C8.10748 0.511997 7.82 0.322021 7.50002 0.322021C7.18004 0.322021 6.89244 0.511997 6.7669 0.806344L5.05563 4.81276L0.72489 5.20587C0.407425 5.23517 0.138599 5.4502 0.039263 5.75336C-0.0595012 6.0571 0.0317097 6.39024 0.271811 6.60081L3.54499 9.47092L2.57989 13.7216C2.50928 14.0341 2.63059 14.3573 2.88992 14.5447C3.02931 14.646 3.19308 14.6966 3.35742 14.6966C3.49864 14.6966 3.63998 14.6591 3.76621 14.5835L7.50002 12.351L11.2331 14.5835C11.507 14.7472 11.8514 14.7322 12.1101 14.5447C12.3694 14.3573 12.4908 14.0341 12.4201 13.7216L11.455 9.47092L14.7282 6.60081C14.9682 6.39024 15.0595 6.05778 14.9608 5.75336Z"
+                                          fill="#F9C800"/>
+                                </svg>
+                                <div class="tooltip-content">Выбор пользователей</div>
+                            </strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
+                                </svg>
+                                <span>3-4 дня</span>
+                            </span>
+                            <strong class="methods__price text--big">30$</strong>
+                            <span class="checkbox">
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_in_russia" id="delivery_in_russia2">
+                        <label class="methods__label checkbox--right" for="delivery_in_russia2">
+                            <span class="image">
+                                <img src="img/Russian_Post.png" alt="">
+                            </span>
+                            <strong class="methods__title">Почта России</strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
+                                </svg>
+                                <span>3-4 дня</span>
+                            </span>
+                            <strong class="methods__price text--big">30$</strong>
+                            <span class="checkbox">
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_in_russia" id="delivery_in_russia3">
+                        <label class="methods__label checkbox--right" for="delivery_in_russia3">
+                            <span class="image">
+                                <img src="img/Delovye-lini.png" alt="">
+                            </span>
+                            <strong class="methods__title">Деловые<br> линии</strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
+                                </svg>
+                                <span>10-12 дней</span>
+                            </span>
+                            <strong class="methods__price text--big">
+                                <svg width="25" height="25">
+                                    <use href="#loading"></use>
+                                </svg>
+                                <div class="tooltip-content">Ожидаем информацию</div>
+                            </strong>
+                            <span class="checkbox">
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_in_russia" id="delivery_in_russia4">
+                        <label class="methods__label checkbox--right" for="delivery_in_russia4">
+                            <span class="image">
+                                <img src="img/geldor.png" alt="">
+                            </span>
+                            <strong class="methods__title">ЖелДор<br> Экспедиция</strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
+                                </svg>
+                                <span>18-25 дней</span>
+                            </span>
+                            <strong class="methods__price text--big">45$</strong>
+                            <span class="checkbox">
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_in_russia" id="delivery_in_russia5">
+                        <label class="methods__label checkbox--right" for="delivery_in_russia5">
+                            <span class="image">
+                                <img src="img/baikal.png" alt="">
+                            </span>
+                            <strong class="methods__title">Байкал сервис</strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
+                                </svg>
+                                <span>18-25 дней</span>
+                            </span>
+                            <strong class="methods__price text--big">45$</strong>
+                            <span class="checkbox">
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_in_russia" id="delivery_in_russia6">
+                        <label class="methods__label checkbox--right" for="delivery_in_russia6">
+                            <span class="image">
+                                <img src="img/gto.png" alt="">
+                            </span>
+                            <strong class="methods__title">GTD</strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
+                                </svg>
+                                <span>18-25 дней</span>
+                            </span>
+                            <strong class="methods__price text--big">
+                                <svg width="25" height="25">
+                                    <use href="#loading"></use>
+                                </svg>
+                                <div class="tooltip-content">Ожидаем информацию</div>
+                            </strong>
+                            <span class="checkbox">
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_in_russia" id="delivery_in_russia7">
+                        <label class="methods__label checkbox--right" for="delivery_in_russia7">
+                            <span class="image">
+                                <img src="img/viktoria.png" alt="">
+                            </span>
+                            <strong class="methods__title">Виктория</strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
+                                </svg>
+                                <span>18-25 дней</span>
+                            </span>
+                            <strong class="methods__price text--big">45$</strong>
+                            <span class="checkbox">
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_in_russia" id="delivery_in_russia8">
+                        <label class="methods__label checkbox--right" for="delivery_in_russia8">
+                            <span class="image">
+                                <img src="img/glavdostavka.png" alt="">
+                            </span>
+                            <strong class="methods__title">Главдоставка</strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
+                                </svg>
+                                <span>18-25 дней</span>
+                            </span>
+                            <strong class="methods__price text--big">45$</strong>
                             <span class="checkbox">
                                 <input type="checkbox" name="checkbox">
                                 <span></span>
                             </span>
                         </label>
-                        <div class="methods__comment">
-                            <input class="input" type="text"
-                                   placeholder="Введите название транспортной компании">
-                            <div class="text--align_right info-text">
-                                <svg width="10" height="10">
-                                    <use href="#comment-save"></use>
+                    </div>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_in_russia" id="delivery_in_russia9">
+                        <label class="methods__label checkbox--right" for="delivery_in_russia9">
+                            <span class="image">
+                                <img src="img/samovizov.png" alt="">
+                            </span>
+                            <strong class="methods__title">Самовывоз<br> люблино</strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
                                 </svg>
-                                <small>Комментарий сохранен</small>
+                                <span>0 дней</span>
+                            </span>
+                            <strong class="methods__price text--big">45$</strong>
+                            <span class="checkbox">
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_in_russia" id="delivery_in_russia10">
+                        <label class="methods__label checkbox--right" for="delivery_in_russia10">
+                            <span class="image">
+                                <img src="img/samovizov.png" alt="">
+                            </span>
+                            <strong class="methods__title">Самовывоз<br> южные ворота</strong>
+                            <span class="methods__days">
+                                <svg width="15" height="16">
+                                    <use href="#calendar"></use>
+                                </svg>
+                                <span>0 дней</span>
+                            </span>
+                            <strong class="methods__price text--big">45$</strong>
+                            <span class="checkbox">
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="methods__item">
+                        <input class="input-hide" type="radio" name="delivery_in_russia" id="delivery_in_russia11">
+                        <label class="methods__label custom-transport" for="delivery_in_russia11">
+                            <div class="checkbox--right">
+                                <svg width="25" height="29" class="shrink-0">
+                                    <use href="#question"></use>
+                                </svg>
+                                <span class="text--big">Желаемой транспортной компании нет в списке. Я укажу название в комментарии к заказу</span>
+                                <span class="checkbox">
+                                    <span></span>
+                                </span>
                             </div>
-                        </div>
+                            <div class="methods__comment">
+                                <input class="input" type="text"
+                                       placeholder="Введите название транспортной компании" disabled>
+                                <div class="text--align_right info-text">
+                                    <svg width="10" height="10">
+                                        <use href="#comment-save"></use>
+                                    </svg>
+                                    <small>Комментарий сохранен</small>
+                                </div>
+                            </div>
+                        </label>
                     </div>
                 </form>
             </div>

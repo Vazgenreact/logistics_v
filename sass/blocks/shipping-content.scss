@@ -96,7 +96,7 @@
 .orders-slider {
   position: relative;
   padding: 0 30px;
-  margin: 25px 0;
+  margin: 22px 0 30px;
   display: flex;
   overflow: auto;
 
@@ -125,6 +125,9 @@
   }
 
   &__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
     top: 0;
     height: 100%;
@@ -133,7 +136,7 @@
     background-color: rgba(255, 255, 255, .8);
     outline: none;
     padding: 0;
-    width: 30px;
+    width: 50px;
     cursor: pointer;
 
     &:disabled {
@@ -152,12 +155,13 @@
     &--left {
       left: 0;
       transform: rotate(180deg);
-      text-align: left;
+      align-items: flex-end;
     }
 
     &--right {
       right: 0;
       text-align: right;
+      align-items: center;
     }
   }
 
@@ -194,6 +198,18 @@
   .orders-slider__item {
     max-width: 255px;
     min-width: 255px;
+    padding: 15px 15px 30px 20px;
+  }
+  .orders-slider__btn {
+
+    &--right {
+      justify-content: flex-start;
+      padding-top: 90px;
+    }
+    &--left {
+      justify-content: flex-end;
+      padding-bottom: 90px;
+    }
   }
 
   .identifier {
@@ -203,11 +219,19 @@
 
   .address {
     flex-grow: 1;
-    padding: 5px 0 20px;
+    padding: 10px 0 20px;
+
+    .text {
+      line-height: 1.6;
+    }
   }
 
   .stock-images {
-    padding-top: 0;
+    padding-top: 10px;
+
+    .semicircle--right {
+      right: -15px;
+    }
 
     .checkbox input:checked + span::before {
       border-color: #000;
@@ -215,6 +239,10 @@
 
     .checkbox input:not(:checked) + span {
       color: $font-color-silver;
+    }
+
+    .checkbox span {
+      margin-top: -5px;
     }
   }
 }
@@ -330,7 +358,7 @@
 
 .my-addresses-container {
   border-bottom: 1px solid $silver-big;
-  padding-bottom: 20px;
+  padding: 30px 0 20px;
 }
 
 .create-address-container {
@@ -342,6 +370,7 @@
     margin-bottom: 10px;
   }
 
+  .autocomplete-select,
   .tooltip-block,
   .input {
     width: calc(30% - 5px);
@@ -384,6 +413,19 @@
   .delivery-methods {
     display: flex;
     justify-content: space-between;
+
+    .checkbox span {
+      color: $font-color-silver;
+      &::before {
+        border-color: $font-color-silver;
+      }
+    }
+    .checkbox input:checked + span {
+      color: $font-color-main;
+      &::before {
+        border-color: #333;
+      }
+    }
   }
 
   @media (max-width: 576px) {
@@ -398,9 +440,14 @@
 
 .methods-delivery {
 
+  &__text {
+    margin: 12px 0 20px;
+  }
+
   .input {
     margin-left: 5px;
     width: 130px;
+    padding: 6px 10px;
   }
 
   .l-flex > svg {
@@ -421,44 +468,6 @@
       opacity: 1;
     }
   }
-}
-
-.custom-transport {
-  border: 1px solid #333333;
-  border-radius: 5px;
-  padding: 20px 20px 5px;
-
-  .text--big {
-    font-weight: 400;
-    padding: 0 30px;
-  }
-
-  .checkbox--right:hover {
-    .checkbox input:not(:checked):not(:disabled) + span:after {
-      opacity: .3;
-    }
-  }
-
-  .methods__comment {
-    margin-top: 15px;
-
-    input::-webkit-input-placeholder {
-      opacity: 1;
-    }
-
-    input:-ms-input-placeholder {
-      opacity: 1;
-    }
-
-    input::placeholder {
-      opacity: 1;
-    }
-  }
-
-  .input {
-    margin-left: 0;
-  }
-
 }
 
 .delivery-formData {

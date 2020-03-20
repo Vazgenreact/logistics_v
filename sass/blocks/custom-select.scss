@@ -6,7 +6,7 @@
     content: '';
     position: absolute;
     right: 10px;
-    top: 14px;
+    top: 11px;
     width: 7px;
     height: 7px;
     border-right: 1px solid #333;
@@ -22,7 +22,7 @@
     padding: 0;
 
     .text {
-      padding: 9px 15px;
+      padding: 6px 10px;
       display: inline-block;
       width: 100%;
       box-sizing: border-box;
@@ -82,6 +82,19 @@
 
 .autocomplete-select {
   position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    width: 7px;
+    height: 7px;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    transform: rotate(45deg);
+    z-index: 8;
+  }
 
   .input {
     width: 100% !important;

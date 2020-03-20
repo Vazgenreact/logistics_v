@@ -11,7 +11,7 @@
             position: absolute;
             content: '';
             left: 0;
-            top: -2px;
+            top: 0;
             border: 1px solid $silver-big;
             border-radius: 3px;
         }
@@ -21,7 +21,7 @@
             background: url(../img/check.svg) no-repeat center;
             background-size: 75% 75%;
             left: 1px;
-            top: -1px;
+            top: 0;
             opacity: 0;
             transition: opacity 0.2s;
         }

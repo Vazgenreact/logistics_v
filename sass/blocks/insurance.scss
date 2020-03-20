@@ -4,7 +4,7 @@
   align-items: center;
   background-color: $silver-normal;
   padding: 13px 20px 13px 10px;
-  margin: 15px 0;
+  margin: 5px 0 30px;
 
   &__content {
     display: flex;
@@ -12,14 +12,14 @@
     margin: 0 10px;
 
     .input {
-      width: 60px;
-      height: 25px;
+      width: 80px;
+      height: 42px;
       padding: 0 5px;
       display: inline-block;
       margin: 0 5px 0 10px;
 
       &:disabled {
-        width: 25px;
+        width: 42px;
         text-align: center;
         background-color: $silver-normal;
 
