@@ -1,5 +1,7 @@
 .admin-page {
-
+  .custom-select .input:first-child input+.text {
+    padding: 9px 15px;
+  }
   .cart-order {
     padding: 0;
   }
@@ -13,10 +15,11 @@
     margin: -45px 0 0;
 
     &__item {
-      flex-basis: 48%;
+      flex-basis: calc(50% - 8px);
     }
     &__link {
       padding-bottom: 10px;
+      font-size: 16px;
     }
   }
   .container__redemption {
@@ -79,7 +82,7 @@
           border: 0;
         }
         .text {
-          padding-left: 0;
+          padding-left: 0!important;
         }
       }
     }

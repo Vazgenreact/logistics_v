@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics Мои сообщения</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <!-- Это спрайт c svg иконками -->
+    <div class="none"><include src="build/img/sprite.svg"></include></div>
+
+    <header class="main  top">
+        <img src="img/logo.svg" alt="Topzakazz logistics logo" class="top__logo">
+        <a href="#" class="text  text--uppercase  text--regular  text--main  top__exit">Выход</a>
+    </header>
+
+    <section class="main">
+        <div class="user-box">
+            <p class="user-box__text">
+                <small class="text  text--little  text--regular">Здравствуйте,</small>
+                <span class="text  text--uppercase  text--bold  user-box__name">Алексей Хайрутдинов</span>
+            </p>
+            <div class="user-box__balance">
+                <a href="#" class="btn  btn--border  btn--arrow  user-box__btn  user-box__btn--left">
+                    Пополнить
+                    <svg class="arrow  arrow--right">
+                        <use xlink:href="#arrow"></use>
+                    </svg>
+                </a>
+                <div class="select select-valuted user-box__select">
+                    <div class="select__param">
+                        <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
+                    </div>
+                    <!-- Если нужно показать селект - показываем select__list display: block; ну или как-то чтоб поменять это свойство-->
+                    <div class="select__list">
+                        <div class="select__item" data-value="4187.63 RUB">
+                            <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
+                        </div>
+                        <div class="select__item" data-value="418.7 CNY">
+                            <strong>418.7</strong><small>.63</small> <span class="helper" data-help="Юани">¥</span>
+                        </div>
+                        <div class="select__item" data-value="65 USD">
+                            <strong>65</strong><small>.63</small> <span class="helper" data-help="Доллары">$</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn  btn--border  btn--border_silver  btn--arrow  user-box__btn  user-box__btn--right">
+                    Вывести
+                    <svg class="arrow  arrow--right">
+                        <use xlink:href="#arrow"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="main container align-stretch">
+        <div class="container__part">
+            <ul class="part">
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link">заказы на выкуп</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link  part__link--disabled">отправки из китая</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link  part__link--disabled">запросы на поиск</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link">финансы</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link  part__link--disabled">сообщения</a>
+                </li>
+            </ul>
+
+            <ul class="part  container__user-sidebar">
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link">информация</a>
+                </li>
+                <li class="part__item">
+                    <a href="change-password.html" class="text  text--uppercase  part__link  part__link--active  text--bold">изменить пароль</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link">адреса</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link  part__link--disabled">социальные сети</a>
+                </li>
+                <li class="part__item  part__item--partner">
+                    <a href="#" class="text  text--uppercase  part__link">реферальная программа</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link">промокод</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link">FAQ</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container__center container__center--flex">
+            <div class="intro  messages__top">
+                <h3 class="l-flex  text  text--uppercase  text--bold  text--big  intro__title">
+                    <svg class="mr-15" width="50" height="50">
+                        <use href="#messages"></use>
+                    </svg>
+                    сообщения
+                </h3>
+                <p class="text">В этом разделе отображены ваши сообщения с мененеджерами</p>
+            </div>
+            <div class="messages grow-1">
+                <div class="messages__container">
+                    <div class="message message--my">
+                        <div class="message__date">
+                            13:28 20.03.2020
+                        </div>
+                        <div class="message__text">
+                            <p class="text">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit</p>
+                        </div>
+                    </div>
+
+                    <div class="message message--my">
+                        <div class="message__date">
+                            21:53 20.03.2020
+                        </div>
+                        <div class="message__text">
+                            <p class="text">Cras sit amet vulputate massa. Integer enim purus, egestas ut iaculis sed, consectetur ut eros. Sed eu tellus vitae lacus vestibulum scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae</p>
+                        </div>
+                    </div>
+
+                    <div class="message message--your">
+                        <div class="message__img">
+                            <img src="img/Ellipse5.png" alt="">
+                        </div>
+                        <div class="message__block">
+                            <div class="message__date">
+                                21:53 20.03.2020
+                            </div>
+                            <div class="message__text">
+                                <p class="text">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit</p>
+                            </div>
+                            <div class="message__text">
+                                <p class="text">Aenean at volutpat risus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message message--my">
+                        <div class="message__date">
+                            13:28 20.03.2020
+                        </div>
+                        <div class="message__text">
+                            <p class="text">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit</p>
+                        </div>
+                    </div>
+
+                    <div class="message message--my">
+                        <div class="message__date">
+                            21:53 20.03.2020
+                        </div>
+                        <div class="message__text">
+                            <p class="text">Cras sit amet vulputate massa. Integer enim purus, egestas ut iaculis sed, consectetur ut eros. Sed eu tellus vitae lacus vestibulum scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae</p>
+                        </div>
+                    </div>
+
+                    <div class="message message--your">
+                        <div class="message__img">
+                            <img src="img/Ellipse5.png" alt="">
+                        </div>
+                        <div class="message__block">
+                            <div class="message__date">
+                                21:53 20.03.2020
+                            </div>
+                            <div class="message__text">
+                                <p class="text">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit</p>
+                            </div>
+                            <div class="message__text">
+                                <p class="text">Aenean at volutpat risus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--     Отправить сообщение    -->
+                <form action="" class="messages__form">
+                    <label class="messages__label">
+                        <input type="text" class="input messages__input" placeholder="Введите сообщение">
+                        <svg class="messages__icon" width="20" height="20">
+                            <use href="#file"></use>
+                        </svg>
+                    </label>
+                    <button class="messages__send">
+                        <svg width="20" height="20">
+                            <use href="#sending"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container__additionally"></div>
+    </main>
+
+    <div class="popup  popup--wechatpay">
+        <a class="cross  popup__close"><svg><use href="#cross"></use></svg></a>
+        <img src="img/wechatpayalexey.png">
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -98,33 +98,6 @@
     </div>
 
     <div class="container__center--max100">
-        <form class="filter" action="">
-            <div class="filter__status custom-select">
-                <div class="input custom-select__input" id="filter_status" onclick="onToggleSelect(this)">
-                    <input class="input-hide" name="filter_status" value="Статус заказа">
-                    <span class="text">Статус заказа</span>
-                </div>
-                <ul class="custom-select__list">
-                    <li class="custom-select__item" onclick="onChangeSelect('filter_status', 'Статус заказа', this)">Статус заказа
-                    </li>
-                    <li class="custom-select__item" onclick="onChangeSelect('filter_status', 'рубли', this)">Статус заказа 2
-                    </li>
-                    <li class="custom-select__item" onclick="onChangeSelect('filter_status', 'доллары', this)">Статус заказа 3
-                    </li>
-                </ul>
-            </div>
-            <div class="filter__date custom-select">
-                <div class="custom-select__input" id="filter_date">
-                    <input class="input" name="filter_date" placeholder="Дата создания заказа">
-                </div>
-            </div>
-            <div class="filter__search">
-                <input type="text" class="input" placeholder="Поиск по заказам">
-                <button class="icon-search">
-                    <svg width="16" height="16"><use href="#search"></use></svg>
-                </button>
-            </div>
-        </form>
         <div class="shipping-top">
             <div class="cart-order container__order">
                 <div class="cart-order__wrap">
@@ -149,7 +122,7 @@
                                     <input class="input-hide" name="order_status" value="Оплачен">
                                     <span class="text">Оплачен</span>
                                 </div>
-                                <ul class="custom-select__list">
+                                <ul class="custom-select__list custom-select__list--shadow">
                                     <li class="custom-select__item" onclick="onChangeSelect('order_status', 'Оплачен', this)">Оплачен
                                     </li>
                                     <li class="custom-select__item" onclick="onChangeSelect('order_status', 'Выкуплен', this)">Выкуплен
@@ -165,7 +138,7 @@
                         </td>
                         <td>
                             <div class="l-flex justify-center">
-                                <button class="marker  marker--box  mr-10" onclick=""><svg><use href="#marker"></use></svg></button>
+                                <button class="marker  marker--box  mr-10" onclick=""><svg><use href="#address"></use></svg></button>
                                 <button class="marker  marker--box  mr-10" disabled><svg><use href="#save"></use></svg></button>
                             </div>
                         </td>
@@ -204,7 +177,7 @@
                             </span>
                         </button>
 
-                        <button class="marker  marker--box  mr-10"><svg><use href="#marker"></use></svg></button>
+                        <button class="marker  marker--box  mr-10"><svg><use href="#address"></use></svg></button>
                         <button type="button" class="redemption-order__delit cross" title="Удалить товар"><svg><use href="#cross"></use></svg></button>
                         <!-- При клике возникает попап popup--delit -->
                     </div>
@@ -348,7 +321,7 @@
                             </span>
                         </button>
 
-                        <button class="marker  marker--box  mr-10"><svg><use href="#marker"></use></svg></button>
+                        <button class="marker  marker--box  mr-10"><svg><use href="#address"></use></svg></button>
                         <button type="button" class="redemption-order__delit cross"><svg><use xlink:href="#cross"></use></svg></button>
                     </div>
 
@@ -458,7 +431,7 @@
                             </span>
                         </button>
 
-                        <button class="marker  marker--box  mr-10"><svg><use href="#marker"></use></svg></button>
+                        <button class="marker  marker--box  mr-10"><svg><use href="#address"></use></svg></button>
                         <button type="button" class="redemption-order__delit cross"><svg><use xlink:href="#cross"></use></svg></button>
                     </div>
 
@@ -561,7 +534,7 @@
                             <input class="input-hide" name="selected_service" value="">
                             <span class="text">Выберите услугу</span>
                         </div>
-                        <ul class="custom-select__list">
+                        <ul class="custom-select__list custom-select__list--shadow">
                             <li class="custom-select__item" onclick="onChangeSelect('selected_service', '', this)">Выберите услугу
                             </li>
                             <li class="custom-select__item" onclick="onChangeSelect('selected_service', 'china', this)">Доставка по Китаю
@@ -584,7 +557,7 @@
                                 <input class="input-hide" name="selected_service_rate" value="юани">
                                 <span class="text">¥, юани</span>
                             </div>
-                            <ul class="custom-select__list">
+                            <ul class="custom-select__list custom-select__list--shadow">
                                 <li class="custom-select__item" onclick="onChangeSelect('selected_service_rate', 'юани', this)">¥, юани
                                 </li>
                                 <li class="custom-select__item" onclick="onChangeSelect('selected_service_rate', 'рубли', this)">₽, рубли
@@ -622,7 +595,7 @@
                                     <input class="input-hide" name="select_refund" value="">
                                     <span class="text">Оформить возврат средств</span>
                                 </div>
-                                <ul class="custom-select__list">
+                                <ul class="custom-select__list custom-select__list--shadow">
                                     <li class="custom-select__item" onclick="onChangeSelect('select_refund', '', this)">Оформить возврат средств
                                     </li>
                                     <li class="custom-select__item" onclick="onChangeSelect('select_refund', 'china', this)">Доставка по Китаю
@@ -646,7 +619,7 @@
                                         <input class="input-hide" name="select_refund_rate" value="юани">
                                         <span class="text">¥, юани</span>
                                     </div>
-                                    <ul class="custom-select__list">
+                                    <ul class="custom-select__list custom-select__list--shadow">
                                         <li class="custom-select__item" onclick="onChangeSelect('select_refund_rate', 'юани', this)">¥, юани
                                         </li>
                                         <li class="custom-select__item" onclick="onChangeSelect('select_refund_rate', 'рубли', this)">₽, рубли

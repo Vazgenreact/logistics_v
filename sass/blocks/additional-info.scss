@@ -7,7 +7,7 @@
 
   &__top {
     background-color: $u-yellow;
-    padding: 15px 17px;
+    padding: 18px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -54,6 +54,15 @@
 
       .checkbox {
         flex-basis: 48%;
+        color: $font-color-silver;
+
+        input:checked + span {
+          color: #333;
+          
+          &::before {
+            border-color: #333;
+          }
+        }
       }
     }
 

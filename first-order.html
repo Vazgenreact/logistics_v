@@ -125,7 +125,7 @@
                             </span>
                         </button>
 
-                        <button class="marker  marker--box  mr-10"><svg><use href="#marker"></use></svg></button>
+                        <button class="marker  marker--box  mr-10"><svg><use href="#address"></use></svg></button>
                         <button type="button" data-help="Удалить товар"
                                 class="helper  helper--delit cross redemption-order__delit ">
                             <svg>
@@ -237,81 +237,81 @@
         </div>
 
         <div class="container__additionally">
-<div class="scroll-block">
-            <div class="banner" style="background-image: url(img/banner.png)">
-                <button class="cross banner__close" aria-label="Закрыть"><svg><use  href="#cross"></use></svg></button>
-                <h5 class="text  text--uppercase  text--bold  text--big  banner__title">Руководство<br> по оформлению<br> заказа</h5>
-            </div>
+            <div class="scroll-block">
+                <div class="banner p-20" style="background-image: url(img/banner.png)">
+                    <button class="cross banner__close" aria-label="Закрыть"><svg><use  href="#cross"></use></svg></button>
+                    <h5 class="text  text--uppercase  text--bold  text--big  banner__title">Руководство<br> по оформлению<br> заказа</h5>
+                </div>
 
-            <div class="mini-cart  container__mini-cart">
-                <h5 class="text  text--uppercase  text--bold  text--big  mini-cart__title l-flex justify-between">Корзина <span>$</span></h5>
-                <table class="mini-cart__params  text  text--regular">
-                    <tr>
-                        <td>Стоимость товара</td>
-                        <td>1250</td>
-                    </tr>
-                    <tr>
-                        <td>Комиссия платформы</td>
-                        <td>55</td>
-                    </tr>
-                    <tr>
-                        <td>Итоговая стоимость</td>
-                        <td>1755</td>
-                    </tr>
-                </table>
-                <table class="mini-cart__params mini-cart__params--silver  text  text--regular  text--blonde helper helper--big helper--right" data-help="Рассчитывается фактически после получения товара на склад. Оплата взымается вместе со стоимостью услуг по транспортировке товара из Китая">
-                    <tr>
-                        <td>Доставка товара по Китаю</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>Дополнительные услуги</td>
-                        <td>0</td>
-                    </tr>
-                </table>
-                <a href="#" class="btn btn--arrow">
-                    Оформить заказ
-                    <svg class="arrow  arrow--right">
-                        <use  href="#arrow"></use>
-                    </svg>
-                </a>
-            </div>
+                <div class="mini-cart  container__mini-cart">
+                    <h5 class="text  text--uppercase  text--bold  text--big  mini-cart__title l-flex justify-between">Корзина <span>¥</span></h5>
+                    <table class="mini-cart__params  text  text--regular">
+                        <tr>
+                            <td>Стоимость товара</td>
+                            <td>1250</td>
+                        </tr>
+                        <tr>
+                            <td>Комиссия платформы</td>
+                            <td>55</td>
+                        </tr>
+                        <tr>
+                            <td>Итоговая стоимость</td>
+                            <td>1755</td>
+                        </tr>
+                    </table>
+                    <table class="mini-cart__params mini-cart__params--silver  text  text--regular  text--blonde helper helper--big helper--right" data-help="Рассчитывается фактически после получения товара на склад. Оплата взымается вместе со стоимостью услуг по транспортировке товара из Китая">
+                        <tr>
+                            <td>Доставка товара по Китаю</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Дополнительные услуги</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                    <a href="#" class="btn btn--arrow">
+                        Оформить заказ
+                        <svg class="arrow  arrow--right">
+                            <use  href="#arrow"></use>
+                        </svg>
+                    </a>
+                </div>
 
-            <div class="buyout">
-                <h5 class="text  text--uppercase  text--bold  text--big">Услуга “выкуп товара с&nbsp;китайских сайтов”</h5>
+                <div class="buyout">
+                    <h5 class="text  text--uppercase  text--bold  text--big">Услуга “выкуп товара с&nbsp;китайских сайтов”</h5>
 
-                <ul class="text  text--regular  buyout__list">
-                    <li class="buyout__item">
-                        <span class="buyout__percent">7%</span>
-                        <!-- сделать хэлпер без &nbsp; невозможно чтоб адаптировался под любое значение, так что придется пхать (как ниже пример). Либо не делать пробелов в строке вообще как этот пример -->
-                        <p class="buyout__price  buyout__price--min helper" data-help="5496,83¥">
-                            до 50 000 ₽
-                        </p>
-                    </li>
-                    <li class="buyout__item">
-                        <span class="buyout__percent">5%</span>
-                        <p class="buyout__price  buyout__price--normal helper" data-help="5496,83¥&nbsp;-&nbsp;21987,30¥">
-                            50 000 ₽ - 200 000 ₽
-                        </p>
-                    </li>
-                    <li class="buyout__item">
-                        <span class="buyout__percent">4%</span>
-                        <p class="buyout__price  buyout__price--large">
-                            200 000 ₽ - 500 000 ₽
-                        </p>
-                    </li>
-                    <li class="buyout__item">
-                        <span class="buyout__percent">3%</span>
-                        <p class="buyout__price  buyout__price--big">
-                            > 500 000 ₽
-                        </p>
-                    </li>
-                </ul>
-                <div class="important  buyout__important">
-                    <p class="text  text--little">Размер комиссии услуг зависит от&nbsp;суммы Вашего заказа. Чем больше сумма заказа, тем наша комиссия ниже</p>
+                    <ul class="text  text--regular  buyout__list">
+                        <li class="buyout__item">
+                            <span class="buyout__percent">7%</span>
+                            <!-- сделать хэлпер без &nbsp; невозможно чтоб адаптировался под любое значение, так что придется пхать (как ниже пример). Либо не делать пробелов в строке вообще как этот пример -->
+                            <p class="buyout__price  buyout__price--min helper" data-help="5496,83¥">
+                                до 50 000 ₽
+                            </p>
+                        </li>
+                        <li class="buyout__item">
+                            <span class="buyout__percent">5%</span>
+                            <p class="buyout__price  buyout__price--normal helper" data-help="5496,83¥&nbsp;-&nbsp;21987,30¥">
+                                50 000 ₽ - 200 000 ₽
+                            </p>
+                        </li>
+                        <li class="buyout__item">
+                            <span class="buyout__percent">4%</span>
+                            <p class="buyout__price  buyout__price--large">
+                                200 000 ₽ - 500 000 ₽
+                            </p>
+                        </li>
+                        <li class="buyout__item">
+                            <span class="buyout__percent">3%</span>
+                            <p class="buyout__price  buyout__price--big">
+                                > 500 000 ₽
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="important  buyout__important">
+                        <p class="text  text--little">Размер комиссии услуг зависит от&nbsp;суммы Вашего заказа. Чем больше сумма заказа, тем наша комиссия ниже</p>
+                    </div>
                 </div>
             </div>
-</div>
         </div>
     </main>
 

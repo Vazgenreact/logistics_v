@@ -98,7 +98,7 @@
         </div>
 
         <div class="container__center">
-            <div class="create-order">
+            <div class="create-order mb-10">
                 <h3 class="text  text--max  text--bold  text--uppercase  text--big_tablet  l-hidden_mobile">Создайте новый заказ</h3>
                 <a href="#" class="btn  btn--arrow  create-order__btn">
                     Создать заказ
@@ -108,9 +108,37 @@
                 </a>
             </div>
 
+            <form class="filter" action="">
+                <div class="custom-select filter__status">
+                    <div class="input custom-select__input" id="filter_status" onclick="onToggleSelect(this)">
+                        <input class="input-hide" name="filter_status" value="">
+                        <span class="text">Статус заказа</span>
+                    </div>
+                    <ul class="custom-select__list custom-select__list--shadow">
+                        <li class="custom-select__item" onclick="onChangeSelect('filter_status', 'Не оплачен', this)">Не оплачен
+                        </li>
+                        <li class="custom-select__item" onclick="onChangeSelect('filter_status', 'Оплачен', this)">Оплачен
+                        </li>
+                        <li class="custom-select__item" onclick="onChangeSelect('filter_status', 'Выкуплен', this)">Выкуплен
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter__date custom-select">
+                    <div class="custom-select__input" id="filter_date">
+                        <input class="input" name="filter_date" placeholder="Дата создания заказа">
+                    </div>
+                </div>
+                <div class="filter__search">
+                    <input type="text" class="input" placeholder="Поиск по заказам">
+                    <button class="icon-search">
+                        <svg width="12" height="12"><use href="#search"></use></svg>
+                    </button>
+                </div>
+            </form>
+
             <div class="cart-order container__order">
                 <div class="cart-order__wrap">
-                    <h5 class="text  text--big  text--bold  text--uppercase">Заказ на выкуп №1</h5>
+                    <h5 class="cart-order__title text  text--big  text--bold  text--uppercase">Заказ на выкуп №1</h5>
                     <span class="text  text--big  cart-order__date">21.04.2019</span>
                 </div>
 
@@ -133,17 +161,62 @@
                     </tr>
                 </table>
 
-                <a href="#" class="btn btn--border btn--arrow  cart-order__btn">
-                    Смотреть заказ
-                    <svg class="arrow  arrow--right">
-                        <use xlink:href="#arrow"></use>
-                    </svg>
-                </a>
+                <div class="l-flex l-margin-left_auto">
+                    <a href="#" class="btn btn--border btn--arrow  cart-order__btn">
+                        Смотреть заказ
+                        <svg class="arrow  arrow--right">
+                            <use href="#arrow"></use>
+                        </svg>
+                    </a>
+                </div>
             </div>
 
             <div class="cart-order container__order">
                 <div class="cart-order__wrap">
-                    <h5 class="text  text--big  text--bold  text--uppercase">Заказ на выкуп №1</h5>
+                    <h5 class="cart-order__title text  text--big  text--bold  text--uppercase">Заказ на выкуп №1</h5>
+                    <span class="text  text--big  cart-order__date">21.04.2019</span>
+                    <button class="cross cross--box  my-addresses__close"><svg><use href="#cross"></use></svg></button>
+                </div>
+
+                <table class="table cart-order__table text  text--small_mobile">
+                    <tr class="table__row">
+                        <td class="text  text--bold  table__cell">Номер заказа:</td>
+                        <td class="table__cell">№1584558</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="text  text--bold  table__cell">Дата создания:</td>
+                        <td class="table__cell">21.04.2019</td>
+                    </tr>
+                    <tr class="table__row  table__row--yellow">
+                        <td class="text  text--bold  table__cell">Статус заказа:</td>
+                        <td class="table__cell">Не оплачен</td>
+                        <td class="table__cell color-red"><a href="#">Оплатите заказ</a></td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="text  text--bold  table__cell">Сумма заказа:</td>
+                        <td class="table__cell">1 257 ¥, юаней</td>
+                    </tr>
+                </table>
+
+                <div class="l-flex l-margin-left_auto">
+                    <a href="#" class="btn btn--border btn--arrow  cart-order__btn">
+                        изменить
+                        <svg class="arrow  arrow--right">
+                            <use href="#arrow"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="btn btn--border btn--arrow  cart-order__btn">
+                        Смотреть заказ
+                        <svg class="arrow  arrow--right">
+                            <use href="#arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="cart-order container__order">
+                <div class="cart-order__wrap">
+                    <h5 class="cart-order__title text  text--big  text--bold  text--uppercase">Заказ на выкуп №1</h5>
                     <span class="text  text--big  cart-order__date">21.04.2019</span>
                 </div>
 
@@ -158,7 +231,7 @@
                     </tr>
                     <tr class="table__row  table__row--yellow">
                         <td class="text  text--bold  table__cell">Статус заказа:</td>
-                        <td class="table__cell">Ожидаем поступление на склад</td>
+                        <td class="table__cell">Товар поступил на склад</td>
                     </tr>
                     <tr class="table__row">
                         <td class="text  text--bold  table__cell">Сумма заказа:</td>
@@ -166,17 +239,19 @@
                     </tr>
                 </table>
 
-                <a href="#" class="btn btn--border btn--arrow  cart-order__btn">
-                    Смотреть заказ
-                    <svg class="arrow  arrow--right">
-                        <use xlink:href="#arrow"></use>
-                    </svg>
-                </a>
+                <div class="l-flex l-margin-left_auto">
+                    <a href="#" class="btn btn--border btn--arrow  cart-order__btn">
+                        Смотреть заказ
+                        <svg class="arrow  arrow--right">
+                            <use href="#arrow"></use>
+                        </svg>
+                    </a>
+                </div>
             </div>
 
             <div class="cart-order container__order">
                 <div class="cart-order__wrap">
-                    <h5 class="text  text--big  text--bold  text--uppercase">Заказ на выкуп №1</h5>
+                    <h5 class="cart-order__title text  text--big  text--bold  text--uppercase">Заказ на выкуп №1</h5>
                     <span class="text  text--big  cart-order__date">21.04.2019</span>
                 </div>
 
@@ -191,7 +266,8 @@
                     </tr>
                     <tr class="table__row  table__row--yellow">
                         <td class="text  text--bold  table__cell">Статус заказа:</td>
-                        <td class="table__cell">Ожидаем поступление на склад</td>
+                        <td class="table__cell">Отправлен</td>
+                        <td class="table__cell color-red"><a href="#">Оплатите доставку</a></td>
                     </tr>
                     <tr class="table__row">
                         <td class="text  text--bold  table__cell">Сумма заказа:</td>
@@ -199,46 +275,16 @@
                     </tr>
                 </table>
 
-                <a href="#" class="btn btn--border btn--arrow  cart-order__btn">
-                    Смотреть заказ
-                    <svg class="arrow  arrow--right">
-                        <use xlink:href="#arrow"></use>
-                    </svg>
-                </a>
-            </div>
-
-            <div class="cart-order container__order">
-                <div class="cart-order__wrap">
-                    <h5 class="text  text--big  text--bold  text--uppercase">Заказ на выкуп №1</h5>
-                    <span class="text  text--big  cart-order__date">21.04.2019</span>
+                <div class="l-flex l-margin-left_auto">
+                    <a href="#" class="btn btn--border btn--arrow  cart-order__btn">
+                        Смотреть заказ
+                        <svg class="arrow  arrow--right">
+                            <use href="#arrow"></use>
+                        </svg>
+                    </a>
                 </div>
-
-                <table class="table cart-order__table text  text--small_mobile">
-                    <tr class="table__row">
-                        <td class="text  text--bold  table__cell">Номер заказа:</td>
-                        <td class="table__cell">№1584558</td>
-                    </tr>
-                    <tr class="table__row">
-                        <td class="text  text--bold  table__cell">Дата создания:</td>
-                        <td class="table__cell">21.04.2019</td>
-                    </tr>
-                    <tr class="table__row  table__row--yellow">
-                        <td class="text  text--bold  table__cell">Статус заказа:</td>
-                        <td class="table__cell">Ожидаем поступление на склад</td>
-                    </tr>
-                    <tr class="table__row">
-                        <td class="text  text--bold  table__cell">Сумма заказа:</td>
-                        <td class="table__cell">1 257 ¥, юаней</td>
-                    </tr>
-                </table>
-
-                <a href="#" class="btn btn--border btn--arrow  cart-order__btn">
-                    Смотреть заказ
-                    <svg class="arrow  arrow--right">
-                        <use xlink:href="#arrow"></use>
-                    </svg>
-                </a>
             </div>
+
             <ul class="pagination container__pagination">
                 <li class="pagination__item">
                     <a href="#" class="pagination__link">
@@ -271,6 +317,7 @@
                 </li>
             </ul>
         </div>
+
         <div class="container__additionally">
             <div class="buyout">
                 <h5 class="text  text--uppercase  text--bold  text--big">Услуга “выкуп товара с&nbsp;китайских сайтов”</h5>
@@ -310,5 +357,7 @@
             <a href="#" class="banner  container__banner"><img src="img/banner-ref.jpg" alt="Реферальная программа"></a>
         </div>
     </main>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

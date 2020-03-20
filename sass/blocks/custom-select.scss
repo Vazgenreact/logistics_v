@@ -5,13 +5,13 @@
   &::after {
     content: '';
     position: absolute;
-    right: 10px;
-    top: 11px;
+    right: 15px;
+    top: 50%;
     width: 7px;
     height: 7px;
     border-right: 1px solid #333;
     border-bottom: 1px solid #333;
-    transform: rotate(45deg);
+    transform: rotate(45deg) translateY(-90%);
     z-index: 8;
   }
 
@@ -21,7 +21,7 @@
     margin-left: 0;
     padding: 0;
 
-    .text {
+    input + .text {
       padding: 6px 10px;
       display: inline-block;
       width: 100%;

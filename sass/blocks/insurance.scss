@@ -2,14 +2,14 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: $silver-normal;
-  padding: 13px 20px 13px 10px;
+  padding: 14px 32px 14px 20px;
   margin: 5px 0 30px;
 
   &__content {
     display: flex;
     align-items: center;
-    margin: 0 10px;
 
     .input {
       width: 80px;

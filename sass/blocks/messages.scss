@@ -1,0 +1,140 @@
+.messages {
+  position: relative;
+  background-color: #fff;
+  min-height: 400px;
+
+  &__top {
+    padding-top: 38px;
+    margin-bottom: 10px;
+  }
+
+  &__container {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    bottom: 20px;
+    right: 12px;
+    max-height: 100%;
+    overflow: auto;
+    padding: 20px 12px 60px 20px;
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+    &::-webkit-scrollbar-track {
+      background: $silver-normal;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $silver-big;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+
+    }
+
+  }
+  &__form {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 24px;
+    display: flex;
+    background-color: #fff;
+    padding: 10px 0 20px 20px;
+  }
+  &__label {
+    position: relative;
+    flex-grow: 1;
+    height: 45px;
+  }
+  &__input {
+    width: 100%;
+    height: 100%;
+    padding-left: 40px;
+  }
+  &__icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__send {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $u-orange;
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+.message {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+
+  &__date {
+    flex-basis: 100%;
+    color: $font-color-silver;
+    font-size: 12px;
+    margin-bottom: 1em;
+  }
+  &__text {
+    max-width: 385px;
+    padding: 10px 15px;
+    background-color: $silver-normal;
+    border-radius: 10px;
+    box-sizing: border-box;
+    line-height: 20px;
+  }
+  &__text + &__text {
+    margin-top: 10px;
+  }
+  &__img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-top: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &--my {
+    justify-content: flex-end;
+    text-align: right;
+
+    .message__text {
+      border-top-right-radius: 0;
+    }
+  }
+  &--your {
+    text-align: left;
+
+    .message__text {
+      border-top-left-radius: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .messages {
+    height: 480px;
+  }
+}

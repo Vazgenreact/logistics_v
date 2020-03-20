@@ -12,6 +12,10 @@
   .text {
     line-height: 1.35;
   }
+
+  .container__order {
+    margin-top: 0;
+  }
 }
 
 .delivery-img {
@@ -364,6 +368,10 @@
 .create-address-container {
   padding: 20px 0;
   border-bottom: 1px solid $silver-big;
+
+  .input-hide + span {
+    padding: 9px 15px!important;
+  }
 
   .l-flex {
     justify-content: space-between;

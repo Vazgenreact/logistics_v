@@ -2,11 +2,13 @@
     $bl: ".table";
     width: 100%;
     border-collapse: collapse;
+    font-weight: 400;
 
     &__cell {
         padding: 12px 0;
         &:first-child {
             padding-left: 12px;
+            width: 40%;
         }
     }
 
@@ -14,11 +16,20 @@
         &--yellow {
             background-color: $u-yellow;
         }
-      &--edit {
-        td {
-          padding: 2px 0;
+        &--edit {
+          td {
+            padding: 2px 0;
+          }
         }
-      }
+        .color-red {
+          text-align: right;
+          padding-right: 20px;
+          font-size: 12px;
+
+          a {
+            color: inherit;
+          }
+        }
     }
 
     &--padding {

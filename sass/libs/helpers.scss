@@ -110,6 +110,9 @@
 .l-max_width {
     width: 100%;
 }
+.align-stretch {
+  align-items: stretch;
+}
 
 .input-hide {
   position: absolute;
@@ -143,6 +146,12 @@
 }
 .mr-10 {
   margin-right: 10px !important;
+}
+.p-20 {
+  padding: 20px !important;
+}
+.mr-15 {
+  margin-right: 15px;
 }
 .grow-1 {
   flex-grow: 1;

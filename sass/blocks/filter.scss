@@ -3,17 +3,23 @@
   padding: 20px;
   display: flex;
   margin-bottom: 10px;
+  font-size: 14px;
+
+  input + .text {
+    padding: 6px 9px !important;
+  }
 
   &__status {
-    width: calc(30% - 10px);
+    width: 118px;
     margin-right: 10px;
+    flex-shrink: 0;
   }
   &__date {
     width: calc(40% - 10px);
     margin-right: 10px;
 
     .input {
-      padding: 9px 10px !important;
+      padding: 6px 9px !important;
       display: inline-block;
       width: 100%;
     }
@@ -24,6 +30,7 @@
 
     .input {
       width: 100%;
+      padding: 6px 9px !important;
     }
     .icon-search {
       position: absolute;
@@ -48,5 +55,20 @@
       margin-right: 0;
       margin-bottom: 5px;
     }
+  }
+}
+
+.cart-order .custom-select__input {
+  font-size: 14px;
+}
+
+.custom-select__list--shadow {
+  padding: 10px 0;
+  border: 0;
+  box-shadow: 0 0 15px rgba(0,0,0,.22);
+
+  .custom-select__item {
+    padding: 6px 20px;
+    font-size: 14px;
   }
 }

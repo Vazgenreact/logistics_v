@@ -24,6 +24,10 @@
 
     &__search {
         flex-grow: 1;
+
+      .input {
+        padding: 6px 9px;
+      }
     }
 
     &__currency {
@@ -138,7 +142,6 @@
         }
 
         &__currency {
-            margin-top: 0;
             order: 1;
         }
     }

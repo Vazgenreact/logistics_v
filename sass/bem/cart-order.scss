@@ -12,7 +12,29 @@
         padding-bottom: 12px;
         border-bottom: 1px solid $silver-normal;
         margin-left: 12px;
+
+        .cross {
+          position: static;
+          padding: 0;
+          border: 0;
+          margin-left: 20px;
+
+          svg {
+            position: static;
+            transform: none;
+          }
+          &:hover svg {
+            transform: rotate(90deg);
+            transition: .3s;
+          }
+        }
+
+
     }
+
+  &__title {
+    flex-grow: 1;
+  }
 
     &__table {
         margin-top: 5px;
@@ -20,7 +42,7 @@
     }
 
     &__btn {
-        margin-left: auto;
+        margin-left: 10px;
         margin-right: 0;
     }
 }
