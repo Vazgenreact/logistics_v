@@ -20,18 +20,8 @@
     box-sizing: border-box;
 
     &::-webkit-scrollbar {
-      width: 2px;
+      display: none;
     }
-    &::-webkit-scrollbar-track {
-      background: $silver-normal;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: $silver-big;
-    }
-    &::-webkit-scrollbar-thumb:hover {
-
-    }
-
   }
   &__form {
     position: absolute;
