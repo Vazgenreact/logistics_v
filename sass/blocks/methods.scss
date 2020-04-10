@@ -6,10 +6,6 @@
   &__item {
     position: relative;
 
-    svg {
-      opacity: .4;
-    }
-
     &:hover .checkbox span {
       &::after {
         opacity: .3;
@@ -41,8 +37,7 @@
       }
     }
 
-    &:hover .input-hide:not(:disabled) + .methods__label,
-    .input-hide:not(:disabled):checked + .methods__label {
+    .input-hide:not(:disabled) + .methods__label {
       border-color: #333;
       color: #333;
 
@@ -221,7 +216,7 @@
 .custom-transport {
   display: flex;
   flex-wrap: wrap;
-  padding: 18px 25px 5px;
+  padding: 18px 25px 15px;
 
   .text--big {
     font-weight: 400;

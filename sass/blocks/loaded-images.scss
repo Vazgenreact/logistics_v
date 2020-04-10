@@ -11,9 +11,8 @@
     border: 1px solid $silver-normal;
 
     &.add-img {
-      border-color: $font-color-main;
       cursor: pointer;
-      background-color: #fff;
+      background-color: $silver-normal;
       flex-shrink: 0;
     }
   }

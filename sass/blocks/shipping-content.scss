@@ -58,7 +58,7 @@
 
     &.active {
       color: inherit;
-      font-weight: 700;
+      font-weight: 400;
       background-color: $u-white;
       border-bottom-color: $u-white;
     }
@@ -368,6 +368,13 @@
 .create-address-container {
   padding: 20px 0;
   border-bottom: 1px solid $silver-big;
+
+  .mb-5 {
+    color: #333;
+  }
+  .mb-20 {
+    margin-bottom: 20px!important;
+  }
 
   .input-hide + span {
     padding: 9px 15px!important;

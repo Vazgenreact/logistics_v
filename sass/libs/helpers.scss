@@ -153,6 +153,12 @@
 .mr-15 {
   margin-right: 15px;
 }
+.mb-5 {
+  margin-bottom: 5px;
+}
+.mb-35 {
+  margin-bottom: 35px;
+}
 .grow-1 {
   flex-grow: 1;
 }
@@ -168,11 +174,20 @@
 .mt-auto {
   margin-top: auto;
 }
+.ml-auto {
+  margin-left: auto!important;
+}
 .border--mutted {
   border-color: $silver-big;
 }
 .text--400 {
   font-weight: 400;
+}
+.w-100 {
+  width: 100% !important;
+}
+.text--muted {
+  color: $font-color-silver;
 }
 @media screen and (min-width: 992px) {
   .pl-lg-30 {

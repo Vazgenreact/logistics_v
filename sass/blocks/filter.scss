@@ -72,3 +72,63 @@
     font-size: 14px;
   }
 }
+
+.filter-tegs {
+
+  &__search {
+    position: relative;
+    width: 100%;
+
+    input {
+      width: 100%;
+    }
+    .search__btn {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: 0;
+    }
+  }
+}
+
+.teg {
+  margin: 0 -2px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    height: 25px;
+    line-height: 25px;
+    white-space: nowrap;
+    margin: 10px 2px 0;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid $silver-big;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+
+  &__close {
+    background: none;
+    border: 0;
+    padding: 2px 5px 0;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      svg {
+        transform: rotate(90deg);
+        transition: .2s;
+      }
+    }
+  }
+}
+
+.custom-cargo {
+  .custom-select .custom-select__input input+.text {
+    padding: 10px;
+  }
+}

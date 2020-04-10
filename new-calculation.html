@@ -144,115 +144,13 @@
                         <span>Высота, м</span>
                         <input type="text" class="input">
                     </div>
-                    <span class="cargo-data__symbol">=</span>
-                    <div class="cargo-data__input">
-                        <span>Объем, м<sup>3</sup></span>
-                        <input type="text" class="input">
-                    </div>
-                </div>
-                <div class="cargo-data__row">
+                    <span class="cargo-data__symbol"></span>
                     <div class="cargo-data__input">
                         <span>Вес, кг</span>
                         <input type="text" class="input">
                     </div>
-                    <span class="cargo-data__symbol"></span>
-                    <div class="cargo-data__input grow-1">
-                        <div class="l-flex align-items-end">
-                            <span class="shrink-0">Характер груза:</span>
-                            <div class="text--small l-flex">
-                                <div class="l-flex">
-                                    Электроника
-                                    <button type="button" data-help="Удалить товар"
-                                            class="cross redemption-order__delit">
-                                        <svg>
-                                            <use href="#cross"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="l-flex">
-                                    Одежда
-                                    <button type="button" data-help="Удалить товар"
-                                            class="cross redemption-order__delit">
-                                        <svg>
-                                            <use href="#cross"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="l-flex">
-                                    Посуда
-                                    <button type="button" data-help="Удалить товар"
-                                            class="cross redemption-order__delit">
-                                        <svg>
-                                            <use href="#cross"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="custom-select cargo-list">
-                            <div class="input custom-select__input" id="select_cargo-data" onclick="onToggleSelect(this)">
-                                <div class="text l-flex">
-                                    Укажите характер груза
-                                    <div class="tooltip-block">
-                                        <svg width="12" height="14">
-                                            <use href="#info"></use>
-                                        </svg>
-                                        <div class="tooltip-content hide-mobile">
-                                            <span>Если в отправке указано несколько характеров груза, то расчет производится по максимальной из них.</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <ul class="custom-select__list">
-                                <li class="custom-select__item">
-                                    <label class="cargo-list__label">
-                                        <span>Электроника</span>
-                                        <span>
-                                            <input type="checkbox" name="Электроника">
-                                            <span class="checkbox-icon"></span>
-                                        </span>
-                                    </label>
-                                </li>
-                                <li class="custom-select__item">
-                                    <label class="cargo-list__label">
-                                        <span>Одежда</span>
-                                        <span>
-                                            <input type="checkbox" name="Одежда">
-                                            <span class="checkbox-icon"></span>
-                                        </span>
-                                    </label>
-                                </li>
-                                <li class="custom-select__item">
-                                    <label class="cargo-list__label">
-                                        <span>Посуда</span>
-                                        <span>
-                                            <input type="checkbox" name="Посуда">
-                                            <span class="checkbox-icon"></span>
-                                        </span>
-                                    </label>
-                                </li>
-                                <li class="custom-select__item">
-                                    <label class="cargo-list__label">
-                                        <span>Игрушки</span>
-                                        <span>
-                                            <input type="checkbox" name="Игрушки">
-                                            <span class="checkbox-icon"></span>
-                                        </span>
-                                    </label>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
                 <div class="cargo-data__row">
-                    <div class="cargo-data__input">
-                        <span>Плотность груза</span>
-                        <div class="l-max_width relative">
-                            <input type="text" class="input" placeholder="2" readonly>
-                            <span class="input-info">кг/м<sup>3</sup></span>
-                        </div>
-                    </div>
-                    <span class="cargo-data__symbol"></span>
                     <div class="cargo-data__input">
                         <span>Количество мест</span>
                         <div class="l-flex">
@@ -263,9 +161,159 @@
                         <input type="checkbox" name="check">
                         <span>умножить на количество</span>
                     </label>
+                    <label class="checkbox ml-auto">
+                        <input type="checkbox" name="check" checked>
+                        <span>Брендовый товар</span>
+                    </label>
                 </div>
             </div>
             <!--     End данные груза    -->
+            <div class="important important--text justify-between l-flex mb-25">
+                <span>Объем: 2 000 м3</span>
+                <span>Плотность груза: 2 000 кг/м3</span>
+            </div>
+
+            <div class="filter-tegs mb-35">
+                <div class="l-flex justify-between mb-5">
+                    <div class="text tooltip-block">
+                        Укажите груз:
+                        <div class="helper helper--big label__help">
+                            <svg width="12" height="14">
+                                <use href="#info"></use>
+                            </svg>
+                            <div class="tooltip-content">
+                                <p class="text">Если в отправке указано несколько характеров груза, то расчет производится по максимальной из них.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="color-blue">Не нашли нужный товар?</span>
+                </div>
+                <div class="filter-tegs__search">
+                    <input type="text" class="input input--muted" placeholder="Введите название товара">
+                    <button class="search__btn" type="button">
+                        <svg width="20" height="20"><use href="#search"></use></svg>
+                    </button>
+                </div>
+                <div class="teg">
+                    <div class="teg__item">
+                        <span>Женские ветровки</span>
+                        <button class="teg__close" type="button">
+                            <svg width="10" height="10"><use href="#cross"></use></svg>
+                        </button>
+                    </div>
+                    <div class="teg__item">
+                        <span>Брюки мужские</span>
+                        <button class="teg__close" type="button">
+                            <svg width="10" height="10"><use href="#cross"></use></svg>
+                        </button>
+                    </div>
+                    <div class="teg__item">
+                        <span>Сушилка для обуви</span>
+                        <button class="teg__close" type="button">
+                            <svg width="10" height="10"><use href="#cross"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-cargo mb-35">
+                <div class="l-flex justify-between mb-5">
+                    <div class="text tooltip-block">
+                        Укажите груз:
+                        <div class="helper helper--big label__help">
+                            <svg width="12" height="14">
+                                <use href="#info"></use>
+                            </svg>
+                            <div class="tooltip-content">
+                                <p class="text">Если в отправке указано несколько характеров груза, то расчет производится по максимальной из них.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="color-blue">Поиск по названию</span>
+                </div>
+
+                <div class="custom-select w-100 mb-10">
+                    <div class="input custom-select__input" id="custom-cargo" onclick="onToggleSelect(this)">
+                        <input class="input-hide" name="custom-cargo" value="">
+                        <span class="text">Складные тканевые короба-органайзеры для хранения</span>
+                    </div>
+                    <ul class="custom-select__list">
+                        <li class="custom-select__item" onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                            Складные тканевые короба-органайзеры для хранения
+                        </li>
+                        <li class="custom-select__item" onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                            Складные тканевые короба-органайзеры для хранения
+                        </li>
+                        <li class="custom-select__item" onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                            Складные тканевые короба-органайзеры для хранения
+                        </li>
+                    </ul>
+                </div>
+                <div class="custom-select w-100 mb-10">
+                    <div class="input custom-select__input" id="Subcategory" onclick="onToggleSelect(this)">
+                        <input class="input-hide" name="Subcategory" value="">
+                        <span class="text">Подкатегория</span>
+                    </div>
+                    <ul class="custom-select__list">
+                        <li class="custom-select__item" onclick="onChangeSelect('Subcategory', 'тканевые', this)">
+                            Подкатегория
+                        </li>
+                        <li class="custom-select__item" onclick="onChangeSelect('Subcategory', 'тканевые', this)">
+                            Подкатегория
+                        </li>
+                        <li class="custom-select__item" onclick="onChangeSelect('Subcategory', 'тканевые', this)">
+                            Подкатегория
+                        </li>
+                    </ul>
+                </div>
+                <div class="custom-select w-100">
+                    <div class="input custom-select__input" id="product-select" onclick="onToggleSelect(this)">
+                        <input class="input-hide" name="product-select" value="">
+                        <span class="text">Товар</span>
+                    </div>
+                    <ul class="custom-select__list">
+                        <li class="custom-select__item" onclick="onChangeSelect('product-select', 'Товар', this)">
+                            Товар
+                        </li>
+                        <li class="custom-select__item" onclick="onChangeSelect('product-select', 'Товар', this)">
+                            Товар
+                        </li>
+                        <li class="custom-select__item" onclick="onChangeSelect('product-select', 'Товар', this)">
+                            Товар
+                        </li>
+                    </ul>
+                </div>
+                <div class="teg mb-25">
+                    <div class="teg__item">
+                        <span>Женские ветровки</span>
+                        <button class="teg__close" type="button">
+                            <svg width="10" height="10"><use href="#cross"></use></svg>
+                        </button>
+                    </div>
+                    <div class="teg__item">
+                        <span>Брюки мужские</span>
+                        <button class="teg__close" type="button">
+                            <svg width="10" height="10"><use href="#cross"></use></svg>
+                        </button>
+                    </div>
+                    <div class="teg__item">
+                        <span>Сушилка для обуви</span>
+                        <button class="teg__close" type="button">
+                            <svg width="10" height="10"><use href="#cross"></use></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="l-flex justify-between">
+                    <span class="text--small text--muted">Добавьте одну или несколько<br> категорий товара</span>
+                    <a href="#" class="btn btn--arrow">
+                        Добавить
+                        <svg class="arrow arrow--right">
+                            <use href="#arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
             <!--     Расчет страховой стоимости    -->
             <div class="insurance-container">
                 <div class="text text--bold tooltip-block">
@@ -314,7 +362,8 @@
                         <div class="stock-images__list">
                             <label class="stock-images__item add-img">
                                 <input type="file">
-                                <span class="cross cross--plus" aria-label="Добавить изображение"><svg><use
+                                <span class="cross cross--plus" aria-label="Добавить изображение">
+                                    <svg><use
                                         href="#cross"></use></svg></span>
                             </label>
                             <div class="stock-images__item"></div>
@@ -507,11 +556,13 @@
             </div>
             <!--      Когда нет адресов      -->
             <form class="create-address-container" action="#">
-                <div class="l-flex">
+                <div class="mb-5">Получатель</div>
+                <div class="l-flex mb-20">
                     <input type="text" class="input" placeholder="Фамилия">
                     <input type="text" class="input" placeholder="Имя">
                     <input type="text" class="input" placeholder="Отчество">
                 </div>
+                <div class="mb-5">Доставка груза</div>
                 <div class="l-flex">
                     <div class="tooltip-block">
                         <input type="text" class="input" placeholder="Страна">
@@ -1110,7 +1161,7 @@
                     </div>
                 </div>
                 <div class="list-item">
-                    <span>Упаковка и погр.работы</span>
+                    <span>Упаковка</span>
                     <span>10$</span>
                 </div>
                 <br>
@@ -1131,7 +1182,8 @@
                 </div>
                 <p class="text">Указана предварительная стоимость
                     отправки груза, исходя из заданных
-                    характеристик. Фактическая цена доставки может отличаться</p>
+                    характеристик. Фактическая цена доставки может отличаться.
+                    Не является публичной офертой.</p>
             </div>
 
             <div class="calculation__bottom">
