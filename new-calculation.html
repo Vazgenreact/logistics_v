@@ -188,11 +188,27 @@
                     </div>
                     <span class="color-blue">Не нашли нужный товар?</span>
                 </div>
-                <div class="filter-tegs__search">
-                    <input type="text" class="input input--muted" placeholder="Введите название товара">
-                    <button class="search__btn" type="button">
-                        <svg width="20" height="20"><use href="#search"></use></svg>
-                    </button>
+                <div class="custom-select w-100 mb-10">
+                    <div class="active" id="custom-searching">
+                        <input type="text" class="input input--muted" placeholder="Введите название товара">
+                        <button class="search__btn" type="button">
+                            <svg width="20" height="20"><use href="#search"></use></svg>
+                        </button>
+                    </div>
+                    <ul class="custom-select__list" style="">
+                        <li class="custom-select__item" onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                            Складные тканевые короба-органайзеры для хранения
+                            <ul class="custom-select__list">
+                                <li class="custom-select__item">fsfasdffasdfsdf</li>
+                            </ul>
+                        </li>
+                        <li class="custom-select__item" onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                            Складные тканевые короба-органайзеры для хранения
+                        </li>
+                        <li class="custom-select__item" onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                            Складные тканевые короба-органайзеры для хранения
+                        </li>
+                    </ul>
                 </div>
                 <div class="teg">
                     <div class="teg__item">

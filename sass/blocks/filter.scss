@@ -82,14 +82,22 @@
     input {
       width: 100%;
     }
-    .search__btn {
-      position: absolute;
-      right: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: 0;
-    }
+  }
+  .custom-select input {
+    height: 40px;
+    padding-left: 15px!important;
+  }
+  .search__btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: 0;
+  }
+
+  .custom-select::after {
+    display: none;
   }
 }
 
