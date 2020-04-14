@@ -51,12 +51,21 @@
     list-style: none;
     padding: 0;
     margin: 5px 0 0;
+    box-sizing: border-box;
 
     .custom-select__list {
       transform: none;
       position: static;
       border: 0;
-      margin-bottom: -12px;
+      margin: 0;
+
+      li {
+        padding: 12px 30px;
+
+        &:hover {
+          background-color: $silver-normal;
+        }
+      }
     }
 
     &::-webkit-scrollbar {
@@ -75,15 +84,23 @@
     }
   }
   &__item {
-    padding: 12px;
     font-size: 16px;
     line-height: 1;
     cursor: pointer;
 
+    span {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+    }
     &.selected,
-    &:hover .custom-select__list,
-    &:hover {
+    & span:hover {
       background-color: $silver-normal;
+    }
+
+    &.sublist {
+      &:hover {}
     }
   }
 }
