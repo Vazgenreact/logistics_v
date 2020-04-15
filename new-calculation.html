@@ -131,17 +131,17 @@
             <div class="cargo-data">
                 <div class="cargo-data__row">
                     <div class="cargo-data__input">
-                        <span>Длина, м</span>
+                        <span>Длина, см</span>
                         <input type="text" class="input">
                     </div>
                     <span class="cargo-data__symbol">x</span>
                     <div class="cargo-data__input">
-                        <span>Ширина, м</span>
+                        <span>Ширина, см</span>
                         <input type="text" class="input">
                     </div>
                     <span class="cargo-data__symbol">x</span>
                     <div class="cargo-data__input">
-                        <span>Высота, м</span>
+                        <span>Высота, см</span>
                         <input type="text" class="input">
                     </div>
                     <span class="cargo-data__symbol"></span>
@@ -169,8 +169,8 @@
             </div>
             <!--     End данные груза    -->
             <div class="important important--text justify-between l-flex mb-25">
-                <span>Объем: 2 000 м3</span>
-                <span>Плотность груза: 2 000 кг/м3</span>
+                <span>Объем: 2 000 м<sup>3</sup></span>
+                <span>Плотность груза: 2 000 кг/м<sup>3</sup></span>
             </div>
 
             <div class="filter-tegs mb-35">
@@ -255,13 +255,13 @@
                     </div>
                     <ul class="custom-select__list">
                         <li class="custom-select__item" onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
-                            Складные тканевые короба-органайзеры для хранения
+                            <span>Складные тканевые короба-органайзеры для хранения</span>
                         </li>
                         <li class="custom-select__item" onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
-                            Складные тканевые короба-органайзеры для хранения
+                            <span>Складные тканевые короба-органайзеры для хранения</span>
                         </li>
                         <li class="custom-select__item" onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
-                            Складные тканевые короба-органайзеры для хранения
+                            <span>Складные тканевые короба-органайзеры для хранения</span>
                         </li>
                     </ul>
                 </div>
@@ -272,13 +272,13 @@
                     </div>
                     <ul class="custom-select__list">
                         <li class="custom-select__item" onclick="onChangeSelect('Subcategory', 'тканевые', this)">
-                            Подкатегория
+                            <span>Подкатегория</span>
                         </li>
                         <li class="custom-select__item" onclick="onChangeSelect('Subcategory', 'тканевые', this)">
-                            Подкатегория
+                            <span>Подкатегория</span>
                         </li>
                         <li class="custom-select__item" onclick="onChangeSelect('Subcategory', 'тканевые', this)">
-                            Подкатегория
+                            <span>Подкатегория</span>
                         </li>
                     </ul>
                 </div>
@@ -289,13 +289,13 @@
                     </div>
                     <ul class="custom-select__list">
                         <li class="custom-select__item" onclick="onChangeSelect('product-select', 'Товар', this)">
-                            Товар
+                            <span>Товар</span>
                         </li>
                         <li class="custom-select__item" onclick="onChangeSelect('product-select', 'Товар', this)">
-                            Товар
+                            <span>Товар</span>
                         </li>
                         <li class="custom-select__item" onclick="onChangeSelect('product-select', 'Товар', this)">
-                            Товар
+                            <span>Товар</span>
                         </li>
                     </ul>
                 </div>
@@ -378,8 +378,8 @@
                         <div class="stock-images__list">
                             <label class="stock-images__item add-img">
                                 <input type="file">
-                                <span class="cross cross--plus" aria-label="Добавить изображение">
-                                    <svg><use
+                                <span class="cross cross--plus cross--big" aria-label="Добавить изображение">
+                                    <svg class=""><use
                                         href="#cross"></use></svg></span>
                             </label>
                             <div class="stock-images__item"></div>
@@ -621,25 +621,25 @@
                         </div>
                         <ul class="custom-select__list">
                             <li class="custom-select__item" onclick="onChangeSelect('select_city', 'Могоча', this)">
-                                Могоча, Россия
+                                <span>Могоча, Россия</span>
                             </li>
                             <li class="custom-select__item" onclick="onChangeSelect('select_city', 'Можайск', this)">
-                                Можайск, Россия
+                                <span>Можайск, Россия</span>
                             </li>
                             <li class="custom-select__item" onclick="onChangeSelect('select_city', 'Можга', this)">
-                                Можга, Россия
+                                <span>Можга, Россия</span>
                             </li>
                             <li class="custom-select__item" onclick="onChangeSelect('select_city', 'Моздок', this)">
-                                Моздок, Россия
+                                <span>Моздок, Россия</span>
                             </li>
                             <li class="custom-select__item" onclick="onChangeSelect('select_city', 'Мокшан', this)">
-                                Мокшан, Россия
+                                <span>Мокшан, Россия</span>
                             </li>
                             <li class="custom-select__item" onclick="onChangeSelect('select_city', 'Москва', this)">
-                                Москва, Россия
+                                <span>Москва, Россия</span>
                             </li>
                             <li class="custom-select__item" onclick="onChangeSelect('select_city', 'Мотовилиха', this)">
-                                Мотовилиха, Россия
+                                <span>Мотовилиха, Россия</span>
                             </li>
                         </ul>
                     </div>
@@ -698,25 +698,32 @@
                             </div>
                             <ul class="custom-select__list">
                                 <li class="custom-select__item"
-                                    onclick="onChangeSelect('delivery_china_russia', 'Могоча', this)">Могоча
+                                    onclick="onChangeSelect('delivery_china_russia', 'Могоча', this)">
+                                    <span>Могоча</span>
                                 </li>
                                 <li class="custom-select__item"
-                                    onclick="onChangeSelect('delivery_china_russia', 'Можайск', this)">Можайск
+                                    onclick="onChangeSelect('delivery_china_russia', 'Можайск', this)">
+                                    <span>Можайск</span>
                                 </li>
                                 <li class="custom-select__item"
-                                    onclick="onChangeSelect('delivery_china_russia', 'Можга', this)">Можга
+                                    onclick="onChangeSelect('delivery_china_russia', 'Можга', this)">
+                                    <span>Можга</span>
                                 </li>
                                 <li class="custom-select__item"
-                                    onclick="onChangeSelect('delivery_china_russia', 'Моздок', this)">Моздок
+                                    onclick="onChangeSelect('delivery_china_russia', 'Моздок', this)">
+                                    <span>Моздок</span>
                                 </li>
                                 <li class="custom-select__item"
-                                    onclick="onChangeSelect('delivery_china_russia', 'Мокшан', this)">Мокшан
+                                    onclick="onChangeSelect('delivery_china_russia', 'Мокшан', this)">
+                                    <span>Мокшан</span>
                                 </li>
                                 <li class="custom-select__item"
-                                    onclick="onChangeSelect('delivery_china_russia', 'Москва', this)">Москва
+                                    onclick="onChangeSelect('delivery_china_russia', 'Москва', this)">
+                                    <span>Москва</span>
                                 </li>
                                 <li class="custom-select__item"
-                                    onclick="onChangeSelect('delivery_china_russia', 'Мотовилиха', this)">Мотовилиха
+                                    onclick="onChangeSelect('delivery_china_russia', 'Мотовилиха', this)">
+                                    <span>Мотовилиха</span>
                                 </li>
                             </ul>
                         </div>
@@ -874,25 +881,32 @@
                             </div>
                             <ul class="custom-select__list">
                                 <li class="custom-select__item"
-                                    onclick="onChangeSelect('delivery_in_russia', 'Могоча', this)">Могоча
+                                    onclick="onChangeSelect('delivery_in_russia', 'Могоча', this)">
+                                    <span>Могоча</span>
                                 </li>
                                 <li class="custom-select__item"
-                                    onclick="onChangeSelect('delivery_in_russia', 'Можайск', this)">Можайск
+                                    onclick="onChangeSelect('delivery_in_russia', 'Можайск', this)">
+                                    <span>Можайск</span>
                                 </li>
                                 <li class="custom-select__item"
-                                    onclick="onChangeSelect('delivery_in_russia', 'Можга', this)">Можга
+                                    onclick="onChangeSelect('delivery_in_russia', 'Можга', this)">
+                                    <span>Можга</span>
                                 </li>
                                 <li class="custom-select__item"
-                                    onclick="onChangeSelect('delivery_in_russia', 'Моздок', this)">Моздок
+                                    onclick="onChangeSelect('delivery_in_russia', 'Моздок', this)">
+                                    <span>Моздок</span>
                                 </li>
                                 <li class="custom-select__item"
-                                    onclick="onChangeSelect('delivery_in_russia', 'Мокшан', this)">Мокшан
+                                    onclick="onChangeSelect('delivery_in_russia', 'Мокшан', this)">
+                                    <span>Мокшан</span>
                                 </li>
                                 <li class="custom-select__item"
-                                    onclick="onChangeSelect('delivery_in_russia', 'Москва', this)">Москва
+                                    onclick="onChangeSelect('delivery_in_russia', 'Москва', this)">
+                                    <span>Москва</span>
                                 </li>
                                 <li class="custom-select__item"
-                                    onclick="onChangeSelect('delivery_in_russia', 'Мотовилиха', this)">Мотовилиха
+                                    onclick="onChangeSelect('delivery_in_russia', 'Мотовилиха', this)">
+                                    <span>Мотовилиха</span>
                                 </li>
                             </ul>
                         </div>
