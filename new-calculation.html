@@ -614,33 +614,16 @@
                     <input type="text" class="input" placeholder="Индекс">
                 </div>
                 <div class="l-flex">
-                    <div class="custom-select">
-                        <div class="input custom-select__input" id="select_city" onclick="onToggleSelect(this)">
-                            <input class="input-hide" name="select_city" value="">
-                            <span class="text">Москва, Россия</span>
-                        </div>
+                    <div class="autocomplete-select">
+                        <input class="input" name="select_city" value="" id="select_city" onfocus="this.classList.add('active')" placeholder="Город">
                         <ul class="custom-select__list">
-                            <li class="custom-select__item" onclick="onChangeSelect('select_city', 'Могоча', this)">
-                                <span>Могоча, Россия</span>
-                            </li>
-                            <li class="custom-select__item" onclick="onChangeSelect('select_city', 'Можайск', this)">
-                                <span>Можайск, Россия</span>
-                            </li>
-                            <li class="custom-select__item" onclick="onChangeSelect('select_city', 'Можга', this)">
-                                <span>Можга, Россия</span>
-                            </li>
-                            <li class="custom-select__item" onclick="onChangeSelect('select_city', 'Моздок', this)">
-                                <span>Моздок, Россия</span>
-                            </li>
-                            <li class="custom-select__item" onclick="onChangeSelect('select_city', 'Мокшан', this)">
-                                <span>Мокшан, Россия</span>
-                            </li>
-                            <li class="custom-select__item" onclick="onChangeSelect('select_city', 'Москва', this)">
-                                <span>Москва, Россия</span>
-                            </li>
-                            <li class="custom-select__item" onclick="onChangeSelect('select_city', 'Мотовилиха', this)">
-                                <span>Мотовилиха, Россия</span>
-                            </li>
+                            <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Могоча, Россия</span></li>
+                            <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Можайск, Россия</span></li>
+                            <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Можга, Россия</span></li>
+                            <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Моздок, Россия</span></li>
+                            <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Мокшан, Россия</span></li>
+                            <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Москва, Россия</span></li>
+                            <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Мотовилиха, Россия</span></li>
                         </ul>
                     </div>
                     <input type="text" class="input" placeholder="Телефон">
@@ -691,9 +674,8 @@
                             Для доставки груза: Китай - Россия
                         </div>
                         <div class="custom-select">
-                            <div class="input custom-select__input" id="delivery_china_russia"
-                                 onclick="onToggleSelect(this)">
-                                <input class="input-hide" name="delivery_china_russia" value="">
+                            <div class="input custom-select__input" id="delivery_china_russia">
+                                <input class="input-hide" name="delivery_china_russia" value="" disabled>
                                 <span class="text">Москва</span>
                             </div>
                             <ul class="custom-select__list">
@@ -752,7 +734,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>3-4 дня</span>
+                                <span>3-4 дн</span>
                             </span>
                             <strong class="methods__price text--big">30$</strong>
                             <span class="checkbox">
@@ -774,7 +756,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>3-4 дня</span>
+                                <span>3-4 дн</span>
                             </span>
                             <strong class="methods__price text--big">20$</strong>
                             <span class="checkbox">
@@ -795,7 +777,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>3-4 дня</span>
+                                <span>3-4 дн</span>
                             </span>
                             <strong class="methods__price text--big">30$</strong>
                             <span class="checkbox">
@@ -816,7 +798,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>3-4 дня</span>
+                                <span>3-4 дн</span>
                             </span>
                             <strong class="methods__price text--big">20$</strong>
                             <span class="checkbox">
@@ -837,7 +819,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>3-4 дня</span>
+                                <span>3-4 дн</span>
                             </span>
                             <strong class="methods__price text--big">30$</strong>
                             <span class="checkbox">
@@ -858,7 +840,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>3-4 дня</span>
+                                <span>3-4 дн</span>
                             </span>
                             <strong class="methods__price text--big">3$</strong>
                             <span class="checkbox">
@@ -874,8 +856,7 @@
                             Для доставки груза по России
                         </div>
                         <div class="custom-select">
-                            <div class="input custom-select__input" id="delivery_in_russia"
-                                 onclick="onToggleSelect(this)">
+                            <div class="input custom-select__input" id="delivery_in_russia">
                                 <input class="input-hide" name="delivery_in_russia" value="" disabled>
                                 <span class="text">Москва</span>
                             </div>
@@ -946,7 +927,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>3-4 дня</span>
+                                <span>3-4 дн</span>
                             </span>
                             <strong class="methods__price text--big">30$</strong>
                             <span class="checkbox">
@@ -965,7 +946,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>3-4 дня</span>
+                                <span>3-4 дн</span>
                             </span>
                             <strong class="methods__price text--big">30$</strong>
                             <span class="checkbox">
@@ -984,7 +965,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>10-12 дней</span>
+                                <span>10-12 дн</span>
                             </span>
                             <strong class="methods__price text--big">
                                 <svg width="25" height="25">
@@ -1008,7 +989,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>18-25 дней</span>
+                                <span>18-25 дн</span>
                             </span>
                             <strong class="methods__price text--big">45$</strong>
                             <span class="checkbox">
@@ -1027,7 +1008,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>18-25 дней</span>
+                                <span>18-25 дн</span>
                             </span>
                             <strong class="methods__price text--big">45$</strong>
                             <span class="checkbox">
@@ -1046,7 +1027,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>18-25 дней</span>
+                                <span>18-25 дн</span>
                             </span>
                             <strong class="methods__price text--big">
                                 <svg width="25" height="25">
@@ -1070,7 +1051,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>18-25 дней</span>
+                                <span>18-25 дн</span>
                             </span>
                             <strong class="methods__price text--big">45$</strong>
                             <span class="checkbox">
@@ -1089,7 +1070,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>18-25 дней</span>
+                                <span>18-25 дн</span>
                             </span>
                             <strong class="methods__price text--big">45$</strong>
                             <span class="checkbox">
@@ -1109,7 +1090,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>0 дней</span>
+                                <span>0 дн</span>
                             </span>
                             <strong class="methods__price text--big">45$</strong>
                             <span class="checkbox">
@@ -1128,7 +1109,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>0 дней</span>
+                                <span>0 дн</span>
                             </span>
                             <strong class="methods__price text--big">45$</strong>
                             <span class="checkbox">
@@ -1150,7 +1131,7 @@
                             </div>
                             <div class="methods__comment">
                                 <input class="input" type="text"
-                                       placeholder="Введите название транспортной компании" disabled>
+                                       placeholder="Введите название транспортной компании">
                                 <div class="text--align_right info-text">
                                     <svg width="10" height="10">
                                         <use href="#comment-save"></use>
