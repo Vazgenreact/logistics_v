@@ -124,143 +124,53 @@
                 </div>
             </div>
 
-            <div class="my-addresses  my-addresses--padding-bottom_none">
-                <a href="#" class="cross cross--box  my-addresses__close"><svg><use xlink:href="#cross"></use></svg></a>
-                <a href="#" class="marker  marker--box  my-addresses__marker"><svg><use xlink:href="#address"></use></svg></a>
-                <div class="l-flex  l-flex--jc_sb  l-margin-bottom_normal  l-flex--wrap_mobile">
-                    <label class="label l-flex__third  l-flex__third--max_mobile l-margin-bottom_normal_mobile">
-                        <span class="text text--silver">Фамилия</span>
-                        <input type="text" class="input  input--max" placeholder="Введите вашу фамилию">
-                    </label>
-                    <label class="label l-flex__third  l-flex__third--max_mobile l-margin-bottom_normal_mobile">
-                        <span class="text text--silver">Имя</span>
-                        <input type="text" class="input  input--max" placeholder="Введите ваше имя">
-                    </label>
-                    <label class="label l-flex__third  l-flex__third--max_mobile">
-                        <span class="text text--silver">Отчество</span>
-                        <input type="text" class="input  input--max" placeholder="Введите ваше отчество">
-                    </label>
-                </div>
-                <div class="l-flex l-flex--jc_sb l-margin-bottom_normal  l-flex--wrap_mobile">
-                    <label class="label l-flex__half  l-flex__half--max  l-flex__half--max_mobile  l-margin-bottom_normal_mobile">
-                        <span class="text text--silver">Область или край:</span>
-                        <input type="text" class="input  input--max" placeholder="Введите область или край">
-                    </label>
-                    <label class="label l-flex__half  l-flex__half--max  l-flex__half--max_mobile">
-                        <span class="text text--silver">Город:</span>
-                        <input type="text" class="input  input--max" placeholder="Введите город">
-                    </label>
-                </div>
-                <div class="l-flex l-flex--jc_sb l-margin-bottom_normal  l-flex--wrap_mobile">
-                    <label class="label l-flex__half  l-flex__half--max  l-flex__half--max_mobile  l-margin-bottom_normal_mobile">
-                        <span class="text text--silver">Улица:</span>
-                        <input type="text" class="input  input--max" placeholder="Введите область или край">
-                    </label>
-                    <div class="l-flex  l-flex--jc_sb  l-flex__half  l-flex__half--max  l-flex__half--max_mobile">
-                        <label class="label l-flex__half">
-                            <span class="text text--silver">Дом:</span>
-                            <input type="text" class="input  input--max" placeholder="Введите номер дома">
-                        </label>
-                        <label class="label l-flex__half">
-                            <span class="text text--silver">Квартира:</span>
-                            <input type="text" class="input  input--max" placeholder="Введите номер квартиры">
-                        </label>
-                    </div>
-                </div>
-                <div class="l-flex l-flex--jc_sb l-margin-bottom_normal">
-                    <label class="label l-flex__half  l-flex__half--max">
-                        <span class="text text--silver">Индекс:</span>
-                        <input type="text" class="input  input--max" placeholder="Введите индекс">
-                    </label>
-                    <label class="label l-flex__half  l-flex__half--max">
-                        <span class="text text--silver">Страна:</span>
-                        <input type="text" class="input  input--max" placeholder="Введите название страны">
-                    </label>
-                </div>
-                <div class="l-flex l-flex--jc_sb l-margin-bottom_normal  l-flex--wrap_mobile">
-                    <label class="label l-flex__half  l-flex__half--max  l-flex__half--max_mobile  l-margin-bottom_normal_mobile">
-                        <span class="text text--silver">Контактный номер телефона:</span>
-                        <input type="text" class="input  input--max" placeholder="Введите номер телефона">
-                    </label>
-                    <label class="label l-flex__half  l-flex__half--max  l-flex__half--max_mobile">
-                        <span class="text text--silver">Резервный номер телефона:</span>
-                        <input type="text" class="input  input--max" placeholder="Введите номер телефона">
-                    </label>
-                </div>
-                <!-- Если вдруг эту штуку желтую нужно будет убрать - у блока  my-addresses нужно будет грохнуть my-addresses--padding-bottom_none чтоб низ не прилип -->
-                <div class="important  important--content">
-                    <p class="text  text--little">Это ваш адрес доставки по умолчанию</p>
-                </div>
-            </div>
-
             <div class="my-addresses container__my-addresses-new">
-                <form action="#" method="post">
-                    <h4 class="text text--bold  l-margin-bottom_normal">Укажите получателя</h4>
-                    <div class="l-flex  l-flex--jc_sb  l-margin-bottom_normal  l-flex--wrap_mobile">
-                        <label class="label l-flex__third  l-flex__third--max_mobile l-margin-bottom_normal_mobile">
-                            <span class="text">Фамилия</span>
-                            <input type="text" class="input  input--max" placeholder="Введите вашу фамилию">
-                        </label>
-                        <label class="label l-flex__third  l-flex__third--max_mobile l-margin-bottom_normal_mobile">
-                            <span class="text">Имя</span>
-                            <input type="text" class="input  input--max" placeholder="Введите ваше имя">
-                        </label>
-                        <label class="label l-flex__third  l-flex__third--max_mobile">
-                            <span class="text">Отчество</span>
-                            <input type="text" class="input  input--max" placeholder="Введите ваше отчество">
-                        </label>
+                <form class="create-address-container" action="#">
+                    <div class="mb-5">Получатель</div>
+                    <div class="l-flex mb-20">
+                        <input type="text" class="input" placeholder="Фамилия">
+                        <input type="text" class="input" placeholder="Имя">
+                        <input type="text" class="input" placeholder="Отчество">
                     </div>
-                    <div class="l-flex l-flex--jc_sb l-margin-bottom_normal  l-flex--wrap_mobile">
-                        <label class="label l-flex__half  l-flex__half--max  l-flex__half--max_mobile  l-margin-bottom_normal_mobile">
-                            <span class="text">Контактный номер телефона:</span>
-                            <input type="text" class="input  input--max" placeholder="Введите номер телефона">
-                        </label>
-                        <label class="label l-flex__half  l-flex__half--max  l-flex__half--max_mobile">
-                            <span class="text">Резервный номер телефона:</span>
-                            <input type="text" class="input  input--max" placeholder="Введите номер телефона">
-                        </label>
-                    </div>
-                    <label class="label  l-margin-bottom_big">
-                        <span class="text">Паспортные данные:</span>
-                        <input type="text" class="input  input--max" placeholder="Введите паспортные данные">
-                        <a data-help="Некоторые транспортные компании запрашивают паспортные данные получателя груза. Пожалуйста, укажите их заранее. Введите через запятую: серия и номер, дата выдачи, кем выдан." class="helper  helper--big label__help"><svg><use xlink:href="#icon-information"></use></svg></a>
-                    </label>
-                    <h4 class="text text--bold  l-margin-bottom_normal">Укажите адрес доставки груза</h4>
-                    <div class="l-flex l-flex--jc_sb l-margin-bottom_normal  l-flex--wrap_mobile">
-                        <label class="label l-flex__half  l-flex__half--max  l-flex__half--max_mobile  l-margin-bottom_normal_mobile">
-                            <span class="text">Область или край:</span>
-                            <input type="text" class="input  input--max" placeholder="Введите область или край">
-                        </label>
-                        <label class="label l-flex__half  l-flex__half--max  l-flex__half--max_mobile">
-                            <span class="text">Город:</span>
-                            <input type="text" class="input  input--max" placeholder="Введите город">
-                        </label>
-                    </div>
-                    <div class="l-flex l-flex--jc_sb l-margin-bottom_normal  l-flex--wrap_mobile">
-                        <label class="label l-flex__half  l-flex__half--max  l-flex__half--max_mobile  l-margin-bottom_normal_mobile">
-                            <span class="text">Улица:</span>
-                            <input type="text" class="input  input--max" placeholder="Введите область или край">
-                        </label>
-                        <div class="l-flex  l-flex--jc_sb  l-flex__half  l-flex__half--max  l-flex__half--max_mobile">
-                            <label class="label l-flex__half">
-                                <span class="text">Дом:</span>
-                                <input type="text" class="input  input--max" placeholder="Введите номер дома">
-                            </label>
-                            <label class="label l-flex__half">
-                                <span class="text">Квартира:</span>
-                                <input type="text" class="input  input--max" placeholder="Введите номер квартиры">
-                            </label>
+                    <div class="mb-5">Доставка груза</div>
+                    <div class="l-flex">
+                        <input type="text" class="input" placeholder="Страна">
+                        <div class="autocomplete-select">
+                            <input class="input" name="select_city" value="" id="select_city" onfocus="this.classList.add('active')" placeholder="Город">
+                            <ul class="custom-select__list">
+                                <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Могоча, Россия</span></li>
+                                <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Можайск, Россия</span></li>
+                                <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Можга, Россия</span></li>
+                                <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Моздок, Россия</span></li>
+                                <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Мокшан, Россия</span></li>
+                                <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Москва, Россия</span></li>
+                                <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Мотовилиха, Россия</span></li>
+                            </ul>
                         </div>
+                        <input type="text" class="input" placeholder="Край или область">
                     </div>
-                    <div class="l-flex  l-flex--jc_sb  l-margin-bottom_normal">
-                        <label class="label l-flex__half  l-flex__half--max">
-                            <span class="text">Индекс:</span>
-                            <input type="text" class="input  input--max" placeholder="Введите индекс">
-                        </label>
-                        <label class="label l-flex__half  l-flex__half--max">
-                            <span class="text">Страна:</span>
-                            <input type="text" class="input  input--max" placeholder="Введите название страны">
-                        </label>
+                    <div class="l-flex">
+                        <input type="text" class="input" placeholder="Улица">
+                        <input type="text" class="input" placeholder="Дом">
+                        <input type="text" class="input" placeholder="Квартира">
+                    </div>
+                    <div class="l-flex">
+                        <input type="text" class="input" placeholder="Индекс">
+                        <div class="tooltip-block">
+                            <input type="text" class="input" placeholder="Паспорт">
+                            <div class="helper helper--big label__help">
+                                <svg width="12" height="14">
+                                    <use href="#info"></use>
+                                </svg>
+                                <div class="tooltip-content hide-mobile">
+                                    <p class="text">Некоторые транспортные компании запрашивают
+                                        паспортные данные получателя груза. Пожалуйста,
+                                        укажите их заранее. Введите через запятую: серия
+                                        и номер, дата выдачи, кем выдан. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" class="input" placeholder="Телефон">
                     </div>
                     <div class="l-flex  l-flex--top  l-flex--jc_sb  l-margin-bottom_big  l-flex--wrap_mobile">
                         <div class="l-flex__half  l-flex__half--max  l-flex__half--max_mobile">
