@@ -13,6 +13,7 @@
     }
 
     .input-hide:not(:disabled):checked + .methods__label {
+      border-color: #333;
       .checkbox span {
         &::before {
           border-color: #333;
@@ -35,11 +36,27 @@
       input::placeholder {
         opacity: 1;
       }
+
+      &.custom-transport {
+        color: #333;
+
+        svg {
+          opacity: 1;
+        }
+      }
     }
 
     .input-hide:not(:disabled) + .methods__label {
-      border-color: #333;
+      border-color: $silver-big;
       color: #333;
+      
+      &.custom-transport {
+        color: $font-color-silver;
+
+        svg {
+          opacity: .45;
+        }
+      }
 
       .methods__days {
         color: #333;
@@ -47,6 +64,10 @@
       .icon,
       svg {
         opacity: 1;
+      }
+      
+      &:hover {
+        border-color: #333;
       }
     }
 
@@ -60,8 +81,8 @@
         display: none;
       }
 
-      svg {
-        opacity: .1;
+      .methods__icon--sm {
+        opacity: .4;
       }
       .helper .tooltip-content {
         display: none;
