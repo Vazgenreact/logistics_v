@@ -139,7 +139,7 @@
     line-height: 1;
     font-size: 16px;
     font-weight: 400;
-    padding-right: 5px;
+    padding-right: 10px;
 
     .tooltip-content {
       left: 100%;
@@ -158,7 +158,8 @@
   }
   &__price {
     position: relative;
-    width: 30px;
+    width: 15%;
+    text-align: right;
     margin-right: 8%;
     flex-shrink: 0;
 
@@ -195,7 +196,7 @@
     }
   }
   &__days {
-    width: 30%;
+    width: 25%;
     font-weight: 300;
     flex-shrink: 0;
     color: $font-color-silver;

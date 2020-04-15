@@ -411,18 +411,7 @@
                             <use href="#obreshetka"></use>
                         </svg>
                         <strong class="methods__title">
-                            <div class="tooltip-block">
-                                Обрешетка + мешок + скотч
-                                <div class="helper helper--big label__help">
-                                    <svg width="12" height="14">
-                                        <use href="#info"></use>
-                                    </svg>
-                                    <div class="tooltip-content hide-mobile">
-                                        <strong>Важная информация!</strong>
-                                        <p class="text">Выбор обрешетки обязателен при отправке электроники и хрупкого груза. Если Вы отправляете груз, который может повредиться в процессе транспортировки, и НЕ выбираете данную упаковку</p>
-                                    </div>
-                                </div>
-                            </div>
+                            Обрешетка + мешок + скотч
                         </strong>
                         <strong class="methods__price text--bold">2$</strong>
                         <span class="checkbox">
@@ -438,20 +427,9 @@
                             <use href="#palet"></use>
                         </svg>
                         <strong class="methods__title">
-                            <div class="tooltip-block">
-                                Палет + обрешетка + стрейч-пленка + скотч
-                                <div class="helper helper--big label__help">
-                                    <svg width="12" height="14">
-                                        <use href="#info"></use>
-                                    </svg>
-                                    <div class="tooltip-content hide-mobile">
-                                        <strong>Важная информация!</strong>
-                                        <p class="text">Выбор обрешетки обязателен при отправке электроники и хрупкого груза. Если Вы отправляете груз, который может повредиться в процессе транспортировки, и НЕ выбираете данную упаковку</p>
-                                    </div>
-                                </div>
-                            </div>
+                            Палет + обрешетка + стрейч-пленка + скотч
                         </strong>
-                        <strong class="methods__price text--bold">2$</strong>
+                        <strong class="methods__price text--bold">2900000$</strong>
                         <span class="checkbox">
                             <span></span>
                         </span>
@@ -584,53 +562,28 @@
                 </div>
                 <div class="mb-5">Доставка груза</div>
                 <div class="l-flex">
-                    <div class="tooltip-block">
-                        <input type="text" class="input" placeholder="Страна">
-                        <div class="helper helper--big label__help">
-                            <svg width="12" height="14">
-                                <use href="#info"></use>
-                            </svg>
-                            <div class="tooltip-content hide-mobile">
-                                <strong>Важная информация!</strong>
-                                <p class="text">Выбор обрешетки обязателен при отправке электроники и хрупкого
-                                    груза.</p>
-                            </div>
-                        </div>
+                    <input type="text" class="input" placeholder="Страна">
+                    <div class="autocomplete-select">
+                        <input class="input" name="select_city" value="" id="select_city" onfocus="this.classList.add('active')" placeholder="Город">
+                        <ul class="custom-select__list">
+                            <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Могоча, Россия</span></li>
+                            <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Можайск, Россия</span></li>
+                            <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Можга, Россия</span></li>
+                            <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Моздок, Россия</span></li>
+                            <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Мокшан, Россия</span></li>
+                            <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Москва, Россия</span></li>
+                            <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Мотовилиха, Россия</span></li>
+                        </ul>
                     </div>
+                    <input type="text" class="input" placeholder="Край или область">
+                </div>
+                <div class="l-flex">
                     <input type="text" class="input" placeholder="Улица">
                     <input type="text" class="input" placeholder="Дом">
-                </div>
-                <div class="l-flex">
-                    <div class="tooltip-block">
-                        <input type="text" class="input" placeholder="Край или область">
-                        <div class="helper  helper--big label__help">
-                            <svg width="12" height="14">
-                                <use href="#info"></use>
-                            </svg>
-                            <div class="tooltip-content hide-mobile">
-                                <strong>Важная информация!</strong>
-                                <p class="text">Выбор обрешетки обязателен при отправке электроники и хрупкого
-                                    груза.</p>
-                            </div>
-                        </div>
-                    </div>
                     <input type="text" class="input" placeholder="Квартира">
-                    <input type="text" class="input" placeholder="Индекс">
                 </div>
                 <div class="l-flex">
-                    <div class="autocomplete-select">
-                    <input class="input active" name="select_city" value="" id="select_city" onfocus="this.classList.add('active')" placeholder="Город">
-                    <ul class="custom-select__list">
-                        <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Могоча, Россия</span></li>
-                        <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Можайск, Россия</span></li>
-                        <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Можга, Россия</span></li>
-                        <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Моздок, Россия</span></li>
-                        <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Мокшан, Россия</span></li>
-                        <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Москва, Россия</span></li>
-                        <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Мотовилиха, Россия</span></li>
-                    </ul>
-                </div>
-                    <input type="text" class="input" placeholder="Телефон">
+                    <input type="text" class="input" placeholder="Индекс">
                     <div class="tooltip-block">
                         <input type="text" class="input" placeholder="Паспорт">
                         <div class="helper helper--big label__help">
@@ -638,16 +591,18 @@
                                 <use href="#info"></use>
                             </svg>
                             <div class="tooltip-content hide-mobile">
-                                <strong>Важная информация!</strong>
-                                <p class="text">Выбор обрешетки обязателен при отправке электроники и хрупкого
-                                    груза.</p>
+                                <p class="text">Некоторые транспортные компании запрашивают
+                                    паспортные данные получателя груза. Пожалуйста,
+                                    укажите их заранее. Введите через запятую: серия
+                                    и номер, дата выдачи, кем выдан. </p>
                             </div>
                         </div>
                     </div>
+                    <input type="text" class="input" placeholder="Телефон">
                 </div>
                 <div class="delivery-methods">
                     <label class="checkbox">
-                        <input type="radio" name="default-delivery-address" checked="">
+                        <input type="radio" name="default-delivery-address" checked>
                         <span>До пункта выдачи заказов Транспортной компани (ПВЗ). САМОВЫВОЗ</span>
                     </label>
                     <label class="checkbox">
