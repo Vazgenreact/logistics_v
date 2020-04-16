@@ -189,6 +189,11 @@
 .text--muted {
   color: $font-color-silver;
 }
+.comment-saved svg,
+.comment-saved {
+  opacity: 1!important;
+  color: #333!important;
+}
 @media screen and (min-width: 992px) {
   .pl-lg-30 {
     padding-left: 30px;

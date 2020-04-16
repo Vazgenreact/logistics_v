@@ -408,11 +408,10 @@
                     <div class="screenshots">
                         <p class="text screenshots__title">Или добавьте ссылку / скриншот</p>
                         <input type="text" placeholder="Введите ссылку или скриншот на товар" class="input">
-                        <label class="add-img">
-                            <input type="file">
+                        <button class="add-img" type="button">
                             <span class="cross cross--plus" aria-label="Добавить изображение"><svg><use
                                     href="#cross"></use></svg></span>
-                        </label>
+                        </button>
                     </div>
                     <!--        Дополнительные требования          -->
                     <div class="requirements">
@@ -540,6 +539,7 @@
                     <p class="text">Комментарий:</p>
                     <input class="input" type="text"
                            placeholder="Если у Вас есть дополнительные требования, укажите их здесь">
+                    <!--     toggleClass  comment-saved    -->
                     <div class="text--align_right">
                         <svg width="10" height="10">
                             <use href="#comment-save"></use>
@@ -719,7 +719,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>3-4 дн</span>
+                                <span>6-8 дн</span>
                             </span>
                             <strong class="methods__price text--big">20$</strong>
                             <span class="checkbox">
@@ -740,7 +740,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>3-4 дн</span>
+                                <span>8-12 дн</span>
                             </span>
                             <strong class="methods__price text--big">30$</strong>
                             <span class="checkbox">
@@ -761,7 +761,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>3-4 дн</span>
+                                <span>13-15 дн</span>
                             </span>
                             <strong class="methods__price text--big">20$</strong>
                             <span class="checkbox">
@@ -782,7 +782,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>3-4 дн</span>
+                                <span>18-23 дн</span>
                             </span>
                             <strong class="methods__price text--big">30$</strong>
                             <span class="checkbox">
@@ -803,7 +803,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>3-4 дн</span>
+                                <span>35-45 дн</span>
                             </span>
                             <strong class="methods__price text--big">3$</strong>
                             <span class="checkbox">
@@ -857,7 +857,7 @@
                         <span class="ml-5 hide-mobile">-</span>
                         <input class="input" type="text" placeholder="Краснодар" value="Краснодар" disabled>
                     </div>
-                    <p class="text">ПредставленыТК с автоматическим расчетом стоимости доставки. Если Вам требуется
+                    <p class="text">Представлены ТК с автоматическим расчетом стоимости доставки. Если Вам требуется
                         отправить груз внутри страны ТК, которой нет в списке, выберите соответствующий пункт меню и
                         укажите название ТК в комментарии к заявке.</p>
                     <!--        filter btn        -->
@@ -877,14 +877,16 @@
                             <span class="icon">
                                 <img src="img/cdek.png" alt="">
                             </span>
-                            <strong class="methods__title">
+                            <strong class="methods__title l-flex">
                                 СДЭК
-                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.9608 5.75336C14.862 5.44963 14.5926 5.23459 14.2751 5.20587L9.94509 4.81276L8.23383 0.806344C8.10748 0.511997 7.82 0.322021 7.50002 0.322021C7.18004 0.322021 6.89244 0.511997 6.7669 0.806344L5.05563 4.81276L0.72489 5.20587C0.407425 5.23517 0.138599 5.4502 0.039263 5.75336C-0.0595012 6.0571 0.0317097 6.39024 0.271811 6.60081L3.54499 9.47092L2.57989 13.7216C2.50928 14.0341 2.63059 14.3573 2.88992 14.5447C3.02931 14.646 3.19308 14.6966 3.35742 14.6966C3.49864 14.6966 3.63998 14.6591 3.76621 14.5835L7.50002 12.351L11.2331 14.5835C11.507 14.7472 11.8514 14.7322 12.1101 14.5447C12.3694 14.3573 12.4908 14.0341 12.4201 13.7216L11.455 9.47092L14.7282 6.60081C14.9682 6.39024 15.0595 6.05778 14.9608 5.75336Z"
-                                          fill="#F9C800"/>
-                                </svg>
-                                <div class="tooltip-content">Выбор пользователей</div>
+                                <div class="relative">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.9608 5.75336C14.862 5.44963 14.5926 5.23459 14.2751 5.20587L9.94509 4.81276L8.23383 0.806344C8.10748 0.511997 7.82 0.322021 7.50002 0.322021C7.18004 0.322021 6.89244 0.511997 6.7669 0.806344L5.05563 4.81276L0.72489 5.20587C0.407425 5.23517 0.138599 5.4502 0.039263 5.75336C-0.0595012 6.0571 0.0317097 6.39024 0.271811 6.60081L3.54499 9.47092L2.57989 13.7216C2.50928 14.0341 2.63059 14.3573 2.88992 14.5447C3.02931 14.646 3.19308 14.6966 3.35742 14.6966C3.49864 14.6966 3.63998 14.6591 3.76621 14.5835L7.50002 12.351L11.2331 14.5835C11.507 14.7472 11.8514 14.7322 12.1101 14.5447C12.3694 14.3573 12.4908 14.0341 12.4201 13.7216L11.455 9.47092L14.7282 6.60081C14.9682 6.39024 15.0595 6.05778 14.9608 5.75336Z"
+                                              fill="#F9C800"/>
+                                    </svg>
+                                    <div class="tooltip-content">Выбор пользователей</div>
+                                </div>
                             </strong>
                             <span class="methods__days">
                                 <svg width="15" height="16">
@@ -909,7 +911,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>3-4 дн</span>
+                                <span>6-8 дн</span>
                             </span>
                             <strong class="methods__price text--big">30$</strong>
                             <span class="checkbox">
@@ -971,7 +973,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>18-25 дн</span>
+                                <span>35-45 дн</span>
                             </span>
                             <strong class="methods__price text--big">45$</strong>
                             <span class="checkbox">
@@ -990,7 +992,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>18-25 дн</span>
+                                <span>10-12 дн</span>
                             </span>
                             <strong class="methods__price text--big">
                                 <svg width="25" height="25">
@@ -1033,7 +1035,7 @@
                                 <svg width="15" height="16">
                                     <use href="#calendar"></use>
                                 </svg>
-                                <span>18-25 дн</span>
+                                <span>35-45 дн</span>
                             </span>
                             <strong class="methods__price text--big">45$</strong>
                             <span class="checkbox">
@@ -1095,7 +1097,8 @@
                             <div class="methods__comment">
                                 <input class="input" type="text"
                                        placeholder="Введите название транспортной компании">
-                                <div class="text--align_right info-text">
+                                <!--     toggleClass  comment-saved    -->
+                                <div class="text--align_right">
                                     <svg width="10" height="10">
                                         <use href="#comment-save"></use>
                                     </svg>
@@ -1162,7 +1165,7 @@
 
             <div class="calculation__bottom">
                 <a href="#" class="btn btn--arrow">
-                    Оформить заказ
+                    создать заявку
                     <svg class="arrow  arrow--right">
                         <use xlink:href="#arrow"></use>
                     </svg>

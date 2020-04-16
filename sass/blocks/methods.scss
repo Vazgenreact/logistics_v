@@ -143,12 +143,16 @@
 
     .tooltip-content {
       left: 100%;
-      top: -50px;
+      top: -10px;
       max-width: 180px;
       text-transform: capitalize;
     }
 
-    svg:hover + .tooltip-content {
+    svg {
+      vertical-align: top;
+      margin-left: 3px;
+    }
+    .relative:hover .tooltip-content {
       opacity: 1;
       z-index: 99;
     }
@@ -188,11 +192,12 @@
       line-height: 1;
       margin-bottom: 5px;
     }
-    svg {
-      opacity: 1;
+    .text--align_right {
+      color: $font-color-silver;
     }
+    svg,
     .info-text {
-      opacity: .3;
+      opacity: .45;
     }
   }
   &__days {
