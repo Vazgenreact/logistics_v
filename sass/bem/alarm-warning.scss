@@ -1,0 +1,28 @@
+.alarm-warning {
+  background-color: $u-alarm;
+  padding: 15px 20px;
+  border-radius: 3px;
+  font-size: .875em;
+
+  &__link {
+    position: relative;
+    padding-right: 20px;
+
+    &.active .toggle-icon {
+      transform: rotate(-90deg);
+    }
+  }
+  &__content {
+    display: none;
+  }
+  &__link.active + &__content {
+    display: block;
+  }
+}
+
+.toggle-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(90deg);
+}

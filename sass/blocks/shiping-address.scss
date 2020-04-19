@@ -1,0 +1,54 @@
+.addresses-shiping {
+  padding-top: 30px;
+}
+
+.shipping-address {
+
+  &__link {
+    position: relative;
+    background-color: #f5f5f5;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 20px;
+    z-index: 1;
+
+    svg {
+      transform: rotate(90deg);
+    }
+
+    &.active svg {
+      transform: rotate(-90deg);
+    }
+    &.active + .shipping-address__content {
+      display: block;
+    }
+  }
+  &__content {
+    display: none;
+    padding: 10px 20px 0;
+    margin-top: -10px;
+    background: #fff;
+    border: 1px solid $silver-big;
+    border-radius: 3px;
+  }
+  &__bottom {
+    padding-bottom: 5px;
+  }
+  &__item {
+    border-bottom: 1px solid $silver-big;
+    padding: 12px 0;
+
+    .text--bold {
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+  }
+}
+
+.shipping-address-all {
+  &__bottom {
+    padding: 0 20px 30px;
+  }
+}
