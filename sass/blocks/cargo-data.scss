@@ -11,6 +11,10 @@
     flex-wrap: wrap;
     align-items: flex-end;
 
+    &.no-wrap {
+      flex-wrap: nowrap;
+    }
+
     .checkbox {
       margin-left: 15px;
       margin-bottom: 10px;

@@ -7,9 +7,17 @@
   padding: 14px 32px 14px 20px;
   margin: 5px 0 30px;
 
+  @media screen and (max-width:1200px) {
+    padding: 14px 15px 14px 5px;
+  }
+
   &__content {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width:1200px) {
+      padding-left: 10px;
+    }
 
     .input {
       width: 80px;
