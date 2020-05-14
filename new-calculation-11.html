@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics Список заказов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<!-- Это спрайт c svg иконками -->
+<div class="none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<header class="main top">
+    <img src="img/logo.svg" alt="Topzakazz logistics logo" class="top__logo">
+    <a href="#" class="text  text--uppercase  text--regular  text--main  top__exit">Выход</a>
+</header>
+
+<section class="main">
+    <div class="user-box">
+        <p class="user-box__text">
+            <small class="text  text--little  text--regular">Здравствуйте,</small>
+            <span class="text  text--uppercase  text--bold  user-box__name">Алексей Хайрутдинов</span>
+        </p>
+        <div class="user-box__balance">
+            <a href="#" class="btn  btn--border  btn--arrow  user-box__btn  user-box__btn--left">
+                Пополнить
+                <svg class="arrow  arrow--right">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
+            <div class="select select-valuted user-box__select">
+                <div class="select__param">
+                    <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
+                </div>
+                <!-- Если нужно показать селект - показываем select__list display: block; ну или как-то чтоб поменять это свойство-->
+                <div class="select__list">
+                    <div class="select__item" data-value="4187.63 RUB">
+                        <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
+                    </div>
+                    <div class="select__item" data-value="418.7 CNY">
+                        <strong>418.7</strong><small>.63</small> <span class="helper" data-help="Юани">¥</span>
+                    </div>
+                    <div class="select__item" data-value="65 USD">
+                        <strong>65</strong><small>.63</small> <span class="helper" data-help="Доллары">$</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#"
+               class="btn  btn--border  btn--border_disabled  btn--arrow  user-box__btn  user-box__btn--right helper helper--payout"
+               data-help="В настоящий момент вывод средств производится в ручном режиме. Свяжитесь с тех. поддержкой через 'Мои сообщения'.">
+                Вывести
+                <svg class="arrow  arrow--right">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<main class="main container">
+    <div class="container__part">
+        <ul class="part">
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--active  text--bold">мои заказы на
+                    выкуп</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои отправки из китая</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои запросы на поиск</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">мои финансы</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои сообщения</a>
+            </li>
+        </ul>
+
+        <ul class="part  container__user-sidebar">
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">моя информация</a>
+            </li>
+            <li class="part__item">
+                <a href="change-password.html" class="text  text--uppercase  part__link">изменить пароль</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">мои адреса</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои социальные сети</a>
+            </li>
+            <li class="part__item  part__item--partner">
+                <a href="#" class="text  text--uppercase  part__link">моя реферальная программа</a>
+            </li>
+        </ul>
+
+        <img src="img/email-confirmation.jpg" class="container__confirmation">
+    </div>
+
+    <div class="container__center--max100">
+        <div class="shipping-top">
+            <div class="shipping-top__title">
+                <img class="delivery-img" src="img/delivery.svg" alt="">
+                <h5 class="text text--big text--uppercase text--bold">отправки из китая</h5>
+            </div>
+            <p class="text">В этом разделе находится вся информация по Вашим отправкам из Китая. В зависимости от задач,
+                подготовьте новый расчет на доставку, сформируйте заказы на отправку со склада или посмотрите данные по
+                уже отправленному товару.</p>
+
+
+            <div class="addresses-shiping">
+                <div class="shipping-address mb-10">
+                    <div class="shipping-address__link" onclick="this.classList.toggle('active')">
+                        <p class="text"><strong class="text--bold">Адреca</strong> наших складов в Китае:</p>
+                        <svg width="15" height="14"><use href="#arrow"></use></svg>
+                    </div>
+                    <div class="shipping-address__content">
+                        <div class="shipping-address__item">
+                            <strong class="text--bold">г. Гуанчжоу:</strong>
+                            <div class="l-flex pb-20">
+                                <div class="grow-1 mr-10">
+                                    广州市越秀区荔德路318号 汇富商 贸中
+                                    心A28 栋102<br> 仓库 13128641323 ALEXEYH.
+                                    箱子上面写 "ID0001/00001”
+                                </div>
+                                <button class="copy-btn shrink-0 copied">
+                                    <svg width="18" height="22"><use href="#i-copy"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="shipping-address__item">
+                            <strong class="text--bold">г. Иу:</strong>
+                            <div class="l-flex pb-20">
+                                <div class="grow-1 mr-10">
+                                    义乌市群英路283号车氏集团院内
+                                    张苹 13128641323<br> ALEXEYH.
+                                    箱子上面写 "ID0001/00001”
+                                </div>
+                                <button class="copy-btn shrink-0">
+                                    <svg width="18" height="22"><use href="#i-copy"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="shipping-address__bottom">
+                            <p class="mb-0">Скопируйте текст выше и передайте своему поставщику / магазину</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="alarm-warning">
+                    <div class="alarm-warning__link" onclick="this.classList.toggle('active')">
+                        <p class="text"><strong class="text--bold">Внимание!</strong> Обязательно сообщите номер <span class="text-no-wrap">клиента/заказа</span> своему поставщику или магазину перед отправкой груза на наш склад.</p>
+                        <svg class="toggle-icon" width="15" height="14"><use href="#arrow"></use></svg>
+                    </div>
+                    <div class="alarm-warning__content">
+                        <p>Каждое отправление должно содержать информацию.
+                            Иначе мы не сможем распознать груз в автоматическом режиме.</p>
+
+                        <p>ID0001  - номер клиента / 00001 - номер заказа</p>
+
+                        <p><strong class="text--bold">Важно!</strong> Номер клиента имеет постоянное значение и назначается системой при регистрации пользователя.</p>
+
+                        <p>Номер заказа имеет переменное значение и назначается системой автоматически при оформлении заказа на отправку.</p>
+
+                        <p><strong class="text--bold">Если Вы отправили товар на наш склад БЕЗ создания заявки на отправку, укажите только номер клиента.</strong></p>
+
+                        <p>В таком случае номер заказа будет назначен автоматически при поступлении груза на наш склад.</p>
+
+                        <p class="mb-0">Учитывайте, что при этом груз НЕ будет отправлен автоматически, потребует больше времени и дополнительной информации от Вас в дальнейшем.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="shipping-nav">
+            <li class="shipping-nav__item"><a class="shipping-nav__link" href="#">заказы<br> на складе</a></li>
+            <li class="shipping-nav__item"><a class="shipping-nav__link" href="#">история отправок</a></li>
+            <li class="shipping-nav__item"><a class="shipping-nav__link active" href="#">Новый расчет <br> на
+                отправку</a></li>
+        </ul>
+
+        <form class="shipping-content fix-height-content">
+            <div class="grow-1">
+                <!--     данные груза    -->
+                <div class="l-flex">
+                    <span class="list-count">1</span>
+                    <div class="text text--bold">
+                        Укажите данные груза:
+                    </div>
+                </div>
+                <div class="cargo-data">
+                    <div class="cargo-data__row">
+                        <div class="cargo-data__input">
+                            <span>Длина, см</span>
+                            <input type="text" class="input" >
+                        </div>
+                        <span class="cargo-data__symbol">x</span>
+                        <div class="cargo-data__input">
+                            <span>Ширина, см</span>
+                            <input type="text" class="input">
+                        </div>
+                        <span class="cargo-data__symbol">x</span>
+                        <div class="cargo-data__input">
+                            <span>Высота, см</span>
+                            <input type="text" class="input">
+                        </div>
+                        <span class="cargo-data__symbol"></span>
+                        <div class="cargo-data__input">
+                            <span>Вес, кг</span>
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                    <div class="cargo-data__row no-wrap">
+                        <div class="cargo-data__input">
+                            <span>Количество мест</span>
+                            <div class="l-flex">
+                                <input type="text" class="input">
+                            </div>
+                        </div>
+                        <label class="checkbox">
+                            <input type="checkbox" name="check">
+                            <span>умножить на количество</span>
+                        </label>
+                        <label class="checkbox ml-auto">
+                            <input type="checkbox" name="check" checked>
+                            <span>Брендовый товар</span>
+                        </label>
+                    </div>
+                </div>
+                <!--     End данные груза    -->
+                <div class="border-bottom">
+                    <div class="important important--text justify-between l-flex mb-25">
+                        <span>Объем: 2 000 м<sup>3</sup></span>
+                        <span>Расчетный вес: 42 кг</span>
+                        <span>Плотность: 2 000 кг/м<sup>3</sup></span>
+                    </div>
+                </div>
+
+                <div class="l-flex pt-40 mb-10">
+                    <span class="list-count">2</span>
+                    <div class="text text--bold tooltip-block">
+                        Укажите характер груза:
+                        <div class="helper helper--big label__help">
+                            <svg width="12" height="14">
+                                <use href="#info"></use>
+                            </svg>
+                            <div class="tooltip-content">
+                                <p class="text">Если в отправке указано несколько характеров груза, то расчет производится по максимальной из них.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-tegs mb-35">
+                    <div class="l-flex justify-end mb-5">
+                        <span class="color-blue">Поиск по названию</span>
+                    </div>
+
+                    <div class="custom-select w-100 mb-10">
+                        <div class="input custom-select__input" id="custom-cargo" onclick="onToggleSelect(this)">
+                            <input class="input-hide" name="custom-cargo" value="">
+                            <span class="text">Складные тканевые короба-органайзеры для хранения</span>
+                        </div>
+                        <ul class="custom-select__list">
+                            <li class="custom-select__item" onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                            </li>
+                            <li class="custom-select__item" onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                            </li>
+                            <li class="custom-select__item" onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="custom-select w-100 mb-10">
+                        <div class="input custom-select__input" id="Subcategory" onclick="onToggleSelect(this)">
+                            <input class="input-hide" name="Subcategory" value="">
+                            <span class="text">Подкатегория</span>
+                        </div>
+                        <ul class="custom-select__list">
+                            <li class="custom-select__item" onclick="onChangeSelect('Subcategory', 'тканевые', this)">
+                                <span>Подкатегория</span>
+                            </li>
+                            <li class="custom-select__item" onclick="onChangeSelect('Subcategory', 'тканевые', this)">
+                                <span>Подкатегория</span>
+                            </li>
+                            <li class="custom-select__item" onclick="onChangeSelect('Subcategory', 'тканевые', this)">
+                                <span>Подкатегория</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="custom-select w-100">
+                        <div class="input custom-select__input" id="product-select" onclick="onToggleSelect(this)">
+                            <input class="input-hide" name="product-select" value="">
+                            <span class="text">Товар</span>
+                        </div>
+                        <ul class="custom-select__list">
+                            <li class="custom-select__item" onclick="onChangeSelect('product-select', 'Товар', this)">
+                                <span>Товар</span>
+                            </li>
+                            <li class="custom-select__item" onclick="onChangeSelect('product-select', 'Товар', this)">
+                                <span>Товар</span>
+                            </li>
+                            <li class="custom-select__item" onclick="onChangeSelect('product-select', 'Товар', this)">
+                                <span>Товар</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="teg mb-25">
+                        <div class="teg__item">
+                            <span>Женские ветровки</span>
+                            <button class="teg__close" type="button">
+                                <svg width="10" height="10"><use href="#cross"></use></svg>
+                            </button>
+                        </div>
+                        <div class="teg__item">
+                            <span>Брюки мужские</span>
+                            <button class="teg__close" type="button">
+                                <svg width="10" height="10"><use href="#cross"></use></svg>
+                            </button>
+                        </div>
+                        <div class="teg__item">
+                            <span>Сушилка для обуви</span>
+                            <button class="teg__close" type="button">
+                                <svg width="10" height="10"><use href="#cross"></use></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="l-flex justify-between">
+                        <span class="text--small text--muted">Добавьте одну или несколько<br> категорий товара</span>
+                        <a href="#" class="btn btn--arrow">
+                            выбрать
+                            <svg class="arrow arrow--right">
+                                <use href="#arrow"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!--     Расчет страховой стоимости    -->
+                <div class="insurance-container">
+                    <div class="text text--bold tooltip-block">
+                        Расчет страховой стоимости
+                        <div class="helper helper--big label__help">
+                            <svg width="12" height="14">
+                                <use href="#info"></use>
+                            </svg>
+                            <div class="tooltip-content">
+                                <p class="text">Если в отправке указано несколько характеров груза, то расчет производится по максимальной из них.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="insurance">
+                        <div class="insurance__content">
+                            <span>Укажите стоимость груза</span>
+                            <input type="text" class="input" name="insurance">
+                            $
+                        </div>
+                        <div class="insurance__content">
+                            <span>Страховой сбор</span>
+                            <input type="text" disabled class="input" value="2">
+                            %
+                        </div>
+                    </div>
+                </div>
+                <!--     End Расчет страховой стоимости    -->
+            </div>
+            <div class="l-flex justify-end">
+                <a href="#" class="btn btn--arrow">
+                    далее
+                    <svg class="arrow arrow--right">
+                        <use href="#arrow"></use>
+                    </svg>
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <div class="calculation-container">
+        <div class="scroll-block">
+            <div class="calculation">
+            <div class="calculation__top">
+                <img class="calculation__img" src="img/calc.svg" alt="">
+                <p class="text text--uppercase text--bold text--big">
+                    предварительный расчет стоимости
+                </p>
+            </div>
+
+            <div class="calculation__list">
+                <p class="text text--bold">Доставка Китай - Россия, <br> г.Москва:</p>
+                <div class="list-item">
+                    <span>Тариф</span>
+                    <span>120$</span>
+                </div>
+                <div class="list-item update">
+                    <span>Страховой сбор</span>
+                    <span>10$</span>
+                    <div class="tooltip-content">
+                        Весь груз отправляемый нашей транспортной компанией подлежит обязательному страхованию.<br><br>
+                        Для ознакомления с условиями страхования
+                        и тарифами перейдите в раздел "Часто задаваемые вопросы".
+                    </div>
+                </div>
+                <div class="list-item">
+                    <span>Упаковка</span>
+                    <span>10$</span>
+                </div>
+                <br>
+                <p class="text text--bold">Доставка по России, <br> Москва - Краснодар</p>
+                <div class="list-item">
+                    <span>ТК СДЭК</span>
+                    <span>120$</span>
+                </div>
+                <div class="list-item">
+                    <span>До ПВЗ</span>
+                </div>
+            </div>
+
+            <div class="calculation__total">
+                <div class="total-top text--bold text--uppercase">
+                    <small>ИТОГО:</small>
+                    <strong>260$</strong>
+                </div>
+                <p class="text">Указана предварительная стоимость
+                    отправки груза, исходя из заданных
+                    характеристик. Фактическая цена доставки может отличаться.
+                    Не является публичной офертой.</p>
+            </div>
+
+        </div>
+        </div>
+    </div>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

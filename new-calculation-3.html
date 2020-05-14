@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics Список заказов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<!-- Это спрайт c svg иконками -->
+<div class="none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<header class="main top">
+    <img src="img/logo.svg" alt="Topzakazz logistics logo" class="top__logo">
+    <a href="#" class="text  text--uppercase  text--regular  text--main  top__exit">Выход</a>
+</header>
+
+<section class="main">
+    <div class="user-box">
+        <p class="user-box__text">
+            <small class="text  text--little  text--regular">Здравствуйте,</small>
+            <span class="text  text--uppercase  text--bold  user-box__name">Алексей Хайрутдинов</span>
+        </p>
+        <div class="user-box__balance">
+            <a href="#" class="btn  btn--border  btn--arrow  user-box__btn  user-box__btn--left">
+                Пополнить
+                <svg class="arrow  arrow--right">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
+            <div class="select select-valuted user-box__select">
+                <div class="select__param">
+                    <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
+                </div>
+                <!-- Если нужно показать селект - показываем select__list display: block; ну или как-то чтоб поменять это свойство-->
+                <div class="select__list">
+                    <div class="select__item" data-value="4187.63 RUB">
+                        <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
+                    </div>
+                    <div class="select__item" data-value="418.7 CNY">
+                        <strong>418.7</strong><small>.63</small> <span class="helper" data-help="Юани">¥</span>
+                    </div>
+                    <div class="select__item" data-value="65 USD">
+                        <strong>65</strong><small>.63</small> <span class="helper" data-help="Доллары">$</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#"
+               class="btn  btn--border  btn--border_disabled  btn--arrow  user-box__btn  user-box__btn--right helper helper--payout"
+               data-help="В настоящий момент вывод средств производится в ручном режиме. Свяжитесь с тех. поддержкой через 'Мои сообщения'.">
+                Вывести
+                <svg class="arrow  arrow--right">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<main class="main container">
+    <div class="container__part">
+        <ul class="part">
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--active  text--bold">мои заказы на
+                    выкуп</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои отправки из китая</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои запросы на поиск</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">мои финансы</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои сообщения</a>
+            </li>
+        </ul>
+
+        <ul class="part  container__user-sidebar">
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">моя информация</a>
+            </li>
+            <li class="part__item">
+                <a href="change-password.html" class="text  text--uppercase  part__link">изменить пароль</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">мои адреса</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои социальные сети</a>
+            </li>
+            <li class="part__item  part__item--partner">
+                <a href="#" class="text  text--uppercase  part__link">моя реферальная программа</a>
+            </li>
+        </ul>
+
+        <img src="img/email-confirmation.jpg" class="container__confirmation">
+    </div>
+
+    <div class="container__center--max100">
+        <div class="shipping-top">
+            <div class="shipping-top__title">
+                <img class="delivery-img" src="img/delivery.svg" alt="">
+                <h5 class="text text--big text--uppercase text--bold">отправки из китая</h5>
+            </div>
+            <p class="text">В этом разделе находится вся информация по Вашим отправкам из Китая. В зависимости от задач,
+                подготовьте новый расчет на доставку, сформируйте заказы на отправку со склада или посмотрите данные по
+                уже отправленному товару.</p>
+
+
+            <div class="addresses-shiping">
+                <div class="shipping-address mb-10">
+                    <div class="shipping-address__link" onclick="this.classList.toggle('active')">
+                        <p class="text"><strong class="text--bold">Адреca</strong> наших складов в Китае:</p>
+                        <svg width="15" height="14"><use href="#arrow"></use></svg>
+                    </div>
+                    <div class="shipping-address__content">
+                        <div class="shipping-address__item">
+                            <strong class="text--bold">г. Гуанчжоу:</strong>
+                            <div class="l-flex pb-20">
+                                <div class="grow-1 mr-10">
+                                    广州市越秀区荔德路318号 汇富商 贸中
+                                    心A28 栋102<br> 仓库 13128641323 ALEXEYH.
+                                    箱子上面写 "ID0001/00001”
+                                </div>
+                                <button class="copy-btn shrink-0 copied">
+                                    <svg width="18" height="22"><use href="#i-copy"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="shipping-address__item">
+                            <strong class="text--bold">г. Иу:</strong>
+                            <div class="l-flex pb-20">
+                                <div class="grow-1 mr-10">
+                                    义乌市群英路283号车氏集团院内
+                                    张苹 13128641323<br> ALEXEYH.
+                                    箱子上面写 "ID0001/00001”
+                                </div>
+                                <button class="copy-btn shrink-0">
+                                    <svg width="18" height="22"><use href="#i-copy"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="shipping-address__bottom">
+                            <p class="mb-0">Скопируйте текст выше и передайте своему поставщику / магазину</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="alarm-warning">
+                    <div class="alarm-warning__link" onclick="this.classList.toggle('active')">
+                        <p class="text"><strong class="text--bold">Внимание!</strong> Обязательно сообщите номер <span class="text-no-wrap">клиента/заказа</span> своему поставщику или магазину перед отправкой груза на наш склад.</p>
+                        <svg class="toggle-icon" width="15" height="14"><use href="#arrow"></use></svg>
+                    </div>
+                    <div class="alarm-warning__content">
+                        <p>Каждое отправление должно содержать информацию.
+                            Иначе мы не сможем распознать груз в автоматическом режиме.</p>
+
+                        <p>ID0001  - номер клиента / 00001 - номер заказа</p>
+
+                        <p><strong class="text--bold">Важно!</strong> Номер клиента имеет постоянное значение и назначается системой при регистрации пользователя.</p>
+
+                        <p>Номер заказа имеет переменное значение и назначается системой автоматически при оформлении заказа на отправку.</p>
+
+                        <p><strong class="text--bold">Если Вы отправили товар на наш склад БЕЗ создания заявки на отправку, укажите только номер клиента.</strong></p>
+
+                        <p>В таком случае номер заказа будет назначен автоматически при поступлении груза на наш склад.</p>
+
+                        <p class="mb-0">Учитывайте, что при этом груз НЕ будет отправлен автоматически, потребует больше времени и дополнительной информации от Вас в дальнейшем.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="shipping-nav">
+            <li class="shipping-nav__item"><a class="shipping-nav__link" href="#">заказы<br> на складе</a></li>
+            <li class="shipping-nav__item"><a class="shipping-nav__link" href="#">история отправок</a></li>
+            <li class="shipping-nav__item"><a class="shipping-nav__link active" href="#">Новый расчет <br> на
+                отправку</a></li>
+        </ul>
+
+        <form class="shipping-content fix-height-content">
+            <div class="grow-1">
+                <!--     адреса Slider    -->
+                <div class="l-flex">
+                    <span class="list-count">4</span>
+                    <div class="text text--bold">
+                        Укажите получателя и адрес для доставки груза
+                    </div>
+                </div>
+                <!--      Когда нет адресов      -->
+                <div class="create-address-container bb-0">
+                    <div class="mb-5">Получатель</div>
+                    <div class="l-flex mb-20">
+                        <input type="text" class="input" placeholder="Фамилия">
+                        <input type="text" class="input" placeholder="Имя">
+                        <input type="text" class="input" placeholder="Отчество">
+                    </div>
+                    <div class="mb-5">Доставка груза</div>
+                    <div class="l-flex">
+                        <input type="text" class="input" placeholder="Страна">
+                        <div class="autocomplete-select">
+                            <input class="input" name="select_city" value="" id="select_city" onfocus="this.classList.add('active')" placeholder="Город">
+                            <ul class="custom-select__list">
+                                <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Могоча, Россия</span></li>
+                                <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Можайск, Россия</span></li>
+                                <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Можга, Россия</span></li>
+                                <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Моздок, Россия</span></li>
+                                <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Мокшан, Россия</span></li>
+                                <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Москва, Россия</span></li>
+                                <li class="custom-select__item" onclick="onAutocomplete('select_city', this)"><span>Мотовилиха, Россия</span></li>
+                            </ul>
+                        </div>
+                        <input type="text" class="input" placeholder="Край или область">
+                    </div>
+                    <div class="l-flex">
+                        <input type="text" class="input" placeholder="Улица">
+                        <input type="text" class="input" placeholder="Дом">
+                        <input type="text" class="input" placeholder="Квартира">
+                    </div>
+                    <div class="l-flex">
+                        <input type="text" class="input" placeholder="Индекс">
+                        <div class="tooltip-block">
+                            <input type="text" class="input" placeholder="Паспорт">
+                            <div class="helper helper--big label__help">
+                                <svg width="12" height="14">
+                                    <use href="#info"></use>
+                                </svg>
+                                <div class="tooltip-content hide-mobile">
+                                    <p class="text">Некоторые транспортные компании запрашивают
+                                        паспортные данные получателя груза. Пожалуйста,
+                                        укажите их заранее. Введите через запятую: серия
+                                        и номер, дата выдачи, кем выдан. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" class="input" placeholder="Телефон">
+                    </div>
+                    <div class="delivery-methods">
+                        <label class="checkbox">
+                            <input type="radio" name="default-delivery-address" checked>
+                            <span>До пункта выдачи заказов Транспортной компани (ПВЗ). САМОВЫВОЗ</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="radio" name="default-delivery-address">
+                            <span>До двери: КУРЬЕРСКАЯ&nbsp;ДОСТАВКА</span>
+                        </label>
+                    </div>
+                </div>
+                <!--     End адреса Slider   -->
+            </div>
+
+            <div class="l-flex justify-between">
+                <a href="#" class="l-flex color-inherit">
+                    <svg class="arrow arrow--left">
+                        <use href="#arrow"></use>
+                    </svg>
+                    <span class="ml-5">Назад</span>
+                </a>
+                <a href="#" class="btn btn--arrow">
+                    далее
+                    <svg class="arrow arrow--right">
+                        <use href="#arrow"></use>
+                    </svg>
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <div class="calculation-container">
+        <div class="scroll-block">
+            <div class="calculation">
+            <div class="calculation__top">
+                <img class="calculation__img" src="img/calc.svg" alt="">
+                <p class="text text--uppercase text--bold text--big">
+                    предварительный расчет стоимости
+                </p>
+            </div>
+
+            <div class="calculation__list">
+                <p class="text text--bold">Доставка Китай - Россия, <br> г.Москва:</p>
+                <div class="list-item">
+                    <span>Тариф</span>
+                    <span>120$</span>
+                </div>
+                <div class="list-item update">
+                    <span>Страховой сбор</span>
+                    <span>10$</span>
+                    <div class="tooltip-content">
+                        Весь груз отправляемый нашей транспортной компанией подлежит обязательному страхованию.<br><br>
+                        Для ознакомления с условиями страхования
+                        и тарифами перейдите в раздел "Часто задаваемые вопросы".
+                    </div>
+                </div>
+                <div class="list-item">
+                    <span>Упаковка</span>
+                    <span>10$</span>
+                </div>
+                <br>
+                <p class="text text--bold">Доставка по России, <br> Москва - Краснодар</p>
+                <div class="list-item">
+                    <span>ТК СДЭК</span>
+                    <span>120$</span>
+                </div>
+                <div class="list-item">
+                    <span>До ПВЗ</span>
+                </div>
+            </div>
+
+            <div class="calculation__total">
+                <div class="total-top text--bold text--uppercase">
+                    <small>ИТОГО:</small>
+                    <strong>260$</strong>
+                </div>
+                <p class="text">Указана предварительная стоимость
+                    отправки груза, исходя из заданных
+                    характеристик. Фактическая цена доставки может отличаться.
+                    Не является публичной офертой.</p>
+            </div>
+
+        </div>
+        </div>
+    </div>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

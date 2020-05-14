@@ -97,6 +97,18 @@
   }
 }
 
+.fix-height-content {
+  min-height: 900px;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 30px 30px;
+  box-sizing: border-box;
+
+  .btn.btn--arrow {
+    min-width: 150px;
+  }
+}
+
 .orders-slider {
   position: relative;
   padding: 0 30px;
@@ -363,11 +375,19 @@
 .my-addresses-container {
   border-bottom: 1px solid $silver-big;
   padding: 30px 0 20px;
+
+  &.bb-0 {
+    border-bottom: 0;
+  }
 }
 
 .create-address-container {
   padding: 20px 0;
   border-bottom: 1px solid $silver-big;
+
+  &.bb-0 {
+    border-bottom: 0;
+  }
 
   .mb-5 {
     color: #333;

@@ -107,6 +107,9 @@
 .justify-between {
   justify-content: space-between;
 }
+.justify-end {
+  justify-content: flex-end;
+}
 .l-max_width {
     width: 100%;
 }
@@ -129,6 +132,9 @@
 .pt-25 {
   padding-top: 25px;
 }
+.pt-40 {
+  padding-top: 40px;
+}
 .pl-30 {
   padding-left: 30px;
 }
@@ -146,6 +152,15 @@
 }
 .mr-10 {
   margin-right: 10px !important;
+}
+.mt-0 {
+  margin-top: 0;
+}
+.mr-20 {
+  margin-right: 20px;
+}
+.mb-30 {
+  margin-bottom: 30px;
 }
 .p-20 {
   padding: 20px !important;
@@ -196,6 +211,12 @@
 .comment-saved {
   opacity: 1!important;
   color: #333!important;
+}
+.border-bottom {
+  border-bottom: 1px solid $silver-big;
+}
+.color-inherit {
+  color: inherit;
 }
 @media screen and (min-width: 992px) {
   .pl-lg-30 {

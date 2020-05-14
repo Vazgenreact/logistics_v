@@ -48,6 +48,12 @@
       right: 5px;
       top: 10px;
     }
+
+    .input.error {
+      padding-left: 12px;
+      color: $font-color-red;
+      border-color: $font-color-red;
+    }
   }
   .custom-select {
     width: 100%;

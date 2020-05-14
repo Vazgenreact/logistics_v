@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics Мои сообщения</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <!-- Это спрайт c svg иконками -->
+    <div class="none"><include src="build/img/sprite.svg"></include></div>
+
+    <header class="main  top">
+        <img src="img/logo.svg" alt="Topzakazz logistics logo" class="top__logo">
+        <a href="#" class="text  text--uppercase  text--regular  text--main  top__exit">Выход</a>
+    </header>
+
+    <section class="main">
+        <div class="user-box">
+            <p class="user-box__text">
+                <small class="text  text--little  text--regular">Здравствуйте,</small>
+                <span class="text  text--uppercase  text--bold  user-box__name">Алексей Хайрутдинов</span>
+            </p>
+            <div class="user-box__balance">
+                <a href="#" class="btn  btn--border  btn--arrow  user-box__btn  user-box__btn--left">
+                    Пополнить
+                    <svg class="arrow  arrow--right">
+                        <use xlink:href="#arrow"></use>
+                    </svg>
+                </a>
+                <div class="select select-valuted user-box__select">
+                    <div class="select__param">
+                        <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
+                    </div>
+                    <!-- Если нужно показать селект - показываем select__list display: block; ну или как-то чтоб поменять это свойство-->
+                    <div class="select__list">
+                        <div class="select__item" data-value="4187.63 RUB">
+                            <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
+                        </div>
+                        <div class="select__item" data-value="418.7 CNY">
+                            <strong>418.7</strong><small>.63</small> <span class="helper" data-help="Юани">¥</span>
+                        </div>
+                        <div class="select__item" data-value="65 USD">
+                            <strong>65</strong><small>.63</small> <span class="helper" data-help="Доллары">$</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn  btn--border  btn--border_silver  btn--arrow  user-box__btn  user-box__btn--right">
+                    Вывести
+                    <svg class="arrow  arrow--right">
+                        <use xlink:href="#arrow"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="main container align-stretch">
+        <div class="container__part">
+            <ul class="part">
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link">заказы на выкуп</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link  part__link--disabled">отправки из китая</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link  part__link--disabled">запросы на поиск</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link">финансы</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link  part__link--disabled">сообщения</a>
+                </li>
+            </ul>
+
+            <ul class="part  container__user-sidebar">
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link">информация</a>
+                </li>
+                <li class="part__item">
+                    <a href="change-password.html" class="text  text--uppercase  part__link  part__link--active  text--bold">изменить пароль</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link">адреса</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link  part__link--disabled">социальные сети</a>
+                </li>
+                <li class="part__item  part__item--partner">
+                    <a href="#" class="text  text--uppercase  part__link">реферальная программа</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link">промокод</a>
+                </li>
+                <li class="part__item">
+                    <a href="#" class="text  text--uppercase  part__link">FAQ</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container__center container__center--flex">
+            <div class="intro">
+                <h3 class="intro__title mt-0">Ваш заказ успешно создан</h3>
+                <div class="l-flex">
+                    <svg class="mr-25" width="60" height="56" viewBox="0 0 60 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M53 14H8c-1.1 0-2 .9-2 2v31h49V16c0-1.1-.9-2-2-2z" fill="#fff" stroke="#333" stroke-miterlimit="10"/>
+                        <path d="M6 46V16c0-1.1.9-2 2-2h45c1.1 0 2 .9 2 2v30" stroke="#333" stroke-width="2" stroke-miterlimit="10"/>
+                        <path d="M59 4v24.05c0 1.63-1.32 2.95-2.95 2.95H37.87l-8.09 7.73c-.58.75-1.78.33-1.78-.62V31h-4.98A3.03 3.03 0 0 1 20 27.98V4c0-1.66 1.34-3 3-3h33c1.66 0 3 1.34 3 3z"
+                              fill="#fff" stroke="#333" stroke-width="2" stroke-miterlimit="10"/>
+                        <path d="M35 16l4 4 9-11" stroke="#333" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M47 16v8H30.91V8H44" stroke="#333" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M2 17v-1c0-3.31 2.69-6 6-6h9" stroke="#333" stroke-width="2" stroke-miterlimit="10"/>
+                        <path d="M59 46H37l-1 1H24l-1-1H1v2c0 1.65 1.35 3 3 3h52c1.66 0 3-1.34 3-3v-2z" fill="#fff" stroke="#333"
+                              stroke-width="2" stroke-miterlimit="10"/>
+                        <path d="M11 55h16" stroke="#333" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                    <div>
+                        <p class="text--muted text--small mt-0 mb-5">Тип операции:</p>
+                        <span class="text--uppercase text--bold text--big">новый расчет <br>
+                            на отправку</span>
+                    </div>
+                </div>
+
+                <div class="order-successfully">
+                    <div class="l-flex text--bold">
+                        <span>Номер заказа:</span>
+                        <span class="order-number">ID0001/00001</span>
+                    </div>
+
+                    <div class="addresses-shiping">
+                        <div class="shipping-address mb-20">
+                            <div class="shipping-address__link justify-center active">
+                                <p class="text"><strong class="text--bold">Адреca</strong> нашего склада в Китае, г. Гуанчжоу:</p>
+                            </div>
+                            <div class="shipping-address__content">
+                                <div class="shipping-address__item">
+                                    <div class="l-flex pb-20">
+                                        <div class="grow-1 mr-10">
+                                            广州市越秀区荔德路318号 汇富商 贸中
+                                            心A28 栋102<br> 仓库 13128641323 ALEXEYH.
+                                            箱子上面写 "ID0001/00001”
+                                        </div>
+                                        <button class="copy-btn shrink-0 copied">
+                                            <svg width="18" height="22"><use href="#i-copy"></use></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alarm-warning">
+                            <p class="text mb-20">Обязательно скопируйте это сообщение и передайте своему продавцу!
+                                Оно содержит адрес нашего склада и маркировку Вашего груза.</p>
+                            <p class="text">Иначе мы не сможем распознать груз в автоматическом режиме.</p>
+                        </div>
+                    </div>
+
+                    <p class="text--bold">Пожалуйста! Укажите дополнительную информацию о своем грузе
+                        и мы выполним комплектацию и отправку быстрее</p>
+
+                    <label class="label">
+                        <span class="text  text--regular">Загрузите фотографии товара</span>
+                    </label>
+                    <div class="l-flex">
+                    </div>
+
+                    <div class="stock-images mt-auto mb-20">
+                        <div class="stock-images__list">
+                            <button class="stock-images__btn stock-images__btn--left" disabled="">
+                                <svg width="25" height="30" viewBox="0 0 512 512">
+                                    <path d="M160 128.4L192.3 96 352 256 192.3 416 160 383.6 287.3 256z"></path>
+                                </svg>
+                            </button>
+                            <button class="stock-images__btn stock-images__btn--right">
+                                <svg width="25" height="30" viewBox="0 0 512 512">
+                                    <path d="M160 128.4L192.3 96 352 256 192.3 416 160 383.6 287.3 256z"></path>
+                                </svg>
+                            </button>
+
+                            <div class="stock-images__item">
+                                <label class="add-img">
+                                    <input type="file">
+                                    <span class="cross cross--plus" aria-label="Добавить изображение">
+                                        <svg><use xlink:href="#cross"></use></svg>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="stock-images__item"></div>
+                            <div class="stock-images__item"></div>
+                            <div class="stock-images__item"></div>
+                            <div class="stock-images__item"></div>
+                            <div class="stock-images__item"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-30">
+                        <p class="text mb-5">Или добавьте ссылку / скриншот</p>
+
+                        <div class="l-flex">
+                            <input type="text" name="link-product" class="input  input--rubber" placeholder="Введите ссылку на товар">
+                            <button class="redemption-order__add-line" type="button">
+                                <span class="cross cross--plus  cross--plus_small cross--plus_center">
+                                    <svg><use xlink:href="#cross"></use></svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="referral-desc__link">
+                        <p class="text text--bold">Дополнительные требования:</p>
+
+                        <div class="l-flex l-flex--top l-flex--wrap_mobile mb-25">
+                            <div class="l-flex__half  l-flex__half--max_mobile">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="check" checked>
+                                    <span>Требуется визуальная проверка на брак</span>
+                                </label>
+                            </div>
+                            <div class="l-flex__half  l-flex__half--max_mobile">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="check" checked>
+                                    <span>Требуется фото товара по&nbsp;прибытию на склад</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <p class="text mb-5">Если Вам известен трек номер доставки по Китаю, укажите его здесь</p>
+                        <div class="l-flex">
+                            <input type="text" name="link-product" class="input  input--rubber" placeholder="Введите трек №">
+                            <button class="redemption-order__add-line" type="button">
+                                <span class="cross cross--plus  cross--plus_small cross--plus_center">
+                                    <svg><use xlink:href="#cross"></use></svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="important  important--text  redemption-order__important">
+                        <p class="text  text--little"><b class="text__bold">Обратите внимание!</b> Стоимость дополнительных услуг оплачивается отдельно за каждую единицу товара согласно следующим тарифам:</p>
+                        <table class="important__table  text  text--little">
+                            <tbody><tr>
+                                <td>Визуальная проверка на брак:</td>
+                                <td>1 ¥/единица</td>
+                            </tr>
+                            <tr>
+                                <td>Отдельное фото товара:</td>
+                                <td>1 ¥/единица</td>
+                            </tr>
+                            </tbody></table>
+                    </div>
+
+                    <div class="methods__comment mb-30">
+                        <p class="mb-5">Комментарий:</p>
+                        <textarea class="input textarea" type="text" placeholder="Если у Вас есть дополнительные требования, укажите их здесь"></textarea>
+                        <div class="text--align_right">
+                            <svg width="10" height="10">
+                                <use href="#comment-save"></use>
+                            </svg>
+                            <small>Комментарий сохранен</small>
+                        </div>
+                    </div>
+
+                    <div class="l-flex justify-end">
+                        <a href="#" class="btn btn--arrow">
+                            далее
+                            <svg class="arrow arrow--right">
+                                <use href="#arrow"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container__additionally"></div>
+    </main>
+
+    <div class="popup  popup--wechatpay">
+        <a class="cross  popup__close"><svg><use href="#cross"></use></svg></a>
+        <img src="img/wechatpayalexey.png">
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

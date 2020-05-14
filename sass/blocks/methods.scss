@@ -3,6 +3,10 @@
   border-bottom: 1px solid $silver-big;
   margin-bottom: 28px;
 
+  &.bb-0 {
+    border-bottom: 0;
+  }
+
   &__item {
     position: relative;
 
@@ -120,7 +124,7 @@
     border: 1px solid $font-color-silver;
     color: $font-color-silver;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     min-height: 52px;
     box-sizing: border-box;
     cursor: pointer;
@@ -184,7 +188,10 @@
   &__comment {
     .input {
       width: 100%;
-      height: 52px;
+    }
+    .textarea {
+      width: 100%;
+      height: 110px;
     }
     .text {
       color: $font-color-silver;
