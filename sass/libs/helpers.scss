@@ -177,6 +177,9 @@
 .mr-25 {
   margin-right: 25px;
 }
+.pt-20 {
+  padding-top: 20px;
+}
 .grow-1 {
   flex-grow: 1;
 }
@@ -194,6 +197,9 @@
 }
 .ml-auto {
   margin-left: auto!important;
+}
+.mr-auto {
+  margin-right: auto;
 }
 .border--mutted {
   border-color: $silver-big;

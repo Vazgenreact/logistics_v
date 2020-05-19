@@ -184,6 +184,27 @@
         </ul>
 
         <form class="shipping-content fix-height-content">
+            <div class="progress-shipping mb-30">
+                <div class="progress-shipping__item completed">
+                    <span>Данные груза</span>
+                </div>
+                <div class="progress-shipping__item">
+                    <span>Упаковка</span>
+                </div>
+                <div class="progress-shipping__item">
+                    <span>Получатель</span>
+                </div>
+                <div class="progress-shipping__item">
+                    <span>Отправка</span>
+                </div>
+                <div class="progress-shipping__item">
+                    <span>Доставка</span>
+                </div>
+                <div class="progress-shipping__item">
+                    <span>Готово!</span>
+                </div>
+            </div>
+
             <div class="grow-1">
                 <!--     данные груза    -->
                 <div class="l-flex">
@@ -370,7 +391,11 @@
                 </div>
                 <!--     End Расчет страховой стоимости    -->
             </div>
-            <div class="l-flex justify-end">
+            <div class="l-flex justify-end shipping-content__footer">
+                <div class="alarm-warning mr-10">
+                    Заполните все обязательные поля,
+                    отмеченные красным
+                </div>
                 <a href="#" class="btn btn--arrow">
                     далее
                     <svg class="arrow arrow--right">

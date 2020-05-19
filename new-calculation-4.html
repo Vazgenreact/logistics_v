@@ -184,6 +184,27 @@
         </ul>
 
         <form class="shipping-content fix-height-content">
+            <div class="progress-shipping mb-30">
+                <div class="progress-shipping__item completed">
+                    <span>Данные груза</span>
+                </div>
+                <div class="progress-shipping__item completed">
+                    <span>Упаковка</span>
+                </div>
+                <div class="progress-shipping__item completed">
+                    <span>Получатель</span>
+                </div>
+                <div class="progress-shipping__item completed">
+                    <span>Отправка</span>
+                </div>
+                <div class="progress-shipping__item">
+                    <span>Доставка</span>
+                </div>
+                <div class="progress-shipping__item">
+                    <span>Готово!</span>
+                </div>
+            </div>
+
             <div class="grow-1">
                 <!--     метод доставки   -->
                 <div class="methods-delivery">
@@ -206,7 +227,7 @@
                     </div>
                     <!--     метод доставки Китай - Россия  -->
                     <div class="delivery-formData">
-                        <div class="l-flex pt-25 mb-10 mobile-wrap">
+                        <div class="l-flex pt-20 mb-10 mobile-wrap">
                             <div class="text mr-10 l-flex">
                                 Сортировочный пункт:
                             </div>
@@ -389,13 +410,16 @@
                 </div>
             </div>
 
-            <div class="l-flex justify-between">
-                <a href="#" class="l-flex color-inherit">
+            <div class="l-flex justify-end shipping-content__footer">
+                <a href="#" class="l-flex color-inherit mr-auto">
                     <svg class="arrow arrow--left">
                         <use href="#arrow"></use>
                     </svg>
                     <span class="ml-5">Назад</span>
                 </a>
+                <div class="alarm-warning mr-10">
+                    Выберите один из методов доставки
+                </div>
                 <a href="#" class="btn btn--arrow">
                     далее
                     <svg class="arrow arrow--right">
