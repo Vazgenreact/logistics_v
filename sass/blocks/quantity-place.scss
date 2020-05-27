@@ -1,0 +1,40 @@
+.quantity-place {
+  padding-top: 10px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $silver-big;
+
+    .btn {
+      width: 30px;
+      height: 30px;
+      min-height: auto;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $silver-big;
+      background-color: #fff;
+
+      &:disabled svg {
+        opacity: .45;
+      }
+
+      &.prev {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &__list {
+    padding-top: 15px;
+
+    .part {
+      height: 113px;
+    }
+  }
+}

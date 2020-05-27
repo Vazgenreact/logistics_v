@@ -1,0 +1,134 @@
+.delivery {
+  border: 1px solid $color-33;
+  border-radius: 3px;
+  padding: 20px;
+  width: 372px;
+  box-sizing: border-box;
+
+  .reset-list li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__bottom {
+    position: relative;
+    border-top: 1px solid $silver-big;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    padding: 20px 0 2px;
+    box-sizing: border-box;
+
+    .btn--muted:not(.btn--outline) {
+      font-weight: 300;
+      border-color: $font-color-silver;
+      & * {
+        margin-top: 0;
+        opacity: .45;
+      }
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $color-33 $color-33 #fff #fff;
+      background-color: #fff;
+      z-index: 9;
+    }
+    &::after {
+      right: 0;
+      margin-right: -30px;
+      transform: rotate(-135deg);
+    }
+    &::before {
+      left: -30px;
+      transform: rotate(45deg);
+    }
+  }
+  .top-scroll-content {
+    position: relative;
+    height: 30px;
+    margin-top: -30px;
+    background-color: rgba(255,255,255,.9);
+  }
+  .part.min-height {
+    & > li {
+      min-height: 49px;
+      align-items: center;
+      box-sizing: border-box;
+    }
+  }
+  .part .custom-select {
+    width: 160px;
+  }
+
+  .tab-content {
+    padding-top: 10px;
+    .part {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 15px;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        .text--muted {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+.yellow-ellipse,
+.green-ellipse {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    margin-right: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+}
+.green-ellipse::before {
+  background-color: #5ED700;
+}
+.yellow-ellipse::before {
+  background-color: $u-orange;
+}
+
+.delivery {
+
+  .checkbox__icon {
+    margin-right: 0;
+  }
+
+}
+.delivery-slider {
+
+  &__list {
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .delivery {
+    width: 303px;
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+}

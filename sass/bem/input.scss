@@ -43,4 +43,10 @@
     &--transparent {
         background-color: transparent;
     }
+  &:read-only {
+    &:focus,
+    &:hover {
+      border-color: $silver-big;
+    }
+  }
 }

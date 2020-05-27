@@ -4,19 +4,21 @@
   width: 16px;
   height: 16px;
   border: 1px solid $font-color-silver;
-  border-radius: 2px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  vertical-align: middle;
 
   &::after {
     content: '';
     position: absolute;
-    left: 3px;
-    top: 3px;
+    left: 50%;
+    top: 25%;
     width: 8px;
     height: 4px;
     border-left: 2px solid #333;
     border-bottom: 2px solid #333;
     opacity: 0;
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translate(-50%, -50%);
   }
 }
 input:checked + .checkbox-icon {

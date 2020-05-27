@@ -1,0 +1,141 @@
+.tab-container {
+  padding-top: 20px;
+
+  &.pt-0 {
+    padding-top: 0;
+  }
+}
+.tab-nav {
+
+  &__link {
+    width: 30%;
+    padding: 5px;
+    border: 0;
+    border-bottom: 2px solid $silver-big;
+    text-align: center;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+
+    &:hover,
+    &.active {
+      color: $color-blue;
+      border-color: $color-blue;
+    }
+  }
+}
+
+.tab-content {
+  padding-top: 15px;
+
+  &__item {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    .stock-images__item {
+      width: 70px;
+      height: 70px;
+      border-color: $silver-big;
+      margin: 0 0 10px;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .add-img {
+      background-color: #fff;
+
+      .cross--plus {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .checkbox input:not(:checked) + * {
+      color: $font-color-silver;
+    }
+  }
+
+  .track-item {
+    padding: 3px 0 3px 5px;
+
+    &.receipt {
+      svg {
+        opacity: .4;
+      }
+    }
+    &.awaited {
+      .icon-minus {
+        color: $font-color-silver;
+      }
+    }
+
+    .custom-select {
+      width: 130px;
+      min-width: auto;
+
+      &__item span {
+        padding: 7px 12px;
+      }
+    }
+  }
+  .icon-minus {
+    width: 10px;
+    height: 2px;
+    margin: 0 3px;
+    display: inline-block;
+    background-color: $font-color-silver;
+  }
+  .track {
+    margin-left: 20px;
+    color: $color-blue;
+  }
+  .link {
+    color: $color-blue;
+    text-decoration: none;
+  }
+  .pink-block {
+    background-color: $u-pink;
+    padding: 5px 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    .l-flex {
+      margin: 5px 0;
+    }
+  }
+  .cargo-data__input {
+    width: 23.5%;
+
+    span {
+      line-height: 1.5;
+    }
+  }
+  .checkbox-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.checking-top {
+  padding: 20px;
+  background-color: $color-f5;
+  border-radius: 3px;
+}
+
+.comment-block {
+
+  .text--align_center,
+  .text--align_right {
+    opacity: .4;
+  }
+  &.saved {
+    .text--align_right {
+      opacity: 1;
+    }
+  }
+}

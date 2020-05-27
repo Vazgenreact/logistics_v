@@ -128,7 +128,10 @@
 .relative {
   position: relative;
 }
-
+.py-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 .pt-25 {
   padding-top: 25px;
 }
@@ -143,6 +146,9 @@
 }
 .mb-25 {
   margin-bottom: 25px;
+}
+.pt-10 {
+  padding-top: 10px;
 }
 .mb-20 {
   margin-bottom: 20px;
@@ -162,6 +168,9 @@
 .mb-30 {
   margin-bottom: 30px;
 }
+.pb-30 {
+  padding-bottom: 30px;
+}
 .p-20 {
   padding: 20px !important;
 }
@@ -179,6 +188,12 @@
 }
 .pt-20 {
   padding-top: 20px;
+}
+.pb-20 {
+  padding-bottom: 20px;
+}
+.mb-15 {
+  margin-bottom: 15px;
 }
 .grow-1 {
   flex-grow: 1;
@@ -221,9 +236,47 @@
 .border-bottom {
   border-bottom: 1px solid $silver-big;
 }
+.border-top {
+  border-top: 1px solid $silver-big;
+}
 .color-inherit {
   color: inherit;
 }
+.toback-link {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+}
+.bg-white {
+  background-color: #fff;
+}
+.bg-gray-f5 {
+  background-color: $color-f5;
+}
+.bg-yellow {
+  background-color: $u-yellow;
+}
+.new-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  border: 0;
+  padding: 0;
+
+  &:disabled {
+    svg {
+      opacity: .4;
+    }
+  }
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .pl-lg-30 {
     padding-left: 30px;

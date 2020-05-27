@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics Заказ создан</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<!-- Это спрайт c svg иконками -->
+<div class="none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<header class="main  top">
+    <img src="img/logo.svg" alt="Topzakazz logistics logo" class="top__logo">
+    <a href="#" class="text  text--uppercase  text--regular  text--main  top__exit">Выход</a>
+</header>
+
+<section class="main">
+    <div class="user-box">
+        <p class="user-box__text">
+            <small class="text  text--little  text--regular">Здравствуйте,</small>
+            <span class="text  text--uppercase  text--bold  user-box__name">Алексей Хайрутдинов</span>
+        </p>
+        <div class="user-box__balance">
+            <a href="#" class="btn  btn--border  btn--arrow  user-box__btn  user-box__btn--left">
+                Пополнить
+                <svg class="arrow  arrow--right">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
+            <div class="select select-valuted user-box__select">
+                <div class="select__param">
+                    <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
+                </div>
+                <!-- Если нужно показать селект - показываем select__list display: block; ну или как-то чтоб поменять это свойство-->
+                <div class="select__list">
+                    <div class="select__item" data-value="4187.63 RUB">
+                        <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
+                    </div>
+                    <div class="select__item" data-value="418.7 CNY">
+                        <strong>418.7</strong><small>.63</small> <span class="helper" data-help="Юани">¥</span>
+                    </div>
+                    <div class="select__item" data-value="65 USD">
+                        <strong>65</strong><small>.63</small> <span class="helper" data-help="Доллары">$</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn  btn--border  btn--border_silver  btn--arrow  user-box__btn  user-box__btn--right">
+                Вывести
+                <svg class="arrow  arrow--right">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<main class="main container admin-page">
+    <div class="container__part">
+        <ul class="part">
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--active  text--bold">мои заказы на
+                    выкуп</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои отправки из китая</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои запросы на поиск</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">мои финансы</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои сообщения</a>
+            </li>
+        </ul>
+
+        <ul class="part  container__user-sidebar">
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">моя информация</a>
+            </li>
+            <li class="part__item">
+                <a href="change-password.html" class="text  text--uppercase  part__link">изменить пароль</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">мои адреса</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои социальные сети</a>
+            </li>
+            <li class="part__item  part__item--partner">
+                <a href="#" class="text  text--uppercase  part__link">моя реферальная программа</a>
+            </li>
+        </ul>
+
+        <img src="img/email-confirmation.jpg" class="container__confirmation">
+    </div>
+
+    <div class="container__center--max100">
+        <div class="shipping-top">
+            <h3 class="text  text--uppercase  text--bold  text--big l-flex mb-25">
+                <img class="mr-15" src="img/storage.svg">
+                <span>Склад</span>
+            </h3>
+
+            <div class="filter-tegs mb-30">
+                <div class="l-flex mb-10">
+                    <div class="custom-select no-arrow grow-1 mr-10">
+                        <div class="">
+                            <input type="text" class="input input--muted" placeholder="Введите название товара">
+                            <button class="search__btn" type="button">
+                                <svg width="20" height="20">
+                                    <use href="#search"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="custom-select__list" style="">
+                            <li class="custom-select__item" onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                                <ul class="custom-select__list">
+                                    <li class="custom-select__item">fsfasdffasdfsdf</li>
+                                </ul>
+                            </li>
+                            <li class="custom-select__item" onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                            </li>
+                            <li class="custom-select__item" onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="redemption-order__add-line l-flex justify-center" type="button">
+                        <svg width="20" height="20">
+                            <use href="#scan"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="l-flex justify-between two-child">
+                    <div class="custom-select">
+                        <div class="input custom-select__input">
+                            <input class="input-hide" name="track1" value="">
+                            <span class="text">Заказы на выкуп</span>
+                        </div>
+                        <ul class="custom-select__list">
+                            <li class="custom-select__item"><span>Заказы на выкуп</span></li>
+                            <li class="custom-select__item"><span>Заказы на доставку</span></li>
+                            <li class="custom-select__item"><span>Заказы на консолидацию</span></li>
+                            <li class="custom-select__item"><span>Неизвестный заказ</span></li>
+                        </ul>
+                    </div>
+                    <div class="custom-select">
+                        <div class="input custom-select__input">
+                            <input class="input-hide" name="track1" value="">
+                            <span class="text">Статус заказа:</span>
+                        </div>
+                        <ul class="custom-select__list">
+                            <li class="custom-select__item"><span>Проверен</span></li>
+                            <li class="custom-select__item"><span>Получен</span></li>
+                            <li class="custom-select__item"><span>Ожидаем</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-bottom pb-30 mb-30">
+                <div class="storage_content">
+                    <div class="l-flex justify-between">
+                        <p class="text text--bold">Заказ на выкуп №V145184532</p>
+                        <button class="new-btn bg-gray-f5" disabled>
+                            <svg width="13" height="13">
+                                <use href="#save"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="part">
+                        <li class="wrap-form__flex">
+                            <span>ID клиента</span>
+                            <span>ID54325463</span>
+                        </li>
+                        <li class="wrap-form__flex">
+                            <span>№ заказа клиента</span>
+                            <span>145</span>
+                        </li>
+                        <li class="wrap-form__flex">
+                            <span class="text--bold">№ на складе</span>
+                            <div class="l-flex">
+                                <button class="new-btn bg-gray-f5 mr-10" onclick="">
+                                    <svg width="15" height="14">
+                                        <use href="#address"></use>
+                                    </svg>
+                                </button>
+                                <input type="text" class="input for-info" readonly value="А125">
+                            </div>
+                        </li>
+                        <li class="wrap-form__flex">
+                            <span>Статус</span>
+                            <div class="custom-select">
+                                <div class="input custom-select__input">
+                                    <input class="input-hide" name="delivery_status" value="">
+                                    <span class="text">Ожидает поступления</span>
+                                </div>
+                                <ul class="custom-select__list">
+                                    <li class="custom-select__item"><span>Ожидает поступления</span></li>
+                                    <li class="custom-select__item"><span>Ожидает поступления 2</span></li>
+                                    <li class="custom-select__item"><span>Ожидает поступления 3</span></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="tab-container">
+                        <div class="tab-nav l-flex justify-between">
+                            <button type="button" class="tab-nav__link active">Трек №</button>
+                            <button type="button" class="tab-nav__link ">Информация</button>
+                            <button type="button" class="tab-nav__link ">Проверка</button>
+                        </div>
+
+                        <div class="tab-content">
+                            <form action="#" class="tab-content__item active">
+                                <div class="border-bottom pb-20 mb-10">
+                                    <div class="track-item l-flex justify-between tested">
+                                        <div class="l-flex">
+                                            <svg width="16" height="12">
+                                                <use href="#check"></use>
+                                            </svg>
+                                            <span class="track">RK11245265626</span>
+                                        </div>
+                                        <div class="custom-select">
+                                            <div class="input custom-select__input">
+                                                <input class="input-hide" name="track1" value="">
+                                                <span class="text">Проверен</span>
+                                            </div>
+                                            <ul class="custom-select__list">
+                                                <li class="custom-select__item"><span>Проверен</span></li>
+                                                <li class="custom-select__item"><span>Получен</span></li>
+                                                <li class="custom-select__item"><span>Ожидаем</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="track-item l-flex justify-between receipt">
+                                        <div class="l-flex">
+                                            <svg width="16" height="12">
+                                                <use href="#check"></use>
+                                            </svg>
+                                            <span class="track">TR11165962656</span>
+                                        </div>
+                                        <div class="custom-select">
+                                            <div class="input custom-select__input">
+                                                <input class="input-hide" name="track1" value="">
+                                                <span class="text">Получен</span>
+                                            </div>
+                                            <ul class="custom-select__list">
+                                                <li class="custom-select__item"><span>Проверен</span></li>
+                                                <li class="custom-select__item"><span>Получен</span></li>
+                                                <li class="custom-select__item"><span>Ожидаем</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="track-item l-flex justify-between awaited">
+                                        <div class="l-flex">
+                                            <span class="icon-minus"></span>
+                                            <span class="track">YT51545569562</span>
+                                        </div>
+                                        <div class="custom-select">
+                                            <div class="input custom-select__input">
+                                                <input class="input-hide" name="track1" value="">
+                                                <span class="text">Ожидаем</span>
+                                            </div>
+                                            <ul class="custom-select__list">
+                                                <li class="custom-select__item"><span>Проверен</span></li>
+                                                <li class="custom-select__item"><span>Получен</span></li>
+                                                <li class="custom-select__item"><span>Ожидаем</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="text link"
+                                   onclick="this.nextElementSibling.classList.remove('none');this.classList.remove('link')">
+                                    Добавить трек номер</p>
+                                <div class="pt-20 none">
+                                    <div class="custom-select w-100 mb-10">
+                                        <div class="input custom-select__input">
+                                            <input class="input-hide" name="track1" value="">
+                                            <span class="text">К заказу:</span>
+                                        </div>
+                                        <ul class="custom-select__list">
+                                            <li class="custom-select__item"><span>№16185452154544555544</span></li>
+                                            <li class="custom-select__item"><span>№72016870138094051150</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="label label--flex mb-30">
+                                        <input type="text" name="link-product" class="input  input--rubber"
+                                               placeholder="">
+                                        <button class="redemption-order__add-line" type="button">
+                                        <span class="cross cross--plus  cross--plus_small cross--plus_center">
+                                            <svg><use href="#cross"></use></svg>
+                                        </span>
+                                        </button>
+                                    </div>
+
+                                    <div class="l-flex justify-end">
+                                        <button class="btn btn--arrow  btn--right" type="submit">
+                                            Сохранить
+                                            <svg class="arrow  arrow--right">
+                                                <use href="#arrow"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <form action="#" class="tab-content__item ">
+                                <div class="tab-container pt-0">
+                                    <div class="tab-nav l-flex justify-between">
+                                        <button type="button" class="tab-nav__link active">Товар</button>
+                                        <button type="button" class="tab-nav__link ">Упаковка</button>
+                                        <button type="button" class="tab-nav__link ">Доставка</button>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div class="tab-content__item active">
+                                            <div class="mb-15">
+                                                <p class="text mb-5">Продавец 1</p>
+                                                <p class="text text--bold mb-5">№16185452154544555544</p>
+                                                <p class="text">RK11245265626</p>
+                                                <p class="text">YT51545569562</p>
+                                            </div>
+                                            <div class="l-flex l-flex--wrap mb-20">
+                                                <svg class="mr-10" width="40" height="40">
+                                                    <use href="#pdf"></use>
+                                                </svg>
+                                                <svg class="mr-10" width="40" height="40">
+                                                    <use href="#pdf"></use>
+                                                </svg>
+                                                <svg class="mr-10" width="40" height="40">
+                                                    <use href="#pdf"></use>
+                                                </svg>
+                                                <svg class="mr-10" width="40" height="40">
+                                                    <use href="#pdf"></use>
+                                                </svg>
+                                                <svg class="mr-10" width="40" height="40">
+                                                    <use href="#pdf"></use>
+                                                </svg>
+                                                <svg class="mr-10" width="40" height="40">
+                                                    <use href="#pdf"></use>
+                                                </svg>
+                                                <svg class="mr-10" width="40" height="40">
+                                                    <use href="#pdf"></use>
+                                                </svg>
+                                            </div>
+
+                                            <div class="mb-15">
+                                                <p class="text mb-5">Продавец 2</p>
+                                                <p class="text text--bold mb-5">№72016870138094051150</p>
+                                                <p class="text">RK11245265626</p>
+                                            </div>
+                                            <div class="l-flex l-flex--wrap mb-20">
+                                                <svg class="mr-10" width="40" height="40">
+                                                    <use href="#pdf"></use>
+                                                </svg>
+                                                <svg class="mr-10" width="40" height="40">
+                                                    <use href="#pdf"></use>
+                                                </svg>
+                                            </div>
+
+                                            <div class="correspondence border-top">
+                                                <div class="mb-15 correspondence__message left">
+                                                    <div class="l-flex justify-between text--small w-100 mb-5">
+                                                        <p class="text name">Менеджер Марина Ведрова</p>
+                                                        <span class="text--muted">21:54 20.03.2020</span>
+                                                    </div>
+                                                    <div class="message__text">
+                                                        <p class="text">“Lorem ipsum dolor sit amet, consectetur
+                                                            adipiscing
+                                                            elit. Donec condimentum, lacus vitae commodo convallis,
+                                                            augue
+                                                            neque blandit...</p>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-15 correspondence__message right">
+                                                    <div class="l-flex justify-between text--small w-100 mb-5">
+                                                        <span class="text--muted">21:54 20.03.2020</span>
+                                                        <p class="text name">Кладовщик Борис</p>
+                                                    </div>
+                                                    <div class="message__text">
+                                                        <p class="text">Cras sit amet vulputate massa. Integer enim
+                                                            purus, egestas ut iaculis sed, consectetur ut eros.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-15 correspondence__message left">
+                                                    <div class="l-flex justify-between text--small w-100 mb-5">
+                                                        <p class="text name">Менеджер Марина Ведрова</p>
+                                                        <span class="text--muted">21:54 20.03.2020</span>
+                                                    </div>
+                                                    <div class="message__text">
+                                                        <p class="text">Ok</p>
+                                                    </div>
+                                                </div>
+                                                <!--     Отправить сообщение    -->
+                                                <div class="l-flex pt-10">
+                                                    <label class="messages__label">
+                                                        <input type="text" class="input messages__input"
+                                                               placeholder="Введите сообщение">
+                                                        <svg class="messages__icon" width="20" height="20">
+                                                            <use href="#file"></use>
+                                                        </svg>
+                                                    </label>
+                                                    <button class="messages__send">
+                                                        <svg width="20" height="20">
+                                                            <use href="#sending"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content__item ">
+                                            <div class="l-flex pt-10 mb-10">
+                                                <svg class="mr-15" width="25" height="25">
+                                                    <use href="#palet"></use>
+                                                </svg>
+                                                <p class="text">Палет + обрешетка + стрейч-пленка + скотч </p>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content__item ">
+                                            <ul class="part pt-5">
+                                                <li class="wrap-form__flex border-bottom">
+                                                    <span>Китай - Китай</span>
+                                                    <div class="custom-select">
+                                                        <div class="input custom-select__input">
+                                                            <input class="input-hide" name="delivery_status" value="">
+                                                            <span class="text">TR11165962656</span>
+                                                        </div>
+                                                        <ul class="custom-select__list">
+                                                            <li class="custom-select__item"><span>TR11165962656</span>
+                                                            </li>
+                                                            <li class="custom-select__item"><span>TR11165962656</span>
+                                                            </li>
+                                                            <li class="custom-select__item"><span>TR11165962656</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="wrap-form__flex border-bottom">
+                                                    <span>Китай - Россия</span>
+                                                    <span>ЖД 8-12 дней</span>
+                                                </li>
+                                                <li class="wrap-form__flex">
+                                                    <span>Россия - Россия<br> Сдек, до двери</span>
+                                                    <div class="custom-select">
+                                                        <div class="input custom-select__input">
+                                                            <input class="input-hide" name="delivery_status" value="">
+                                                            <span class="text">TR11165962656</span>
+                                                        </div>
+                                                        <ul class="custom-select__list">
+                                                            <li class="custom-select__item"><span>TR11165962656</span>
+                                                            </li>
+                                                            <li class="custom-select__item"><span>TR11165962656</span>
+                                                            </li>
+                                                            <li class="custom-select__item"><span>TR11165962656</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <form action="#" class="tab-content__item ">
+                                <div class="checking-top mb-20">
+                                    <div class="custom-select w-100 mb-15">
+                                        <div class="input custom-select__input">
+                                            <input class="input-hide" name="track1" value="">
+                                            <span class="text bg-white">YT51545569562</span>
+                                        </div>
+                                        <ul class="custom-select__list">
+                                            <li class="custom-select__item"><span>YT51545569562</span></li>
+                                            <li class="custom-select__item"><span>№72016870138094051150</span></li>
+                                        </ul>
+                                    </div>
+                                    <p class="text mb-10">Продавец №1</p>
+
+                                    <p class="text mb-10">№16185452154544555544</p>
+                                    <div class="l-flex l-flex--wrap mb-25">
+                                        <svg class="mr-10" width="40" height="40">
+                                            <use href="#pdf"></use>
+                                        </svg>
+                                        <svg class="mr-10" width="40" height="40">
+                                            <use href="#pdf"></use>
+                                        </svg>
+                                        <svg class="mr-10" width="40" height="40">
+                                            <use href="#pdf"></use>
+                                        </svg>
+                                        <svg class="mr-10" width="40" height="40">
+                                            <use href="#pdf"></use>
+                                        </svg>
+                                    </div>
+
+                                    <div class="pink-block mb-10">
+                                        <label class="l-flex justify-between">
+                                            <span>Фото товара</span>
+                                            <input type="checkbox" class="none" checked>
+                                            <span class="checkbox-icon"></span>
+                                        </label>
+                                        <label class="l-flex justify-between">
+                                            <span>Проверка товара</span>
+                                            <input type="checkbox" class="none">
+                                            <span class="checkbox-icon"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="wrap-form__flex">
+                                        <span>Статус</span>
+
+                                        <div class="custom-select">
+                                            <div class="input custom-select__input">
+                                                <input class="input-hide" name="track1" value="">
+                                                <span class="text bg-white">Ожидаем</span>
+                                            </div>
+                                            <ul class="custom-select__list">
+                                                <li class="custom-select__item"><span>Проверен</span></li>
+                                                <li class="custom-select__item"><span>Получен</span></li>
+                                                <li class="custom-select__item"><span>Ожидаем</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-container">
+                                    <div class="tab-nav l-flex justify-between">
+                                        <button type="button" class="tab-nav__link active">Габариты</button>
+                                        <button type="button" class="tab-nav__link ">Фото</button>
+                                        <button type="button" class="tab-nav__link ">Услуги</button>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div class="tab-content__item active">
+                                            <div class="border-bottom pb-30 mb-20">
+                                                <p class="text text--bold mb-15">Место 1</p>
+                                                <div class="cargo-data__row justify-between">
+                                                    <div class="cargo-data__input">
+                                                        <span>Длина, см</span>
+                                                        <input type="text" class="input">
+                                                    </div>
+                                                    <div class="cargo-data__input">
+                                                        <span>Ширина, см</span>
+                                                        <input type="text" class="input">
+                                                    </div>
+                                                    <div class="cargo-data__input">
+                                                        <span>Высота, см</span>
+                                                        <input type="text" class="input">
+                                                    </div>
+                                                    <div class="cargo-data__input">
+                                                        <span>Вес, кг</span>
+                                                        <input type="text" class="input">
+                                                    </div>
+                                                </div>
+                                                <div class="filter-tegs">
+                                                    <div class="l-flex justify-between mb-5">
+                                                        <span class="text">Укажите груз:</span>
+                                                        <span class="color-blue">Не нашли нужный товар?</span>
+                                                    </div>
+                                                    <div class="custom-select no-arrow w-100">
+                                                        <div class="" id="custom-searching">
+                                                            <input type="text" class="input input--muted"
+                                                                   placeholder="Введите название товара">
+                                                            <button class="search__btn" type="button">
+                                                                <svg width="20" height="20">
+                                                                    <use href="#search"></use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                        <ul class="custom-select__list" style="">
+                                                            <li class="custom-select__item"
+                                                                onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                                                                <ul class="custom-select__list">
+                                                                    <li class="custom-select__item">fsfasdffasdfsdf</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="custom-select__item"
+                                                                onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                                                            </li>
+                                                            <li class="custom-select__item"
+                                                                onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="teg">
+                                                        <div class="teg__item">
+                                                            <span>Женские ветровки</span>
+                                                            <button class="teg__close" type="button">
+                                                                <svg width="10" height="10">
+                                                                    <use href="#cross"></use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="teg__item">
+                                                            <span>Брюки мужские</span>
+                                                            <button class="teg__close" type="button">
+                                                                <svg width="10" height="10">
+                                                                    <use href="#cross"></use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="border-bottom pb-30 mb-20">
+                                                <p class="text text--bold mb-15">Место 2</p>
+                                                <div class="cargo-data__row justify-between">
+                                                    <div class="cargo-data__input">
+                                                        <span>Длина, см</span>
+                                                        <input type="text" class="input">
+                                                    </div>
+                                                    <div class="cargo-data__input">
+                                                        <span>Ширина, см</span>
+                                                        <input type="text" class="input">
+                                                    </div>
+                                                    <div class="cargo-data__input">
+                                                        <span>Высота, см</span>
+                                                        <input type="text" class="input">
+                                                    </div>
+                                                    <div class="cargo-data__input">
+                                                        <span>Вес, кг</span>
+                                                        <input type="text" class="input">
+                                                    </div>
+                                                </div>
+                                                <div class="filter-tegs">
+                                                    <div class="l-flex justify-between mb-5">
+                                                        <span class="text">Укажите груз:</span>
+                                                        <span class="color-blue">Поиск по названию</span>
+                                                    </div>
+
+                                                    <div class="custom-select w-100 mb-10">
+                                                        <div class="input custom-select__input" id="custom-cargo"
+                                                             onclick="onToggleSelect(this)">
+                                                            <input class="input-hide" name="custom-cargo" value="">
+                                                            <span class="text">Категория</span>
+                                                        </div>
+                                                        <ul class="custom-select__list">
+                                                            <li class="custom-select__item"
+                                                                onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                                                            </li>
+                                                            <li class="custom-select__item"
+                                                                onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                                                            </li>
+                                                            <li class="custom-select__item"
+                                                                onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="custom-select w-100 mb-10">
+                                                        <div class="input custom-select__input" id="Subcategory"
+                                                             onclick="onToggleSelect(this)">
+                                                            <input class="input-hide" name="Subcategory" value="">
+                                                            <span class="text">Подкатегория</span>
+                                                        </div>
+                                                        <ul class="custom-select__list">
+                                                            <li class="custom-select__item"
+                                                                onclick="onChangeSelect('Subcategory', 'тканевые', this)">
+                                                                <span>Подкатегория</span>
+                                                            </li>
+                                                            <li class="custom-select__item"
+                                                                onclick="onChangeSelect('Subcategory', 'тканевые', this)">
+                                                                <span>Подкатегория</span>
+                                                            </li>
+                                                            <li class="custom-select__item"
+                                                                onclick="onChangeSelect('Subcategory', 'тканевые', this)">
+                                                                <span>Подкатегория</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="custom-select w-100">
+                                                        <div class="input custom-select__input" id="product-select"
+                                                             onclick="onToggleSelect(this)">
+                                                            <input class="input-hide" name="product-select" value="">
+                                                            <span class="text">Товар</span>
+                                                        </div>
+                                                        <ul class="custom-select__list">
+                                                            <li class="custom-select__item"
+                                                                onclick="onChangeSelect('product-select', 'Товар', this)">
+                                                                <span>Товар</span>
+                                                            </li>
+                                                            <li class="custom-select__item"
+                                                                onclick="onChangeSelect('product-select', 'Товар', this)">
+                                                                <span>Товар</span>
+                                                            </li>
+                                                            <li class="custom-select__item"
+                                                                onclick="onChangeSelect('product-select', 'Товар', this)">
+                                                                <span>Товар</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="teg">
+                                                        <div class="teg__item">
+                                                            <span>Женские ветровки</span>
+                                                            <button class="teg__close" type="button">
+                                                                <svg width="10" height="10">
+                                                                    <use href="#cross"></use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="teg__item">
+                                                            <span>Брюки мужские</span>
+                                                            <button class="teg__close" type="button">
+                                                                <svg width="10" height="10">
+                                                                    <use href="#cross"></use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="text--align_center mb-20">
+                                                <a href="#" class="link">Добавить еще 1 место</a>
+                                            </div>
+
+                                            <div class="l-flex justify-end">
+                                                <button class="btn btn--arrow  btn--right" type="submit">
+                                                    Сохранить
+                                                    <svg class="arrow  arrow--right">
+                                                        <use href="#arrow"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content__item ">
+                                            <div class="l-flex l-flex--wrap justify-between pt-10 mb-10">
+                                                <div class="stock-images__item">
+                                                    <label class="add-img">
+                                                        <input type="file">
+                                                        <span class="cross cross--plus"
+                                                              aria-label="Добавить изображение">
+                                                    <svg><use href="#cross"></use></svg>
+                                                </span>
+                                                    </label>
+                                                </div>
+                                                <div class="stock-images__item"></div>
+                                                <div class="stock-images__item"></div>
+                                                <div class="stock-images__item"></div>
+                                                <div class="stock-images__item"></div>
+                                                <div class="stock-images__item"></div>
+                                            </div>
+
+                                            <!--     toggleClass  saved    -->
+                                            <div class="comment-block mb-15">
+                                                <p class="text mb-5">Комментарий:</p>
+                                                <textarea class="input textarea w-100"
+                                                          placeholder="Текст комментария"></textarea>
+                                                <div class="text--align_right">
+                                                    <svg width="10" height="10">
+                                                        <use href="#comment-save"></use>
+                                                    </svg>
+                                                    <small>Комментарий сохранен</small>
+                                                </div>
+                                            </div>
+
+                                            <div class="l-flex justify-end">
+                                                <button class="btn btn--arrow  btn--right" type="submit">
+                                                    Сохранить
+                                                    <svg class="arrow  arrow--right">
+                                                        <use href="#arrow"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content__item ">
+                                            <p class="text mb-5">Выставить дополнительный счет по данному заказу</p>
+                                            <div class="custom-select l-max_width mb-30">
+                                                <div class="input custom-select__input" onclick="onToggleSelect(this)">
+                                                    <input class="input-hide" name="selected_service" value="">
+                                                    <span class="text">Выберите услугу</span>
+                                                </div>
+                                                <ul class="custom-select__list custom-select__list--shadow">
+                                                    <li class="custom-select__item"
+                                                        onclick="onChangeSelect('selected_service', '', this)">Выберите
+                                                        услугу
+                                                    </li>
+                                                    <li class="custom-select__item"
+                                                        onclick="onChangeSelect('selected_service', 'china', this)">
+                                                        Доставка
+                                                        по Китаю
+                                                    </li>
+                                                    <li class="custom-select__item"
+                                                        onclick="onChangeSelect('selected_service', 'marriage', this)">
+                                                        Проверка на брак
+                                                    </li>
+                                                    <li class="custom-select__item"
+                                                        onclick="onChangeSelect('selected_service', 'photo', this)">Фото
+                                                        товара
+                                                    </li>
+                                                    <li class="custom-select__item"
+                                                        onclick="onChangeSelect('selected_service', 'storage', this)">
+                                                        Хранение товара на складе
+                                                    </li>
+                                                    <li class="custom-select__item"
+                                                        onclick="onChangeSelect('selected_service', 'other', this)">
+                                                        Другое
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="l-flex price-block mb-20">
+                                                <p class="text text--400">Укажите<br> сумму</p>
+                                                <input type="text" class="input price-input grow-1">
+                                                <div class="custom-select custom-select--sm">
+                                                    <div class="input custom-select__input"
+                                                         onclick="onToggleSelect(this)">
+                                                        <input class="input-hide" name="selected_service_rate"
+                                                               value="юани">
+                                                        <span class="text">¥, юани</span>
+                                                    </div>
+                                                    <ul class="custom-select__list custom-select__list--shadow">
+                                                        <li class="custom-select__item"
+                                                            onclick="onChangeSelect('selected_service_rate', 'юани', this)">
+                                                            ¥, юани
+                                                        </li>
+                                                        <li class="custom-select__item"
+                                                            onclick="onChangeSelect('selected_service_rate', 'рубли', this)">
+                                                            ₽, рубли
+                                                        </li>
+                                                        <li class="custom-select__item"
+                                                            onclick="onChangeSelect('selected_service_rate', 'доллары', this)">
+                                                            $, доллары
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <p class="text mb-5">Комментарий:</p>
+                                            <textarea name="" class="input l-max_width mb-10"
+                                                      placeholder="Текст комментария"></textarea>
+                                            <div class="l-flex">
+                                                <div class="l-flex l-flex--wrap justify-between mb-10">
+                                                    <div class="stock-images__item mr-10">
+                                                        <label class="add-img">
+                                                            <input type="file">
+                                                            <span class="cross cross--plus"
+                                                                  aria-label="Добавить изображение">
+                                                                <svg><use href="#cross"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <!--                                                    <div class="stock-images__item mr-10"></div>-->
+                                                </div>
+                                                <button class="btn btn--arrow">
+                                                    выставить счет
+                                                    <svg class="arrow  arrow--right">
+                                                        <use href="#arrow"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="l-flex justify-end mb-30">
+                <button class="btn btn--arrow  btn--right" type="submit">
+                    создать заказ
+                    <svg class="arrow  arrow--right">
+                        <use href="#arrow"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="storage_content">
+                <div class="l-flex justify-between mb-10">
+                    <p class="text text--bold">Заказ на консолидацию №K8228478777</p>
+                    <button class="new-btn bg-gray-f5" disabled="">
+                        <svg width="13" height="13">
+                            <use href="#save"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mb-15">
+                    <p class="text mb-5">Введите трек номер</p>
+                    <input type="text" class="input w-100" placeholder="Трек №">
+                </div>
+                <div class="">
+                    <p class="text mb-5">Введите ID клиента</p>
+                    <input type="text" class="input w-100" placeholder="Введите ID клиента">
+                </div>
+
+                <ul class="part">
+                    <li class="wrap-form__flex">
+                        <span>№ заказа клиента</span>
+                        <span>-</span>
+                    </li>
+                    <li class="wrap-form__flex">
+                        <span class="text--bold">№ на складе</span>
+                        <div class="l-flex">
+                            <button class="new-btn bg-gray-f5 mr-10" onclick="">
+                                <svg width="15" height="14">
+                                    <use href="#address"></use>
+                                </svg>
+                            </button>
+                            <input type="text" class="input for-info" readonly="" value="">
+                        </div>
+                    </li>
+                    <li class="wrap-form__flex">
+                        <span>Статус</span>
+                        <div class="custom-select">
+                            <div class="input custom-select__input">
+                                <input class="input-hide" name="track1" value="">
+                                <span class="text">Получен</span>
+                            </div>
+                            <ul class="custom-select__list">
+                                <li class="custom-select__item"><span>Проверен</span></li>
+                                <li class="custom-select__item"><span>Получен</span></li>
+                                <li class="custom-select__item"><span>Ожидаем</span></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="tab-container">
+                    <div class="tab-nav l-flex justify-between">
+                        <button type="button" class="tab-nav__link active">Габариты</button>
+                        <button type="button" class="tab-nav__link">Фото</button>
+                        <button type="button" class="tab-nav__link ">Услуги</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-content__item active">
+                            <div class="border-bottom pb-30 mb-20">
+                                <p class="text text--bold mb-15">Место 1</p>
+                                <div class="cargo-data__row justify-between">
+                                    <div class="cargo-data__input">
+                                        <span>Длина, см</span>
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="cargo-data__input">
+                                        <span>Ширина, см</span>
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="cargo-data__input">
+                                        <span>Высота, см</span>
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="cargo-data__input">
+                                        <span>Вес, кг</span>
+                                        <input type="text" class="input">
+                                    </div>
+                                </div>
+                                <div class="filter-tegs">
+                                    <div class="l-flex justify-between mb-5">
+                                        <span class="text">Укажите груз:</span>
+                                        <span class="color-blue">Не нашли нужный товар?</span>
+                                    </div>
+                                    <div class="custom-select no-arrow w-100">
+                                        <div class="">
+                                            <input type="text" class="input input--muted"
+                                                   placeholder="Введите название товара">
+                                            <button class="search__btn" type="button">
+                                                <svg width="20" height="20">
+                                                    <use href="#search"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <ul class="custom-select__list" style="">
+                                            <li class="custom-select__item"
+                                                onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                                                <ul class="custom-select__list">
+                                                    <li class="custom-select__item">fsfasdffasdfsdf</li>
+                                                </ul>
+                                            </li>
+                                            <li class="custom-select__item"
+                                                onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                                            </li>
+                                            <li class="custom-select__item"
+                                                onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="teg">
+                                        <div class="teg__item">
+                                            <span>Женские ветровки</span>
+                                            <button class="teg__close" type="button">
+                                                <svg width="10" height="10">
+                                                    <use href="#cross"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="teg__item">
+                                            <span>Брюки мужские</span>
+                                            <button class="teg__close" type="button">
+                                                <svg width="10" height="10">
+                                                    <use href="#cross"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border-bottom pb-30 mb-20">
+                                <p class="text text--bold mb-15">Место 2</p>
+                                <div class="cargo-data__row justify-between">
+                                    <div class="cargo-data__input">
+                                        <span>Длина, см</span>
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="cargo-data__input">
+                                        <span>Ширина, см</span>
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="cargo-data__input">
+                                        <span>Высота, см</span>
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="cargo-data__input">
+                                        <span>Вес, кг</span>
+                                        <input type="text" class="input">
+                                    </div>
+                                </div>
+                                <div class="filter-tegs">
+                                    <div class="l-flex justify-between mb-5">
+                                        <span class="text">Укажите груз:</span>
+                                        <span class="color-blue">Поиск по названию</span>
+                                    </div>
+
+                                    <div class="custom-select w-100 mb-10">
+                                        <div class="input custom-select__input" onclick="onToggleSelect(this)">
+                                            <input class="input-hide" name="custom-cargo" value="">
+                                            <span class="text">Категория</span>
+                                        </div>
+                                        <ul class="custom-select__list">
+                                            <li class="custom-select__item"
+                                                onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                                            </li>
+                                            <li class="custom-select__item"
+                                                onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                                            </li>
+                                            <li class="custom-select__item"
+                                                onclick="onChangeSelect('custom-cargo', 'тканевые', this)">
+                                                <span>Складные тканевые короба-органайзеры для хранения</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="custom-select w-100 mb-10">
+                                        <div class="input custom-select__input" onclick="onToggleSelect(this)">
+                                            <input class="input-hide" name="Subcategory" value="">
+                                            <span class="text">Подкатегория</span>
+                                        </div>
+                                        <ul class="custom-select__list">
+                                            <li class="custom-select__item"
+                                                onclick="onChangeSelect('Subcategory', 'тканевые', this)">
+                                                <span>Подкатегория</span>
+                                            </li>
+                                            <li class="custom-select__item"
+                                                onclick="onChangeSelect('Subcategory', 'тканевые', this)">
+                                                <span>Подкатегория</span>
+                                            </li>
+                                            <li class="custom-select__item"
+                                                onclick="onChangeSelect('Subcategory', 'тканевые', this)">
+                                                <span>Подкатегория</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="custom-select w-100">
+                                        <div class="input custom-select__input" onclick="onToggleSelect(this)">
+                                            <input class="input-hide" name="product-select" value="">
+                                            <span class="text">Товар</span>
+                                        </div>
+                                        <ul class="custom-select__list">
+                                            <li class="custom-select__item"
+                                                onclick="onChangeSelect('product-select', 'Товар', this)">
+                                                <span>Товар</span>
+                                            </li>
+                                            <li class="custom-select__item"
+                                                onclick="onChangeSelect('product-select', 'Товар', this)">
+                                                <span>Товар</span>
+                                            </li>
+                                            <li class="custom-select__item"
+                                                onclick="onChangeSelect('product-select', 'Товар', this)">
+                                                <span>Товар</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="teg">
+                                        <div class="teg__item">
+                                            <span>Женские ветровки</span>
+                                            <button class="teg__close" type="button">
+                                                <svg width="10" height="10">
+                                                    <use href="#cross"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="teg__item">
+                                            <span>Брюки мужские</span>
+                                            <button class="teg__close" type="button">
+                                                <svg width="10" height="10">
+                                                    <use href="#cross"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text--align_center mb-20">
+                                <a href="#" class="link">Добавить еще 1 место</a>
+                            </div>
+
+                            <div class="l-flex justify-end">
+                                <button class="btn btn--arrow  btn--right" type="submit">
+                                    Сохранить
+                                    <svg class="arrow  arrow--right">
+                                        <use href="#arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tab-content__item">
+                            <div class="l-flex l-flex--wrap justify-between pt-10 mb-10">
+                                <div class="stock-images__item">
+                                    <label class="add-img">
+                                        <input type="file">
+                                        <span class="cross cross--plus" aria-label="Добавить изображение">
+                                                    <svg><use href="#cross"></use></svg>
+                                                </span>
+                                    </label>
+                                </div>
+                                <div class="stock-images__item"></div>
+                                <div class="stock-images__item"></div>
+                                <div class="stock-images__item"></div>
+                                <div class="stock-images__item"></div>
+                                <div class="stock-images__item"></div>
+                            </div>
+
+                            <!--     toggleClass  saved    -->
+                            <div class="comment-block mb-15">
+                                <p class="text mb-5">Комментарий:</p>
+                                <textarea class="input textarea w-100" placeholder="Текст комментария"></textarea>
+                                <div class="text--align_right">
+                                    <svg width="10" height="10">
+                                        <use href="#comment-save"></use>
+                                    </svg>
+                                    <small>Комментарий сохранен</small>
+                                </div>
+                            </div>
+
+                            <div class="l-flex justify-end">
+                                <button class="btn btn--arrow  btn--right" type="submit">
+                                    Сохранить
+                                    <svg class="arrow  arrow--right">
+                                        <use href="#arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tab-content__item ">
+                            <p class="text mb-5">Выставить дополнительный счет по данному заказу</p>
+                            <div class="custom-select l-max_width mb-30">
+                                <div class="input custom-select__input" onclick="onToggleSelect(this)">
+                                    <input class="input-hide" name="selected_service" value="">
+                                    <span class="text">Выберите услугу</span>
+                                </div>
+                                <ul class="custom-select__list custom-select__list--shadow">
+                                    <li class="custom-select__item"
+                                        onclick="onChangeSelect('selected_service', '', this)">Выберите
+                                        услугу
+                                    </li>
+                                    <li class="custom-select__item"
+                                        onclick="onChangeSelect('selected_service', 'china', this)">Доставка
+                                        по Китаю
+                                    </li>
+                                    <li class="custom-select__item"
+                                        onclick="onChangeSelect('selected_service', 'marriage', this)">
+                                        Проверка на брак
+                                    </li>
+                                    <li class="custom-select__item"
+                                        onclick="onChangeSelect('selected_service', 'photo', this)">Фото
+                                        товара
+                                    </li>
+                                    <li class="custom-select__item"
+                                        onclick="onChangeSelect('selected_service', 'storage', this)">
+                                        Хранение товара на складе
+                                    </li>
+                                    <li class="custom-select__item"
+                                        onclick="onChangeSelect('selected_service', 'other', this)">Другое
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="l-flex price-block mb-20">
+                                <p class="text text--400">Укажите<br> сумму</p>
+                                <input type="text" class="input price-input grow-1">
+                                <div class="custom-select custom-select--sm">
+                                    <div class="input custom-select__input" onclick="onToggleSelect(this)">
+                                        <input class="input-hide" name="selected_service_rate" value="юани">
+                                        <span class="text">¥, юани</span>
+                                    </div>
+                                    <ul class="custom-select__list custom-select__list--shadow">
+                                        <li class="custom-select__item"
+                                            onclick="onChangeSelect('selected_service_rate', 'юани', this)">
+                                            ¥, юани
+                                        </li>
+                                        <li class="custom-select__item"
+                                            onclick="onChangeSelect('selected_service_rate', 'рубли', this)">
+                                            ₽, рубли
+                                        </li>
+                                        <li class="custom-select__item"
+                                            onclick="onChangeSelect('selected_service_rate', 'доллары', this)">
+                                            $, доллары
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="text mb-5">Комментарий:</p>
+                            <textarea name="" class="input l-max_width mb-10"
+                                      placeholder="Текст комментария"></textarea>
+                            <div class="l-flex">
+                                <div class="l-flex l-flex--wrap justify-between mb-10">
+                                    <div class="stock-images__item mr-10">
+                                        <label class="add-img">
+                                            <input type="file">
+                                            <span class="cross cross--plus" aria-label="Добавить изображение">
+                                                                <svg><use href="#cross"></use></svg>
+                                                            </span>
+                                        </label>
+                                    </div>
+                                    <!--                                                    <div class="stock-images__item mr-10"></div>-->
+                                </div>
+                                <button class="btn btn--arrow">
+                                    выставить счет
+                                    <svg class="arrow  arrow--right">
+                                        <use href="#arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container__additionally"></div>
+</main>
+
+<script src="js/main.js"></script>
+
+<script>
+    document.querySelectorAll('.custom-select__input').forEach(function (elem) {
+        elem.addEventListener('click', function () {
+            this.classList.toggle('active')
+        })
+    });
+    document.querySelectorAll('.tab-nav').forEach(function (elem) {
+        elem.querySelectorAll('.tab-nav__link').forEach(function (el, index) {
+            el.addEventListener('click', function () {
+                this.parentElement.nextElementSibling.querySelector('.active').classList.remove('active');
+                this.parentElement.nextElementSibling.children[index].classList.add('active');
+                this.parentElement.querySelector('.active').classList.remove('active');
+                this.classList.add('active');
+            })
+        })
+    });
+</script>
+</body>
+</html>

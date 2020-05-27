@@ -1,0 +1,109 @@
+.order-slider {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 70px;
+  display: flex;
+  overflow: hidden;
+  margin-left: -30px;
+  margin-right: -30px;
+
+  .stock-images__btn {
+    padding: 0 20px;
+
+    svg {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__item {
+    margin: 0 5px;
+  }
+}
+
+.order-slider .delivery .reset-list li:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.slider-nav {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    height: 2px;
+    background-color: $color-f5;
+
+    &.active {
+      background-color: $font-color-silver;
+    }
+  }
+}
+
+.even-style {
+  li {
+    margin-bottom: 0!important;
+    padding: 5px 9px 6px;
+  }
+  li:nth-child(even) {
+    background-color: $silver-normal;
+  }
+}
+
+.product-count {
+  width: 2.857em;
+  height: 2.142em;
+  border-radius: 3px;
+  text-align: center;
+  font-size: .875em;
+  line-height: 2.142em;
+  color: $font-color-silver;
+  border: 1px solid $silver-big;
+
+  &.active {
+    border-color: $color-blue;
+    color: #333;
+  }
+}
+
+.order-scroll-layout {
+  margin-left: -9px;
+  margin-right: -9px;
+  padding-left: 9px;
+  padding-right: 9px;
+  height: 200px;
+  overflow: auto;
+
+  &::-webkit-scrollbar-track {
+    background-color: $color-f5;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 2px;
+    background-color: $color-f5;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #C4C4C4;
+    border-radius: 3px;
+  }
+}
+.order-scroll-content {
+  position: relative;
+  margin-left: -6px;
+  margin-right: -6px;
+
+  .part > li {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .tooltip-content {
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+  }
+  .helper {
+    position: static;
+  }
+}

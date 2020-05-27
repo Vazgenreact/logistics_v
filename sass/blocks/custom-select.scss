@@ -22,8 +22,9 @@
     padding: 0;
 
     input + .text {
+      min-height: 35px;
       padding: 6px 10px;
-      display: inline-block;
+      display: block;
       width: 100%;
       box-sizing: border-box;
       white-space: nowrap;
@@ -91,7 +92,7 @@
     span {
       display: block;
       width: 100%;
-      padding: 12px;
+      padding: 7px 12px;
       box-sizing: border-box;
     }
     &.selected,
