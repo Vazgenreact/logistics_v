@@ -59,7 +59,10 @@
       color: $font-color-silver;
     }
   }
-
+  .tab-content .part li {
+    min-height: 40px;
+    box-sizing: border-box;
+  }
   .track-item {
     padding: 3px 0 3px 5px;
 

@@ -220,7 +220,7 @@
                 </div>
             </div>
 
-            <div class="grow-1">
+            <div class="grow-1 mb-15">
                 <!--     метод доставки   -->
                 <div class="methods-delivery">
                     <div class="l-flex">
@@ -404,13 +404,13 @@
                             </span>
                                 <strong class="methods__price text--big">
                                     <svg width="25" height="25">
-                                        <use href="#loading"></use>
+                                        <use href="#worning-icon"></use>
                                     </svg>
-                                    <div class="tooltip-content">Ожидаем информацию</div>
+                                    <div class="tooltip-content">Не корректные данные</div>
                                 </strong>
                                 <span class="checkbox">
-                                <span></span>
-                            </span>
+                                    <span></span>
+                                </span>
                             </label>
                         </div>
                         <div class="methods__item">
@@ -507,11 +507,18 @@
                     </svg>
                     <span class="ml-5">Назад</span>
                 </a>
-                <div class="alarm-warning mr-10">
-                    <span class="text--align_right text--small grow-1 mr-20">Нажимая кнопку, <br>
+
+                <!--        toggleClass none        -->
+                <div class="mr-20 text--align_right ml-5">
+                    <span class="text--small grow-1">Нажимая кнопку, <br>
                     Вы принимаете <a href="#" class="color-inherit"><u>условия сервиса</u></a></span>
                 </div>
-                <a href="#" class="btn btn--arrow">
+                <div class="alarm-warning mr-10 ml-5 none">
+                    Выберите один из методов доставки
+                </div>
+                <!--        toggleClass none        -->
+
+                <a href="#" class="btn l-flex">
                     создать заявку
                     <svg class="arrow arrow--right">
                         <use href="#arrow"></use>

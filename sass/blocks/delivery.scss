@@ -52,12 +52,6 @@
       transform: rotate(45deg);
     }
   }
-  .top-scroll-content {
-    position: relative;
-    height: 30px;
-    margin-top: -30px;
-    background-color: rgba(255,255,255,.9);
-  }
   .part.min-height {
     & > li {
       min-height: 49px;
@@ -79,8 +73,8 @@
       li {
         display: flex;
         justify-content: space-between;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding-top: 3px;
+        padding-bottom: 3px;
 
         .text--muted {
           text-align: right;
@@ -88,6 +82,27 @@
       }
     }
   }
+  .new-btn {
+    outline: none;
+    & + .tooltip-content {
+      left: 0;
+      top: 100%;
+    }
+    &:hover + .tooltip-content {
+      opacity: 1;
+      z-index: 9;
+    }
+  }
+}
+
+
+.top-scroll-content {
+  position: relative;
+  height: 30px;
+  margin-top: -30px;
+  margin-left: -20px;
+  margin-right: -20px;
+  background-color: rgba(255,255,255,.9);
 }
 
 .yellow-ellipse,

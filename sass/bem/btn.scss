@@ -27,6 +27,16 @@
         background-color: $u-pink;
     }
 
+  &--red {
+    border: 1px solid $font-color-red;
+    color: $font-color-red;
+    background-color: #fff;
+
+    svg {
+      fill: $font-color-red;
+    }
+  }
+
     &--arrow {
         svg {
             transform: translate(0, -1px);
