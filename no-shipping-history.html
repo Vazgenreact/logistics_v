@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics Список заказов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<!-- Это спрайт c svg иконками -->
+<div class="none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<header class="main top">
+    <img src="img/logo.svg" alt="Topzakazz logistics logo" class="top__logo">
+    <a href="#" class="text  text--uppercase  text--regular  text--main  top__exit">Выход</a>
+</header>
+
+<section class="main">
+    <div class="user-box">
+        <div class="user-box__text l-flex">
+            <img class="user-box__img" src="img/Yuliya.png" alt="">
+            <div class="">
+                <small class="text  text--little  text--regular">Здравствуйте,</small>
+                <span class="text  text--bold  user-box__name">Юлия Архипенко</span>
+                <p class="text">ID:595614215655</p>
+            </div>
+        </div>
+        <div class="user-box__balance">
+            <a href="#" class="btn  btn--border  btn--arrow  user-box__btn  user-box__btn--left">
+                Пополнить
+                <svg class="arrow  arrow--right">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
+            <div class="select select-valuted user-box__select">
+                <div class="select__param">
+                    <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
+                </div>
+                <!-- Если нужно показать селект - показываем select__list display: block; ну или как-то чтоб поменять это свойство-->
+                <div class="select__list">
+                    <div class="select__item" data-value="4187.63 RUB">
+                        <strong>4187</strong><small>.63</small> <span class="helper" data-help="Рубли">₽</span>
+                    </div>
+                    <div class="select__item" data-value="418.7 CNY">
+                        <strong>418.7</strong><small>.63</small> <span class="helper" data-help="Юани">¥</span>
+                    </div>
+                    <div class="select__item" data-value="65 USD">
+                        <strong>65</strong><small>.63</small> <span class="helper" data-help="Доллары">$</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#"
+               class="btn  btn--border  btn--border_disabled  btn--arrow  user-box__btn  user-box__btn--right helper helper--payout"
+               data-help="В настоящий момент вывод средств производится в ручном режиме. Свяжитесь с тех. поддержкой через 'Мои сообщения'.">
+                Вывести
+                <svg class="arrow  arrow--right">
+                    <use xlink:href="#arrow"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<main class="main container">
+    <div class="container__part">
+        <ul class="part">
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--active  text--bold">мои заказы на
+                    выкуп</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои отправки из китая</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои запросы на поиск</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">мои финансы</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои сообщения</a>
+            </li>
+        </ul>
+
+        <ul class="part  container__user-sidebar">
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">моя информация</a>
+            </li>
+            <li class="part__item">
+                <a href="change-password.html" class="text  text--uppercase  part__link">изменить пароль</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link">мои адреса</a>
+            </li>
+            <li class="part__item">
+                <a href="#" class="text  text--uppercase  part__link  part__link--disabled">мои социальные сети</a>
+            </li>
+            <li class="part__item  part__item--partner">
+                <a href="#" class="text  text--uppercase  part__link">моя реферальная программа</a>
+            </li>
+        </ul>
+
+        <img src="img/email-confirmation.jpg" class="container__confirmation">
+    </div>
+
+    <div class="container__center--max100">
+        <div class="shipping-history__top">
+            <div class="shipping-top mb-20">
+                <div class="shipping-top__title">
+                    <img class="delivery-img" src="img/delivery.svg" alt="">
+                    <h5 class="text text--big text--uppercase text--bold">отправки из китая</h5>
+                </div>
+                <p class="text">В этом разделе находится вся информация по Вашим отправкам из Китая. В зависимости от
+                    задач,
+                    подготовьте новый расчет на доставку, сформируйте заказы на отправку со склада или посмотрите данные
+                    по
+                    уже отправленному товару.</p>
+            </div>
+
+            <ul class="shipping-nav">
+                <li class="shipping-nav__item"><a class="shipping-nav__link" href="#">заказы<br> на складе</a></li>
+                <li class="shipping-nav__item"><a class="shipping-nav__link active" href="#">история отправок</a></li>
+                <li class="shipping-nav__item"><a class="shipping-nav__link" href="#">Новый расчет <br> на отправку</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="shipping-content">
+            <div>
+                <p>В данном разделе хранится вся информация о Ваших заявках на отправку и фактическим отправлениям.
+                    Обратите внимание, что фактически отправленные грузы могут отличаться от первичной заяявки на
+                    перевозку в части веса,
+                    габаритов, плотности груза и другим показателям. Поэтому мы сохраняем всю историю заказа на
+                    перевозку,
+                    чтобы Вы всегда могли ознакомится с деталями.</p>
+            </div>
+
+            <div class="not-storage_content pb-30">
+                <img src="img/not-found.png" alt="">
+                <p class="text text--align_center mb-30">У Вас еще нет ни одного заказа на отправку</p>
+                <div class="l-flex justify-center pb-30">
+                    <button class="btn l-flex mb-35" type="submit">
+                        Новый расчет доставки
+                        <svg class="arrow arrow--right">
+                            <use href="#arrow"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container__additionally"></div>
+</main>
+
+<script>
+    document.querySelectorAll('.custom-select__input').forEach(function (elem) {
+        elem.addEventListener('click', function () {
+            this.classList.toggle('active')
+        })
+    });
+    document.querySelectorAll('.tab-nav').forEach(function (elem) {
+        elem.querySelectorAll('.tab-nav__link').forEach(function (el, index) {
+            el.addEventListener('click', function () {
+                this.parentElement.nextElementSibling.querySelector('.tab-content__item.active').classList.remove('active');
+                this.parentElement.nextElementSibling.children[index].classList.add('active');
+                this.parentElement.querySelector('.active').classList.remove('active');
+                this.classList.add('active');
+            })
+        })
+    });
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
