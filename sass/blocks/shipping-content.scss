@@ -126,6 +126,15 @@
     .btn {
       padding: 16px 15px 14px;
     }
+
+    &.last-form {
+      margin: 0 -30px -30px;
+      padding: 30px;
+
+      &.active {
+        background-color: $u-pink;
+      }
+    }
   }
 }
 
