@@ -10,9 +10,13 @@
   }
 
   &__status {
-    width: 118px;
+    width: 190px;
     margin-right: 10px;
     flex-shrink: 0;
+
+    .text {
+      line-height: 1.7;
+    }
   }
   &__date {
     width: calc(40% - 10px);
